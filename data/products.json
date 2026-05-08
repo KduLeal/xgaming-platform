@@ -17,6 +17,41 @@
       "link": "https://meli.la/1haWFbG",
       "store": "Mercado Livre",
       "score": 80
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa de vídeo Nvidia Asus TUF Gaming GeForce RTX ",
+      "price": 22999,
+      "image": "/images/products/gpu/placa-de-vdeo-nvidia-asus-tuf.jpg",
+      "link": "https://meli.la/2nGD5rd",
+      "store": "Mercado Livre",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 26449
+        },
+        {
+          "month": "Jan/26",
+          "price": 26393
+        },
+        {
+          "month": "Fev/26",
+          "price": 26269
+        },
+        {
+          "month": "Mar/26",
+          "price": 25018
+        },
+        {
+          "month": "Abr/26",
+          "price": 24215
+        },
+        {
+          "month": "Mai/26",
+          "price": 22999
+        }
+      ]
     }
   ],
   "cpu": [

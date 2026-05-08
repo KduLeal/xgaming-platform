@@ -82,26 +82,26 @@ Toda tarefa segue esta sequência obrigatória:
 
 ## 🔥 PADRÕES OBRIGATÓRIOS EM TODO CÓDIGO
 
+### DESIGN & INTERATIVIDADE (PIXILA-STYLE)
+- **Custom Cursor:** Cursor neon (`.custom-cursor`) que segue o mouse com lerp (0.2).
+- **Magnetic:** Botões e CTAs com classe `.magnetic` que seguem levemente o cursor.
+- **Card Tilt:** Cards de produto/categoria com efeito 3D Tilt via JS no desktop.
+- **Mobile Safe:** Interatividades pesadas (cursor, tilt, magnetic) desativadas em telas <= 768px.
+
 ### CSS
-- Usar variáveis CSS do design system (nunca hardcode cores)
-- Glassmorphism: `background: var(--bg-card); backdrop-filter: blur(10px); border: 1px solid var(--border-glass);`
-- Hover obrigatório em todo elemento clicável
-- Transição padrão: `transition: var(--transition);`
-- Mobile-first: breakpoints em 768px e 1024px
+- Usar variáveis CSS do design system (nunca hardcode cores).
+- Glassmorphism: `background: var(--bg-card); backdrop-filter: blur(10px); border: 1px solid var(--border-glass);`.
+- Hover obrigatório em todo elemento clicável.
+- Mobile-first: breakpoints em 768px e 1024px.
 
 ### JavaScript
-- Módulos ES6 (import/export)
-- Event delegation quando possível
-- IntersectionObserver para scroll animations
-- requestAnimationFrame para animações canvas
-- Error handling silencioso (nunca crashar a UI)
+- Módulos ES6 (import/export).
+- Event delegation para elementos dinâmicos.
+- requestAnimationFrame para animações canvas e cursor.
+- **Vercel Flow:** Todo `git push` atualiza a produção automaticamente via Git-Ops.
+- **Security Audit:** Nunca expor código do `scraper/` no bundle de produção.
 
 ### HTML
-- Semantic tags (section, nav, main, article)
-- IDs únicos em elementos interativos
-- aria-labels em botões de ícone
-- Meta tags em toda página
-
-### Commits mentais (log de alterações)
-- Sempre documentar o que mudou no report final
-- Manter changelog no artefato de resultado
+- Semantic tags (section, nav, main, article).
+- IDs únicos em elementos interativos.
+- Meta tags em toda página.

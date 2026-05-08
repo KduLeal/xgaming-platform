@@ -4,7 +4,24 @@ import fs from 'fs';
 import path from 'path';
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import { exec } from 'child_process';
 puppeteer.use(StealthPlugin());
+
+// Helper for Git-Ops Auto Deploy
+function autoDeploy(productName) {
+  const commitMsg = `feat: adiciona produto "${productName}" via Admin Panel`;
+  // Use powershell syntax for safety in Windows
+  const cmd = `git add .; git commit -m "${commitMsg}"; git push`;
+  
+  console.log(`[Git-Ops] 🚀 Iniciando deploy automático para: ${productName}`);
+  exec(cmd, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`[Git-Ops] ❌ Erro no deploy: ${error.message}`);
+      return;
+    }
+    console.log(`[Git-Ops] ✅ Deploy concluído com sucesso!\n${stdout}`);
+  });
+}
 
 const app = express();
 app.use(cors());
@@ -150,6 +167,10 @@ app.post('/api/add-product', async (req, res) => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2));
 
     console.log(`[Admin API] Produto adicionado com sucesso: ${newProduct.name}`);
+    
+    // Trigger Git-Ops Auto Deploy
+    autoDeploy(newProduct.name);
+
     res.json({ success: true, product: newProduct });
   } catch (error) {
     console.error('[Admin API] Erro:', error);

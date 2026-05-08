@@ -37,18 +37,33 @@ O projeto é dividido em duas frentes que se comunicam através de um arquivo JS
 
 ## 4. Status Atual (Onde Paramos)
 
-**Ponto de Save:** 07 de Maio de 2026.
-*   **Limpeza:** Todos os produtos fictícios (Mock Data) foram deletados de `products.json`. O site está 100% limpo, aguardando curadoria manual.
-*   **Legal/Compliance:** Banner de cookies LGPD ativo (`main.js`), páginas de Termos, Privacidade e Contato criadas. Aviso de FTC/Afiliado no footer de todas as páginas.
-*   **Facilitador:** Criado o app/script `Painel-Admin.bat` na raiz. Ele liga simultaneamente o Vite e o Node.js e abre o navegador do usuário.
+**Ponto de Save:** 08 de Maio de 2026.
+*   **Deploy Vercel:** O site está oficialmente em produção em `https://xgaming-platform.vercel.app/`. O fluxo de Git-Ops (Local -> Push -> Auto Deploy) está ativo.
+*   **Gestor de Cobertura:** Implementado no `admin.html`. Uma ferramenta de análise que cruza `hardware-specs.json` com `products.json` para identificar quais produtos do mercado ainda faltam ser cadastrados na plataforma.
+*   **UX Pixila-Style:** Adicionada interatividade de alto nível (Cursor Neon customizado, Botões Magnéticos e Tilt 3D em cards). Sistema inteligente que desativa essas funções automaticamente em dispositivos móveis para preservar performance.
+*   **Auto-Deploy (Git-Ops):** O servidor de admin (`admin-server.mjs`) agora realiza `git push` automaticamente sempre que um novo produto é cadastrado. O site público se auto-atualiza sem intervenção manual.
+*   **Compliance:** Detector de AdBlock "gentil" implementado (pede apoio mas permite continuar). Banner LGPD corrigido e responsivo.
+*   **Categorias:** Foco total em 5 categorias de hardware (GPU, CPU, Mobo, RAM, SSD). Categoria "Monitores" removida para purificar o nicho de performance.
 
 ---
 
-## 5. Workflow Futuro (Próximos Passos)
+## 5. Workflow de Produção (Manutenção)
 
-Se você é a IA assumindo este projeto, foque nos seguintes passos:
+1.  **Curadoria Local:** Utilize o `Painel-Admin.bat` para abrir o Gestor de Cobertura. 
+2.  **Scraping:** Adicione novos produtos via URL do Mercado Livre. O sistema salva em `data/products.json`.
+3.  **Sincronização:** Após adicionar itens, execute:
+    ```powershell
+    git add .
+    git commit -m "feat: atualiza catálogo de [categoria]"
+    git push
+    ```
+4.  **Auto-Deploy:** A Vercel detecta o push e atualiza o site público em segundos.
 
-1.  **Deploy na Vercel (Obrigatório):** O próximo grande passo é fazer o push deste repositório para o GitHub e conectar na Vercel. 
-    *   *Nota Crítica de Arquitetura:* Na Vercel, o `products.json` será estático (read-only). O Painel de Admin local ainda poderá ser usado para atualizar o JSON na máquina do Kadu, e depois ele fará um `git commit` para atualizar a Vercel. Se o Kadu quiser adicionar produtos remotamente no futuro, será necessário migrar de JSON para um Banco de Dados real (ex: Supabase, Vercel KV ou Firebase).
-2.  **SEO e Meta Tags:** Adicionar OpenGraph (OG) tags dinâmicas para as páginas de produtos, para que o compartilhamento via WhatsApp mostre a imagem da placa.
-3.  **Expansão do Scraper:** O Mercado Livre altera sua estrutura de DOM ocasionalmente. Mantenha os seletores do `admin-server.mjs` atualizados caso a extração de preço venha a falhar.
+---
+
+## 6. Próximos Passos (Roadmap)
+
+1.  **SEO e Meta Tags:** Implementar OpenGraph (OG) tags dinâmicas para que o compartilhamento de produtos exiba imagem e preço no WhatsApp/Social.
+2.  **Filtros Avançados:** Adicionar filtros de preço (min/max) e especificações técnicas (ex: "Apenas GPUs com 12GB+") nas páginas de categoria.
+3.  **Migração de DB:** Caso o volume de produtos ultrapasse a viabilidade do JSON estático, migrar o `products.json` para **Supabase (PostgreSQL)** para permitir atualizações via API sem necessidade de push manual.
+

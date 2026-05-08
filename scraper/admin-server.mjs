@@ -156,9 +156,39 @@ app.post('/api/add-product', async (req, res) => {
       image: localImagePath,
       link: link,
       store: "Mercado Livre",
-      score: 80,
+      score: 80, // Default
       priceHistory: history
     };
+
+    // Real "Custo-Benefício" Score Calculation
+    try {
+      const SPECS_FILE = path.resolve('data/hardware-specs.json');
+      const specsDB = JSON.parse(fs.readFileSync(SPECS_FILE, 'utf-8'));
+      const catSpecs = specsDB[category] || {};
+      let matchedSpec = null;
+      for (const [key, spec] of Object.entries(catSpecs)) {
+        if (newProduct.name.toLowerCase().includes(key.toLowerCase())) {
+          matchedSpec = spec;
+          break;
+        }
+      }
+      
+      if (matchedSpec && matchedSpec.Benchmark) {
+        const bench = parseInt(matchedSpec.Benchmark);
+        // GPUs are more expensive, CPUs have higher bench/price ratios
+        const multiplier = category === 'gpu' ? 50 : 70;
+        let calculatedScore = Math.round((bench / price) * multiplier);
+        
+        // Premium items are expensive but good, so they shouldn't have a low score
+        if (bench > 30000) calculatedScore = Math.max(calculatedScore, 85);
+        if (bench > 20000) calculatedScore = Math.max(calculatedScore, 75);
+        
+        newProduct.score = Math.min(98, Math.max(40, calculatedScore));
+        newProduct.benchmark = bench; // Save real benchmark
+      }
+    } catch (e) {
+      console.warn('[Admin API] Falha ao calcular score real:', e.message);
+    }
 
     // Update JSON
     const db = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
@@ -181,6 +211,17 @@ app.post('/api/add-product', async (req, res) => {
 });
 
 const PORT = 3002;
+
+app.get('/api/data', (req, res) => {
+  try {
+    const products = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
+    const specs = JSON.parse(fs.readFileSync(path.resolve('data/hardware-specs.json'), 'utf-8'));
+    res.json({ products, specs });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`🤖 Admin Server rodando na porta ${PORT}`);
   console.log(`Acesse http://localhost:3001/admin.html para adicionar produtos.`);

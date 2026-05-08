@@ -161,13 +161,10 @@
 
     async function loadCoverage() {
       try {
-        // Usa timestamp pra evitar cache do navegador no products.json
-        const [resSpecs, resProds] = await Promise.all([
-          fetch('/data/hardware-specs.json'),
-          fetch('/data/products.json?t=' + Date.now())
-        ]);
-        hwSpecs = await resSpecs.json();
-        prodData = await resProds.json();
+        const res = await fetch('http://localhost:3002/api/data');
+        const data = await res.json();
+        hwSpecs = data.specs;
+        prodData = data.products;
         
         const activeCat = document.querySelector('.coverage-filters button.active').dataset.cat;
         renderCoverage(activeCat);

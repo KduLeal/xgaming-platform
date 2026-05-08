@@ -131,8 +131,7 @@ const CATEGORIES = [
   { id: 'cpu', icon: '⚡', name: 'Processadores', desc: 'CPUs AMD Ryzen e Intel Core para todos os workloads.', models: productsData.cpu?.length || 0, brands: new Set(productsData.cpu?.map(i=>i.brand)).size },
   { id: 'mobo', icon: '🔧', name: 'Placas-mãe', desc: 'Motherboards para Intel e AMD com os melhores chipsets.', models: productsData.mobo?.length || 0, brands: new Set(productsData.mobo?.map(i=>i.brand)).size },
   { id: 'ram', icon: '💾', name: 'Memórias RAM', desc: 'Kits DDR4 e DDR5 de alta performance para seu build.', models: productsData.ram?.length || 0, brands: new Set(productsData.ram?.map(i=>i.brand)).size },
-  { id: 'ssd', icon: '💿', name: 'SSDs', desc: 'NVMe e SATA para armazenamento ultrarrápido.', models: productsData.ssd?.length || 0, brands: new Set(productsData.ssd?.map(i=>i.brand)).size },
-  { id: 'monitor', icon: '🖥️', name: 'Monitores', desc: 'Monitores gaming 144Hz+ com HDR e resposta rápida.', models: productsData.monitor?.length || 0, brands: new Set(productsData.monitor?.map(i=>i.brand)).size },
+  { id: 'ssd', icon: '💿', name: 'SSDs', desc: 'NVMe e SATA para armazenamento ultrarrápido.', models: productsData.ssd?.length || 0, brands: new Set(productsData.ssd?.map(i=>i.brand)).size }
 ];
 
 // Build deals from best scores across all categories
@@ -274,4 +273,45 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => banner.remove(), 300);
     });
   }
+});
+
+// ========== ADBLOCK DETECTOR ==========
+document.addEventListener('DOMContentLoaded', () => {
+  if (sessionStorage.getItem('adblockSkipped')) return;
+
+  // Create a bait element
+  const bait = document.createElement('div');
+  bait.className = 'ad-banner ad-container ad-slot textads';
+  bait.style.height = '10px';
+  bait.style.width = '10px';
+  bait.style.position = 'absolute';
+  bait.style.left = '-9999px';
+  bait.style.top = '-9999px';
+  document.body.appendChild(bait);
+
+  setTimeout(() => {
+    // Check if bait is hidden or removed
+    const isBlocked = bait.offsetHeight === 0 || bait.style.display === 'none' || !document.body.contains(bait);
+    
+    if (isBlocked) {
+      const adBanner = document.createElement('div');
+      adBanner.className = 'adblock-banner fade-up visible';
+      adBanner.innerHTML = `
+        <div class="adblock-content">
+          <p><strong>Ops! AdBlocker detectado.</strong> 🛑<br>A XGaming se mantém através de links de afiliados e anúncios seguros. Por favor, considere desativar seu bloqueador para nos apoiar!</p>
+        </div>
+        <button id="skip-adblock" class="btn-secondary" style="white-space: nowrap;">Continuar Assim Mesmo</button>
+      `;
+      document.body.appendChild(adBanner);
+      
+      document.getElementById('skip-adblock').addEventListener('click', () => {
+        sessionStorage.setItem('adblockSkipped', 'true'); // Only skip for current session
+        adBanner.style.opacity = '0';
+        setTimeout(() => adBanner.remove(), 300);
+      });
+    }
+    
+    // Cleanup
+    if (document.body.contains(bait)) bait.remove();
+  }, 500);
 });

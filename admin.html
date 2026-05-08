@@ -19,6 +19,24 @@
     .error { background: rgba(255, 60, 60, 0.1); border: 1px solid var(--red); color: var(--red); }
     .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; vertical-align: middle; margin-right: 10px; }
     @keyframes spin { to { transform: rotate(360deg); } }
+    
+    /* Gestor de Cobertura */
+    .coverage-container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); backdrop-filter: blur(10px); }
+    .coverage-header { text-align: center; margin-bottom: 2rem; }
+    .coverage-header h2 { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: var(--cyan); }
+    .coverage-filters { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; }
+    .coverage-filters button { padding: 8px 16px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-glass); color: var(--text-2); border-radius: 6px; cursor: pointer; transition: 0.3s; }
+    .coverage-filters button.active, .coverage-filters button:hover { background: rgba(0,240,255,0.1); border-color: var(--cyan); color: var(--cyan); }
+    .coverage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 768px) { .coverage-grid { grid-template-columns: 1fr; } }
+    .coverage-list h3 { font-size: 1.1rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-glass); }
+    .coverage-list.missing h3 { color: var(--red); border-color: rgba(255,60,60,0.3); }
+    .coverage-list.done h3 { color: var(--green); border-color: rgba(0,255,128,0.3); }
+    .coverage-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 6px; margin-bottom: 8px; border: 1px solid transparent; }
+    .coverage-list.missing .coverage-item { border-left: 3px solid var(--red); }
+    .coverage-list.done .coverage-item { border-left: 3px solid var(--green); }
+    .coverage-item a { color: var(--cyan); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; background: rgba(0,240,255,0.1); border-radius: 4px; transition: 0.3s; }
+    .coverage-item a:hover { background: var(--cyan); color: #000; }
   </style>
 </head>
 <body>
@@ -63,7 +81,32 @@
     <div id="status-msg"></div>
   </div>
 
+  <div class="coverage-container">
+    <div class="coverage-header">
+      <h2>Gestor de Cobertura</h2>
+      <p style="color: var(--text-2); font-size: 0.9rem; margin-top: 0.5rem;">Acompanhe o que falta cadastrar no seu banco de dados ideal.</p>
+    </div>
+    <div class="coverage-filters" id="coverage-filters">
+      <button class="active" data-cat="gpu">GPUs</button>
+      <button data-cat="cpu">CPUs</button>
+      <button data-cat="mobo">Placas-Mãe</button>
+      <button data-cat="ram">Memórias</button>
+      <button data-cat="ssd">SSDs</button>
+    </div>
+    <div class="coverage-grid">
+      <div class="coverage-list missing">
+        <h3>Pendentes / Faltando (<span id="count-missing">0</span>)</h3>
+        <div id="list-missing">Aguardando dados...</div>
+      </div>
+      <div class="coverage-list done">
+        <h3>Cadastrados (<span id="count-done">0</span>)</h3>
+        <div id="list-done">Aguardando dados...</div>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // ========== ADD PRODUCT ==========
     document.getElementById('admin-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('submit-btn');
@@ -90,6 +133,7 @@
           msg.textContent = '✅ Sucesso! Produto adicionado ao products.json.';
           msg.classList.add('success');
           document.getElementById('admin-form').reset();
+          loadCoverage(); // Atualiza a cobertura automaticamente
         } else {
           msg.textContent = '❌ Erro: ' + (data.error || 'Falha ao processar produto.');
           msg.classList.add('error');
@@ -103,6 +147,85 @@
         btn.innerHTML = 'Adicionar Produto';
       }
     });
+
+    // ========== COVERAGE MANAGER ==========
+    let hwSpecs = null;
+    let prodData = null;
+
+    function matchKey(productName, key) {
+      if (!productName || !key) return false;
+      const normalizedKey = key.replace(/\s+/g, '').toLowerCase();
+      const normalizedName = productName.replace(/\s+/g, '').toLowerCase();
+      return normalizedName.includes(normalizedKey);
+    }
+
+    async function loadCoverage() {
+      try {
+        // Usa timestamp pra evitar cache do navegador no products.json
+        const [resSpecs, resProds] = await Promise.all([
+          fetch('/data/hardware-specs.json'),
+          fetch('/data/products.json?t=' + Date.now())
+        ]);
+        hwSpecs = await resSpecs.json();
+        prodData = await resProds.json();
+        
+        const activeCat = document.querySelector('.coverage-filters button.active').dataset.cat;
+        renderCoverage(activeCat);
+      } catch (err) {
+        console.error('Erro ao carregar dados de cobertura:', err);
+      }
+    }
+
+    function renderCoverage(cat) {
+      if (!hwSpecs || !prodData) return;
+
+      const idealItems = Object.keys(hwSpecs[cat] || {});
+      const existingItems = prodData[cat] || [];
+
+      const missing = [];
+      const done = [];
+
+      idealItems.forEach(idealKey => {
+        // Procura se tem algum produto cadastrado que bata com a chave ideal
+        const hasMatch = existingItems.some(prod => matchKey(prod.name, idealKey));
+        if (hasMatch) {
+          done.push(idealKey);
+        } else {
+          missing.push(idealKey);
+        }
+      });
+
+      document.getElementById('count-missing').textContent = missing.length;
+      document.getElementById('count-done').textContent = done.length;
+
+      document.getElementById('list-missing').innerHTML = missing.map(key => {
+        const searchQuery = encodeURIComponent(key);
+        return `
+          <div class="coverage-item">
+            <span>${key}</span>
+            <a href="https://lista.mercadolivre.com.br/${searchQuery}" target="_blank">Buscar no ML ↗</a>
+          </div>
+        `;
+      }).join('') || '<div class="coverage-item">Tudo completo!</div>';
+
+      document.getElementById('list-done').innerHTML = done.map(key => `
+        <div class="coverage-item">
+          <span>${key}</span>
+          <span style="color: var(--green); font-size: 0.85rem;">✅</span>
+        </div>
+      `).join('') || '<div class="coverage-item">Nenhum ainda.</div>';
+    }
+
+    document.querySelectorAll('.coverage-filters button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.coverage-filters button').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        renderCoverage(e.target.dataset.cat);
+      });
+    });
+
+    // Inicia ao carregar a página
+    window.addEventListener('load', loadCoverage);
   </script>
 </body>
 </html>

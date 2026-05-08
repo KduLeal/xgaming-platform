@@ -12,6 +12,8 @@ export default defineConfig({
         produto: resolve(__dirname, 'produto.html'),
         comparador: resolve(__dirname, 'comparador.html'),
         sobre: resolve(__dirname, 'sobre.html'),
+        privacidade: resolve(__dirname, 'privacidade.html'),
+        termos: resolve(__dirname, 'termos.html'),
       },
     },
   },

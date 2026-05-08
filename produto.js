@@ -162,7 +162,11 @@ function renderProduct(product) {
 
   // Detailed specs table
   renderDetailedSpecs(product);
+  
+  // Offers table
+  renderOffersTable(product);
 
+  // Price monitor description
   // Price monitor description
   const priceDesc = document.getElementById('prod-price-desc');
   if (priceDesc) {
@@ -357,6 +361,43 @@ function renderNotFound() {
   }
   const details = document.querySelector('.prod-details');
   if (details) details.style.display = 'none';
+}
+
+function renderOffersTable(product) {
+  const container = document.getElementById('offers-table-body');
+  if (!container) return;
+
+  let offers = product.offers || [];
+  
+  // If no offers array but single store info exists, convert it
+  if (offers.length === 0 && product.store && product.price) {
+    offers = [{ store: product.store, price: product.price, link: product.link }];
+  }
+
+  // Sort by price
+  offers.sort((a, b) => a.price - b.price);
+
+  if (offers.length === 0) {
+    container.innerHTML = '<tr><td colspan="3" style="text-align:center;">Nenhuma oferta disponível no momento.</td></tr>';
+    return;
+  }
+
+  container.innerHTML = offers.map((offer, idx) => `
+    <tr class="${idx === 0 ? 'best-offer-row' : ''}">
+      <td>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span class="store-badge">${offer.store}</span>
+          ${idx === 0 ? '<span class="price-badge-small">MELHOR PREÇO</span>' : ''}
+        </div>
+      </td>
+      <td class="${idx === 0 ? 'green' : ''}" style="font-weight:bold;">
+        R$ ${offer.price.toLocaleString('pt-BR')}
+      </td>
+      <td>
+        <a href="${offer.link}" target="_blank" rel="noopener noreferrer" class="btn-buy-small">Ir para Loja</a>
+      </td>
+    </tr>
+  `).join('');
 }
 
 // ========== INIT ==========

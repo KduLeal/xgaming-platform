@@ -59,6 +59,15 @@ function detectBrand(title) {
   return 'Geral';
 }
 
+function detectStore(url) {
+  if (url.includes('mercadolivre.com') || url.includes('meli.la')) return 'Mercado Livre';
+  if (url.includes('kabum.com.br')) return 'KaBuM!';
+  if (url.includes('terabyteshop.com.br')) return 'Terabyte';
+  if (url.includes('pichau.com.br')) return 'Pichau';
+  if (url.includes('amazon.com')) return 'Amazon';
+  return 'Loja Parceira';
+}
+
 app.post('/api/add-product', async (req, res) => {
   const { link, category, brand } = req.body;
   if (!link || !category) return res.status(400).json({ error: 'Link e Categoria são obrigatórios' });
@@ -149,15 +158,21 @@ app.post('/api/add-product', async (req, res) => {
     history.push({ month: months[5], price: price });
 
     // Build Product Object
+    const newOffer = {
+      store: detectStore(link),
+      price: price,
+      link: link,
+      lastUpdate: new Date().toISOString()
+    };
+
     const newProduct = {
       brand: finalBrand,
       name: data.title.substring(0, 120),
-      price: price,
+      price: price, // Current best price
       image: localImagePath,
-      link: link,
-      store: "Mercado Livre",
       score: 80, // Default
-      priceHistory: history
+      priceHistory: history,
+      offers: [newOffer]
     };
 
     // Real "Custo-Benefício" Score Calculation
@@ -175,25 +190,44 @@ app.post('/api/add-product', async (req, res) => {
       
       if (matchedSpec && matchedSpec.Benchmark) {
         const bench = parseInt(matchedSpec.Benchmark);
-        // GPUs are more expensive, CPUs have higher bench/price ratios
         const multiplier = category === 'gpu' ? 50 : 70;
         let calculatedScore = Math.round((bench / price) * multiplier);
-        
-        // Premium items are expensive but good, so they shouldn't have a low score
         if (bench > 30000) calculatedScore = Math.max(calculatedScore, 85);
         if (bench > 20000) calculatedScore = Math.max(calculatedScore, 75);
-        
         newProduct.score = Math.min(98, Math.max(40, calculatedScore));
-        newProduct.benchmark = bench; // Save real benchmark
+        newProduct.benchmark = bench;
       }
     } catch (e) {
       console.warn('[Admin API] Falha ao calcular score real:', e.message);
     }
 
-    // Update JSON
+    // Update JSON with Multi-Offer Logic
     const db = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
     if (!db[category]) db[category] = [];
-    db[category].push(newProduct);
+    
+    const normalizedNewName = newProduct.name.replace(/\s+/g, '').toLowerCase();
+    const existingIndex = db[category].findIndex(p => p.name.replace(/\s+/g, '').toLowerCase() === normalizedNewName);
+
+    if (existingIndex !== -1) {
+      console.log(`[Admin API] Produto existente encontrado. Adicionando nova oferta...`);
+      const existing = db[category][existingIndex];
+      if (!existing.offers) existing.offers = [{ store: existing.store || "Mercado Livre", price: existing.price, link: existing.link }];
+      
+      // Update or add offer
+      const offerIndex = existing.offers.findIndex(o => o.store === newOffer.store && o.link === newOffer.link);
+      if (offerIndex !== -1) {
+        existing.offers[offerIndex] = newOffer;
+      } else {
+        existing.offers.push(newOffer);
+      }
+      
+      // Update best price
+      existing.price = Math.min(...existing.offers.map(o => o.price));
+      existing.lastUpdate = new Date().toISOString();
+    } else {
+      db[category].push(newProduct);
+    }
+    
     fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2));
 
     console.log(`[Admin API] Produto adicionado com sucesso: ${newProduct.name}`);

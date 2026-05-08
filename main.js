@@ -239,6 +239,80 @@ function updateHeroStats() {
   });
 }
 
+// ========== INTERACTIVE PIXILA-STYLE EFFECTS ==========
+function initInteractiveEffects() {
+  if (window.innerWidth <= 768) return; // Disable on mobile
+
+  // 1. Custom Cursor
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  document.body.appendChild(cursor);
+
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function renderCursor() {
+    cursorX += (mouseX - cursorX) * 0.2;
+    cursorY += (mouseY - cursorY) * 0.2;
+    cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+    requestAnimationFrame(renderCursor);
+  }
+  requestAnimationFrame(renderCursor);
+
+  // 2. Hover states for cursor
+  // Use event delegation to handle dynamically added elements
+  document.body.addEventListener('mouseover', (e) => {
+    if (e.target.closest('a, button, input, select, .category-card, .deal-card')) {
+      cursor.classList.add('hovering');
+    }
+  });
+  document.body.addEventListener('mouseout', (e) => {
+    if (e.target.closest('a, button, input, select, .category-card, .deal-card')) {
+      cursor.classList.remove('hovering');
+    }
+  });
+
+  // 3. Magnetic Elements (Buttons)
+  const magneticEls = document.querySelectorAll('.btn-primary, .nav-cta, .footer-social');
+  magneticEls.forEach(el => {
+    el.classList.add('magnetic');
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const h = rect.width / 2;
+      const w = rect.height / 2;
+      const x = e.clientX - rect.left - h;
+      const y = e.clientY - rect.top - w;
+      el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = `translate(0px, 0px)`;
+    });
+  });
+
+  // 4. Tilt Effect for Cards
+  // Applying directly to elements might conflict with hover states, but CSS transition makes it smooth
+  const tiltEls = document.querySelectorAll('.category-card, .deal-card, .feature-card');
+  tiltEls.forEach(el => {
+    el.style.transition = 'transform 0.2s ease-out, border-color 0.3s';
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xPct = (x / rect.width - 0.5) * 2;
+      const yPct = (y / rect.height - 0.5) * 2;
+      el.style.transform = `perspective(1000px) rotateX(${yPct * -5}deg) rotateY(${xPct * 5}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+    });
+  });
+}
+
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   initParticles();
@@ -251,6 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   requestAnimationFrame(() => {
     initScrollAnimations();
     initCounters();
+    initInteractiveEffects();
   });
 });
 

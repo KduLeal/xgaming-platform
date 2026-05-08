@@ -433,3 +433,40 @@ section { position: relative; z-index: 1; }
   .cookie-banner, .adblock-banner { flex-direction: column; text-align: center; bottom: 0; left: 0; right: 0; border-radius: var(--radius-lg) var(--radius-lg) 0 0; padding: 1.5rem 1rem; }
   .cookie-banner .btn-primary, .adblock-banner .btn-primary { width: 100%; justify-content: center; }
 }
+
+/* ========== CUSTOM CURSOR & MAGNETIC EFFECTS ========== */
+body { cursor: none; }
+a, button, input, select, .category-card, .deal-card { cursor: none !important; }
+
+.custom-cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--cyan);
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s, border 0.3s;
+  will-change: transform;
+  mix-blend-mode: screen;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+}
+
+.custom-cursor.hovering {
+  width: 60px; height: 60px;
+  background: rgba(0, 240, 255, 0.05);
+  border: 1px solid var(--cyan);
+  box-shadow: none;
+  backdrop-filter: blur(2px);
+}
+
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  body, a, button, input, select, .category-card, .deal-card { cursor: auto !important; }
+  .custom-cursor { display: none !important; }
+}

@@ -435,8 +435,8 @@ section { position: relative; z-index: 1; }
 }
 
 /* ========== CUSTOM CURSOR & MAGNETIC EFFECTS ========== */
-body { cursor: none; }
-a, button, input, select, .category-card, .deal-card { cursor: none !important; }
+body { cursor: auto; }
+a, button, input, select, .category-card, .deal-card { cursor: pointer; }
 
 .custom-cursor {
   position: fixed;

@@ -142,6 +142,8 @@
   <script type="module">
     import './style.css';
     import productsData from './data/products.json';
+    import hardwareSpecs from './data/hardware-specs.json';
+    
     // Particles
     const canvas = document.getElementById('particles-canvas');
     if (canvas) {
@@ -194,6 +196,20 @@
       return 'brand-intel';
     }
 
+    function matchKey(productName, key) {
+      const normalizedKey = key.replace(/\s+/g, '').toLowerCase();
+      const normalizedName = productName.replace(/\s+/g, '').toLowerCase();
+      return normalizedName.includes(normalizedKey);
+    }
+
+    function getTechnicalSpecs(product) {
+      const dbCat = hardwareSpecs[product.category] || {};
+      for (const [key, specs] of Object.entries(dbCat)) {
+        if (matchKey(product.name, key)) return specs;
+      }
+      return null;
+    }
+
     function compare() {
       const v1 = document.getElementById('select-1').value;
       const v2 = document.getElementById('select-2').value;
@@ -203,6 +219,9 @@
       const g1 = allProducts.find(p => p.name === v1);
       const g2 = allProducts.find(p => p.name === v2);
       
+      const t1 = getTechnicalSpecs(g1);
+      const t2 = getTechnicalSpecs(g2);
+
       // Update slots with images
       document.querySelector('#slot-1 .comp-slot-icon').innerHTML = `<img src="${g1.image}" style="max-width:120px; max-height:80px; object-fit:contain; filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));" onerror="this.style.display='none'" />`;
       document.querySelector('#slot-2 .comp-slot-icon').innerHTML = `<img src="${g2.image}" style="max-width:120px; max-height:80px; object-fit:contain; filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));" onerror="this.style.display='none'" />`;
@@ -214,11 +233,25 @@
       const specs = [
         { label:'Preço à Vista', v1:`R$ ${g1.price.toLocaleString('pt-BR')}`, v2:`R$ ${g2.price.toLocaleString('pt-BR')}`, w: g1.price < g2.price ? 1 : g1.price > g2.price ? 2 : 0 }
       ];
-      if (g1.tdp || g2.tdp) specs.push({ label:'Consumo (TDP)', v1:g1.tdp ? `${g1.tdp}W` : '-', v2:g2.tdp ? `${g2.tdp}W` : '-', w: g1.tdp < g2.tdp ? 1 : g1.tdp > g2.tdp ? 2 : 0 });
+
+      // Add common tech specs if categories match
+      if (g1.category === g2.category && t1 && t2) {
+        const labels = Array.from(new Set([...Object.keys(t1), ...Object.keys(t2)]));
+        labels.forEach(l => {
+          if (l === 'TDP Padrão' || l === 'TDP (PBP)') return; // Handled separately
+          specs.push({ label: l, v1: t1[l] || '-', v2: t2[l] || '-', w: 0 });
+        });
+      }
+
+      if (g1.tdp || g2.tdp || (t1 && (t1['TDP Padrão']||t1['TDP (PBP)'])) || (t2 && (t2['TDP Padrão']||t2['TDP (PBP)']))) {
+        const tdp1 = g1.tdp || parseInt(t1?.['TDP Padrão'] || t1?.['TDP (PBP)'] || 0);
+        const tdp2 = g2.tdp || parseInt(t2?.['TDP Padrão'] || t2?.['TDP (PBP)'] || 0);
+        specs.push({ label:'Consumo (TDP)', v1:tdp1 ? `${tdp1}W` : '-', v2:tdp2 ? `${tdp2}W` : '-', w: (tdp1 > 0 && tdp1 < tdp2) ? 1 : (tdp2 > 0 && tdp2 < tdp1) ? 2 : 0 });
+      }
+
       if (g1.benchmark || g2.benchmark) specs.push({ label:'Pontuação Benchmark', v1:g1.benchmark ? g1.benchmark.toLocaleString('pt-BR') : '-', v2:g2.benchmark ? g2.benchmark.toLocaleString('pt-BR') : '-', w: (g1.benchmark||0) > (g2.benchmark||0) ? 1 : (g1.benchmark||0) < (g2.benchmark||0) ? 2 : 0 });
       if (g1.score || g2.score) specs.push({ label:'Score Custo-Benefício', v1:g1.score ? `${g1.score}/100` : '-', v2:g2.score ? `${g2.score}/100` : '-', w: (g1.score||0) > (g2.score||0) ? 1 : (g1.score||0) < (g2.score||0) ? 2 : 0 });
-      if (g1.freeShipping || g2.freeShipping) specs.push({ label:'Frete', v1:g1.freeShipping?'Grátis':'-', v2:g2.freeShipping?'Grátis':'-', w:0 });
-
+      
       container.innerHTML = `<div class="comp-results">
         <div class="comp-result-card"><div class="comp-result-name">${g1.name}</div>${specs.map(s=>`<div class="comp-spec-row"><span>${s.label}</span><span class="${s.w===1?'winner':''}">${s.v1}</span></div>`).join('')}
         <a href="/produto.html?name=${encodeURIComponent(g1.name)}" class="btn-primary" style="display:block;text-align:center;margin-top:2rem;">Ver Produto 1</a></div>

@@ -27,9 +27,10 @@ function getProductFromURL() {
       }
       
       let bench = found.benchmark;
-      if (!bench) {
-         bench = Math.floor(found.price * (catId === 'cpu' ? 4.2 : 2.8));
+      if (!bench && dbRef) {
+         bench = dbRef['Benchmark'] ? parseInt(dbRef['Benchmark']) : 0;
       }
+      if (!bench) bench = 0; // No more fake benchmarks
 
       return { ...found, category: catId, tdp, benchmark: bench };
     }

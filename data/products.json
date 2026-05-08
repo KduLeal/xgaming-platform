@@ -52,6 +52,41 @@
           "price": 22999
         }
       ]
+    },
+    {
+      "brand": "Intel",
+      "name": "Placa De Vídeo Asrock Intel Arc B580 Steel Legend ",
+      "price": 2647,
+      "image": "/images/products/gpu/placa-de-vdeo-asrock-intel-ar.jpg",
+      "link": "https://meli.la/1haWFbG",
+      "store": "Mercado Livre",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 3044
+        },
+        {
+          "month": "Jan/26",
+          "price": 3038
+        },
+        {
+          "month": "Fev/26",
+          "price": 2916
+        },
+        {
+          "month": "Mar/26",
+          "price": 2796
+        },
+        {
+          "month": "Abr/26",
+          "price": 2704
+        },
+        {
+          "month": "Mai/26",
+          "price": 2647
+        }
+      ]
     }
   ],
   "cpu": [

@@ -151,7 +151,7 @@ app.post('/api/add-product', async (req, res) => {
     // Build Product Object
     const newProduct = {
       brand: finalBrand,
-      name: data.title.substring(0, 50),
+      name: data.title.substring(0, 120),
       price: price,
       image: localImagePath,
       link: link,

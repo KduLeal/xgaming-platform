@@ -20,79 +20,43 @@
     },
     {
       "brand": "NVIDIA",
-      "name": "Placa de vídeo Nvidia Asus TUF Gaming GeForce RTX ",
+      "name": "Placa de vídeo Nvidia Asus TUF Gaming GeForce RTX 4090",
       "price": 22999,
       "image": "/images/products/gpu/placa-de-vdeo-nvidia-asus-tuf.jpg",
       "link": "https://meli.la/2nGD5rd",
       "store": "Mercado Livre",
       "score": 80,
       "priceHistory": [
-        {
-          "month": "Dez/25",
-          "price": 26449
-        },
-        {
-          "month": "Jan/26",
-          "price": 26393
-        },
-        {
-          "month": "Fev/26",
-          "price": 26269
-        },
-        {
-          "month": "Mar/26",
-          "price": 25018
-        },
-        {
-          "month": "Abr/26",
-          "price": 24215
-        },
-        {
-          "month": "Mai/26",
-          "price": 22999
-        }
+        { "month": "Dez/25", "price": 26449 },
+        { "month": "Jan/26", "price": 26393 },
+        { "month": "Fev/26", "price": 26269 },
+        { "month": "Mar/26", "price": 25018 },
+        { "month": "Abr/26", "price": 24215 },
+        { "month": "Mai/26", "price": 22999 }
       ]
     },
     {
       "brand": "Intel",
-      "name": "Placa De Vídeo Asrock Intel Arc B580 Steel Legend ",
+      "name": "Placa De Vídeo Asrock Intel Arc B580 Steel Legend OC",
       "price": 2647,
       "image": "/images/products/gpu/placa-de-vdeo-asrock-intel-ar.jpg",
       "link": "https://meli.la/1haWFbG",
       "store": "Mercado Livre",
       "score": 80,
       "priceHistory": [
-        {
-          "month": "Dez/25",
-          "price": 3044
-        },
-        {
-          "month": "Jan/26",
-          "price": 3038
-        },
-        {
-          "month": "Fev/26",
-          "price": 2916
-        },
-        {
-          "month": "Mar/26",
-          "price": 2796
-        },
-        {
-          "month": "Abr/26",
-          "price": 2704
-        },
-        {
-          "month": "Mai/26",
-          "price": 2647
-        }
+        { "month": "Dez/25", "price": 3044 },
+        { "month": "Jan/26", "price": 3038 },
+        { "month": "Fev/26", "price": 2916 },
+        { "month": "Mar/26", "price": 2796 },
+        { "month": "Abr/26", "price": 2704 },
+        { "month": "Mai/26", "price": 2647 }
       ]
     }
   ],
   "cpu": [
     {
       "brand": "AMD",
-      "name": "Processador Amd Ryzen 5 5600gt, 3.6ghz (4.6ghz Tur",
+      "name": "Processador Amd Ryzen 5 5600GT 3.6GHz (4.6GHz Turbo)",
       "price": 1140,
       "image": "/images/products/cpu/processador-amd-ryzen-5-5600gt.jpg",
       "link": "https://meli.la/2nJfoxP",

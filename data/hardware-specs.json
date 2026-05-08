@@ -40,7 +40,12 @@
     "GTX 1660 Super": { "Benchmark": "12700", "Arquitetura": "Turing", "CUDA Cores": "1408", "VRAM Base": "6GB GDDR6", "TDP Padrão": "125W", "Interface": "PCIe 3.0 x16" },
     "GTX 1660": { "Benchmark": "11600", "Arquitetura": "Turing", "CUDA Cores": "1408", "VRAM Base": "6GB GDDR5", "TDP Padrão": "120W", "Interface": "PCIe 3.0 x16" },
     "GTX 1650 Super": { "Benchmark": "9800", "Arquitetura": "Turing", "CUDA Cores": "1280", "VRAM Base": "4GB GDDR6", "TDP Padrão": "100W", "Interface": "PCIe 3.0 x16" },
-    "GTX 1650": { "Benchmark": "7800", "Arquitetura": "Turing", "CUDA Cores": "896", "VRAM Base": "4GB GDDR5/GDDR6", "TDP Padrão": "75W", "Interface": "PCIe 3.0 x16" }
+    "GTX 1650": { "Benchmark": "7800", "Arquitetura": "Turing", "CUDA Cores": "896", "VRAM Base": "4GB GDDR5/GDDR6", "TDP Padrão": "75W", "Interface": "PCIe 3.0 x16" },
+    "Arc B580": { "Benchmark": "19500", "Arquitetura": "Xe2 (Battlemage)", "Xe Cores": "20", "VRAM Base": "12GB GDDR6", "TDP Padrão": "190W", "Interface": "PCIe 4.0 x8" },
+    "Arc A770": { "Benchmark": "15200", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "32", "VRAM Base": "8GB/16GB GDDR6", "TDP Padrão": "225W", "Interface": "PCIe 4.0 x16" },
+    "Arc A750": { "Benchmark": "13800", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "28", "VRAM Base": "8GB GDDR6", "TDP Padrão": "225W", "Interface": "PCIe 4.0 x16" },
+    "Arc A580": { "Benchmark": "11900", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "24", "VRAM Base": "8GB GDDR6", "TDP Padrão": "185W", "Interface": "PCIe 4.0 x16" },
+    "Arc A380": { "Benchmark": "6500", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "8", "VRAM Base": "6GB GDDR6", "TDP Padrão": "75W", "Interface": "PCIe 4.0 x8" }
   },
   "cpu": {
     "Ryzen 9 9950X": { "Benchmark": "65000", "Socket": "AM5", "Cores / Threads": "16 / 32", "TDP (PBP)": "170W", "Gráficos": "Radeon Graphics" },

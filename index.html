@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="XGaming — Plataforma premium de comparação de hardware gamer. Compare GPUs, CPUs, placas-mãe e mais com preços em tempo real." />
+  <title>XGaming — Comparação de Hardware Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/categoria.html?cat=gpu" class="active">Placas de Vídeo</a>
+      <a href="/categoria.html?cat=cpu">Processadores</a>
+      <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+      <a href="/categoria.html?cat=ram">Memórias</a>
+      <a href="/categoria.html?cat=ssd">SSDs</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/sobre.html">Sobre</a>
+    </div>
+    <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-up">
+        <div class="hero-badge">🎯 Plataforma de Hardware #1 do Brasil</div>
+        <h1 class="hero-title">
+          Compare hardware com <span class="highlight">inteligência real</span>
+        </h1>
+        <p class="hero-subtitle">
+          Monitore preços em tempo real, analise benchmarks, compare custo-benefício entre lojas e encontre a melhor oportunidade para seu setup gamer.
+        </p>
+        <div class="hero-features">
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Preços em tempo real
+          </div>
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            Benchmarks integrados
+          </div>
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            31+ lojas comparadas
+          </div>
+          <div class="hero-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Histórico de preços
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="/categoria.html?cat=gpu" class="btn-primary">🔥 Explorar GPUs</a>
+          <a href="/comparador.html" class="btn-secondary">⚔️ Comparar Hardware</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-right">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Modelos Ativos</div>
+            <div class="stat-value" data-counter="580">0</div>
+            <div class="stat-desc">GPUs, CPUs e mais</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Lojas Monitoradas</div>
+            <div class="stat-value" data-counter="31">0</div>
+            <div class="stat-desc">comparadas por produto</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Categorias Ativas</div>
+            <div class="stat-value" data-counter="6">0</div>
+            <div class="stat-desc">experiência completa</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Última Sync</div>
+            <div class="stat-value" style="font-size:1.4rem;">⚡ Live</div>
+            <div class="stat-desc">atualização contínua</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <span class="section-tag">🏷️ Categorias</span>
+        <h2 class="section-title">Explore por categoria</h2>
+        <p class="section-subtitle">Navegue pelo catálogo completo de hardware com dados em tempo real de preços e performance.</p>
+      </div>
+      <div class="categories-grid" id="categories-grid"></div>
+    </div>
+  </section>
+
+  <!-- DEALS -->
+  <section id="deals">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <span class="section-tag">🔥 Ofertas em Destaque</span>
+        <h2 class="section-title">Melhores preços agora</h2>
+        <p class="section-subtitle">Os melhores custo-benefício encontrados hoje nas principais lojas do Brasil.</p>
+      </div>
+      <div class="deals-scroll" id="deals-scroll"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <span class="section-tag">✨ Por que XGaming?</span>
+        <h2 class="section-title">Inteligência para seu setup</h2>
+        <p class="section-subtitle">Ferramentas que vão além da comparação de preço.</p>
+      </div>
+      <div class="features-grid" id="features-grid"></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter-section">
+    <div class="section-container">
+      <div class="newsletter fade-up">
+        <span class="section-tag">📬 Newsletter</span>
+        <h2 class="section-title" style="margin-top:1rem;">Receba alertas de preço</h2>
+        <p class="section-subtitle">Seja notificado quando o hardware que você quer atingir o menor preço histórico.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="seu@email.com" required />
+          <button type="submit" class="btn-primary">Inscrever ⚡</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="section-container" style="padding-top:0;padding-bottom:0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="x">X</span>GAMING</div>
+          <p class="footer-desc">Aviso Legal: O XGaming é suportado por sua audiência. Quando você compra através de links em nosso site, podemos ganhar uma comissão de afiliado, sem custo extra para você.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social" aria-label="Discord">💬</a>
+            <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+          <a href="/categoria.html?cat=cpu">Processadores</a>
+          <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+          <a href="/categoria.html?cat=ram">Memórias RAM</a>
+          <a href="/categoria.html?cat=ssd">SSDs</a>
+        </div>
+        <div class="footer-column">
+          <h4>Ferramentas</h4>
+          <a href="/comparador.html">Comparador</a>
+          <a href="#">Ranking de Preço</a>
+          <a href="#">Alertas de Preço</a>
+        </div>
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <a href="/sobre.html">Sobre Nós</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 XGaming. Todos os direitos reservados.</span>
+        <span>Feito com 💜 para gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

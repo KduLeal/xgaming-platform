@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XGaming — Sobre</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .about-hero { padding-top: 120px; text-align: center; position: relative; z-index: 1;
+      background: radial-gradient(ellipse at 50% 30%, rgba(168,85,247,0.05) 0%, transparent 60%); }
+    .about-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem; }
+    .about-stat { text-align: center; }
+    .about-stat-value { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--cyan); }
+    .about-stat-label { font-size: 0.85rem; color: var(--text-2); margin-top: 0.5rem; }
+    .about-mission {
+      max-width: 800px; margin: 4rem auto; padding: 3rem;
+      border-radius: var(--radius-xl); background: var(--bg-card);
+      border: 1px solid var(--border-glass); backdrop-filter: blur(10px);
+    }
+    .about-mission h2 { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; margin-bottom: 1.5rem; }
+    .about-mission p { font-size: 0.95rem; color: var(--text-2); line-height: 1.8; margin-bottom: 1rem; }
+    .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .tech-card {
+      padding: 1.5rem; border-radius: var(--radius-lg); text-align: center;
+      background: var(--bg-glass); border: 1px solid var(--border-glass); transition: var(--transition);
+    }
+    .tech-card:hover { border-color: var(--border-glow); transform: translateY(-4px); }
+    .tech-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .tech-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .tech-desc { font-size: 0.75rem; color: var(--text-2); }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+      <a href="/categoria.html?cat=cpu">Processadores</a>
+      <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+      <a href="/categoria.html?cat=ram">Memórias</a>
+      <a href="/categoria.html?cat=ssd">SSDs</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/sobre.html" class="active">Sobre</a>
+    </div>
+    <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="about-hero">
+    <div class="section-container">
+      <span class="section-tag fade-up">🎮 Sobre Nós</span>
+      <h1 class="section-title fade-up" style="margin-top:1rem;">A plataforma #1 de hardware do Brasil</h1>
+      <p class="section-subtitle fade-up">A plataforma para quem busca o melhor do mercado.</p>
+      <div class="about-stats fade-up">
+        <div class="about-stat"><div class="about-stat-value" data-counter="67">0</div><div class="about-stat-label">Modelos catalogados</div></div>
+        <div class="about-stat"><div class="about-stat-value" style="font-size: 2.2rem;">As Melhores</div><div class="about-stat-label">lojas do Brasil</div></div>
+        <div class="about-stat"><div class="about-stat-value" data-counter="5">0</div><div class="about-stat-label">Categorias ativas</div></div>
+        <div class="about-stat"><div class="about-stat-value" style="font-size: 2.2rem;">Milhares</div><div class="about-stat-label">de gamers impactados</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-container">
+      <div class="about-mission fade-up">
+        <h2>🎯 Nossa Missão</h2>
+        <p>O XGaming nasceu da frustração de comparar preços de hardware em dezenas de lojas diferentes. Acreditamos que todo gamer merece acesso a informações claras, atualizadas e inteligentes para tomar a melhor decisão de compra.</p>
+        <p>Monitoramos preços em tempo real, integramos benchmarks de fontes confiáveis e calculamos o verdadeiro custo-benefício de cada produto. Tudo isso de forma gratuita e transparente.</p>
+      </div>
+
+      <div class="section-header fade-up">
+        <span class="section-tag">⚡ Funcionalidades</span>
+        <h2 class="section-title">O seu arsenal de compras</h2>
+      </div>
+      <div class="tech-grid fade-up">
+        <div class="tech-card"><div class="tech-icon">⚡</div><div class="tech-name">Preços em Tempo Real</div><div class="tech-desc">Monitoramento contínuo</div></div>
+        <div class="tech-card"><div class="tech-icon">⚔️</div><div class="tech-name">Comparador de Hardware</div><div class="tech-desc">Lado a lado em detalhes</div></div>
+        <div class="tech-card"><div class="tech-icon">🔥</div><div class="tech-name">Aviso de Promoções</div><div class="tech-desc">Análise de ofertas</div></div>
+        <div class="tech-card"><div class="tech-icon">📊</div><div class="tech-name">Histórico de Preços</div><div class="tech-desc">Gráficos precisos</div></div>
+        <div class="tech-card"><div class="tech-icon">🤖</div><div class="tech-name">Inteligência Real</div><div class="tech-desc">Cálculo de Custo-Benefício</div></div>
+        <div class="tech-card"><div class="tech-icon">🛡️</div><div class="tech-name">Lojas Confiáveis</div><div class="tech-desc">Apenas lojas oficiais</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="section-container" style="padding-top:0;padding-bottom:0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="x">X</span>GAMING</div>
+          <p class="footer-desc">Aviso Legal: O XGaming é suportado por sua audiência. Quando você compra através de links em nosso site, podemos ganhar uma comissão de afiliado, sem custo extra para você.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social" aria-label="Discord">💬</a>
+            <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+          <a href="/categoria.html?cat=cpu">Processadores</a>
+          <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+          <a href="/categoria.html?cat=ram">Memórias RAM</a>
+          <a href="/categoria.html?cat=ssd">SSDs</a>
+        </div>
+        <div class="footer-column">
+          <h4>Ferramentas</h4>
+          <a href="/comparador.html">Comparador</a>
+          <a href="#">Ranking de Preço</a>
+          <a href="#">Alertas de Preço</a>
+        </div>
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <a href="/sobre.html">Sobre Nós</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 XGaming. Todos os direitos reservados.</span>
+        <span>Feito com 💜 para gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import './style.css';
+    // Particles
+    const canvas = document.getElementById('particles-canvas');
+    if(canvas){const ctx=canvas.getContext('2d');const r=()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;};r();window.addEventListener('resize',r);let ps=[];for(let i=0;i<40;i++)ps.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,s:Math.random()*1.5+0.3,sx:(Math.random()-0.5)*0.2,sy:(Math.random()-0.5)*0.2,o:Math.random()*0.3+0.1,c:Math.random()>0.5?'0,240,255':'168,85,247'});function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.x+=p.sx;p.y+=p.sy;if(p.x<0||p.x>canvas.width)p.sx*=-1;if(p.y<0||p.y>canvas.height)p.sy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.s,0,Math.PI*2);ctx.fillStyle=`rgba(${p.c},${p.o})`;ctx.fill();});requestAnimationFrame(loop);}loop();}
+    // Navbar
+    const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar?.classList.toggle('scrolled',window.scrollY>50));document.getElementById('hamburger')?.addEventListener('click',()=>document.getElementById('nav-links')?.classList.toggle('open'));
+    // Animations
+    const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+    // Counters
+    document.querySelectorAll('[data-counter]').forEach(el=>{const obs2=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=parseInt(el.dataset.counter);let c=0;const inc=t/60;const timer=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t.toLocaleString('pt-BR');clearInterval(timer);}else el.textContent=Math.floor(c).toLocaleString('pt-BR');},16);obs2.unobserve(el);}});},{threshold:0.5});obs2.observe(el);});
+  </script>
+</body>
+</html>

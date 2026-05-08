@@ -1,0 +1,30 @@
+{
+  "name": "xgaming",
+  "version": "1.0.0",
+  "description": "XGaming — Plataforma Premium de Comparação de Hardware",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "admin": "node scraper/admin-server.mjs"
+  },
+  "keywords": [
+    "hardware",
+    "gaming",
+    "gpu",
+    "cpu"
+  ],
+  "author": "XGaming",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "puppeteer": "^24.43.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

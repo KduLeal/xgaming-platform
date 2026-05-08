@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="XGaming — Compare GPUs, CPUs, Placas-mãe e mais com preços em tempo real." />
+  <title>XGaming — Categoria</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/categoria.css" />
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+      <a href="/categoria.html?cat=cpu">Processadores</a>
+      <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+      <a href="/categoria.html?cat=ram">Memórias</a>
+      <a href="/categoria.html?cat=ssd">SSDs</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/sobre.html">Sobre</a>
+    </div>
+    <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- CATEGORY HERO -->
+  <section class="cat-hero" id="cat-hero">
+    <div class="section-container">
+      <nav class="breadcrumb" id="breadcrumb">
+        <a href="/">Home</a> <span>›</span> <span id="breadcrumb-cat">Categoria</span>
+      </nav>
+      <h1 class="cat-title fade-up" id="cat-title">Placas de Vídeo</h1>
+      <p class="cat-subtitle fade-up" id="cat-subtitle">Compare preços, benchmarks e custo-benefício das melhores GPUs do mercado.</p>
+
+      <!-- INFO CARDS -->
+      <div class="cat-info-cards fade-up" id="cat-info-cards"></div>
+    </div>
+  </section>
+
+  <!-- FILTERS + TABLE -->
+  <section class="cat-content">
+    <div class="section-container" style="padding-top:2rem;">
+      <div class="cat-toolbar fade-up">
+        <div class="cat-count" id="cat-count">Mostrando <strong>0</strong> de <strong>0</strong> modelos</div>
+        <div class="cat-filters">
+          <div class="filter-group">
+            <select id="filter-brand" class="filter-select">
+              <option value="">Todas as Marcas</option>
+            </select>
+          </div>
+          <input type="text" id="filter-search" class="filter-input" placeholder="🔍 Buscar modelo..." />
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="table" id="view-table">☰</button>
+            <button class="view-btn" data-view="grid" id="view-grid">⊞</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE VIEW -->
+      <div class="product-table-wrap fade-up" id="table-view">
+        <table class="product-table" id="product-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="name">Modelo <span class="sort-icon">⇅</span></th>
+              <th class="sortable" data-sort="price">Preço <span class="sort-icon">⇅</span></th>
+              <th class="sortable" data-sort="tdp">TDP <span class="sort-icon">⇅</span></th>
+              <th class="sortable" data-sort="benchmark">Benchmark <span class="sort-icon">⇅</span></th>
+              <th class="sortable" data-sort="score">Custo-benefício <span class="sort-icon">⇅</span></th>
+            </tr>
+          </thead>
+          <tbody id="product-tbody"></tbody>
+        </table>
+      </div>
+
+      <!-- GRID VIEW -->
+      <div class="product-grid hidden" id="grid-view"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="section-container" style="padding-top:0;padding-bottom:0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="x">X</span>GAMING</div>
+          <p class="footer-desc">Aviso Legal: O XGaming é suportado por sua audiência. Quando você compra através de links em nosso site, podemos ganhar uma comissão de afiliado, sem custo extra para você.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social" aria-label="Discord">💬</a>
+            <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+          <a href="/categoria.html?cat=cpu">Processadores</a>
+          <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+          <a href="/categoria.html?cat=ram">Memórias RAM</a>
+          <a href="/categoria.html?cat=ssd">SSDs</a>
+        </div>
+        <div class="footer-column">
+          <h4>Ferramentas</h4>
+          <a href="/comparador.html">Comparador</a>
+          <a href="#">Ranking de Preço</a>
+          <a href="#">Alertas de Preço</a>
+        </div>
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <a href="/sobre.html">Sobre Nós</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 XGaming. Todos os direitos reservados.</span>
+        <span>Feito com 💜 para gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/categoria.js"></script>
+</body>
+</html>

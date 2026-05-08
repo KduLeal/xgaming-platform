@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XGaming — Comparador</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .comp-hero { padding-top: 120px; position: relative; z-index: 1; }
+    .comp-selector { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
+    .comp-slot {
+      flex: 1; min-width: 280px; padding: 2rem; border-radius: var(--radius-lg);
+      background: var(--bg-card); border: 2px dashed var(--border-glass);
+      text-align: center; transition: var(--transition); cursor: pointer;
+    }
+    .comp-slot:hover { border-color: var(--cyan); }
+    .comp-slot.filled { border-style: solid; border-color: var(--border-glow); }
+    .comp-slot-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .comp-slot-label { color: var(--text-2); font-size: 0.9rem; }
+    .comp-slot select {
+      width: 100%; margin-top: 1rem; padding: 10px; border-radius: var(--radius-md);
+      background: var(--bg-secondary); border: 1px solid var(--border-glass);
+      color: var(--text-1); font-size: 0.85rem; outline: none;
+    }
+    .comp-slot select option { background: var(--bg-secondary); }
+    .comp-results { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .comp-result-card {
+      flex: 1; min-width: 280px; padding: 2rem; border-radius: var(--radius-lg);
+      background: var(--bg-card); border: 1px solid var(--border-glass); backdrop-filter: blur(10px);
+    }
+    .comp-result-name { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center; }
+    .comp-spec-row { display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--border-glass); font-size: 0.85rem; }
+    .comp-spec-row span:first-child { color: var(--text-2); }
+    .comp-spec-row span:last-child { font-weight: 600; }
+    .comp-spec-row .winner { color: var(--green); }
+    .comp-btn { margin-top: 2rem; text-align: center; }
+    .comp-empty { text-align: center; padding: 4rem; color: var(--text-2); font-size: 1.1rem; }
+    @media(max-width:768px) { .comp-selector, .comp-results { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+      <a href="/categoria.html?cat=cpu">Processadores</a>
+      <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+      <a href="/categoria.html?cat=ram">Memórias</a>
+      <a href="/categoria.html?cat=ssd">SSDs</a>
+      <a href="/comparador.html" class="active">Comparador</a>
+      <a href="/sobre.html">Sobre</a>
+    </div>
+    <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="comp-hero">
+    <div class="section-container">
+      <div class="section-header fade-up">
+        <span class="section-tag">⚔️ Comparador</span>
+        <h1 class="section-title">Compare lado a lado</h1>
+        <p class="section-subtitle">Selecione dois produtos para uma comparação visual completa.</p>
+      </div>
+
+      <div class="comp-selector fade-up">
+        <div class="comp-slot" id="slot-1">
+          <div class="comp-slot-icon">🎮</div>
+          <div class="comp-slot-label">Produto 1</div>
+          <select id="select-1">
+            <option value="">Selecionar GPU...</option>
+            <option value="rtx4060ti">RTX 4060 Ti 8GB</option>
+            <option value="rx7600xt">RX 7600 XT 16GB</option>
+            <option value="rtx4070s">RTX 4070 Super</option>
+            <option value="rx7800xt">RX 7800 XT</option>
+            <option value="rtx3050">RTX 3050 6GB</option>
+            <option value="rx6600">RX 6600 8GB</option>
+          </select>
+        </div>
+        <div class="comp-slot" id="slot-2">
+          <div class="comp-slot-icon">🎮</div>
+          <div class="comp-slot-label">Produto 2</div>
+          <select id="select-2">
+            <option value="">Selecionar GPU...</option>
+            <option value="rtx4060ti">RTX 4060 Ti 8GB</option>
+            <option value="rx7600xt">RX 7600 XT 16GB</option>
+            <option value="rtx4070s">RTX 4070 Super</option>
+            <option value="rx7800xt">RX 7800 XT</option>
+            <option value="rtx3050">RTX 3050 6GB</option>
+            <option value="rx6600">RX 6600 8GB</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="comp-results"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="section-container" style="padding-top:0;padding-bottom:0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="x">X</span>GAMING</div>
+          <p class="footer-desc">Aviso Legal: O XGaming é suportado por sua audiência. Quando você compra através de links em nosso site, podemos ganhar uma comissão de afiliado, sem custo extra para você.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social" aria-label="Discord">💬</a>
+            <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+          <a href="/categoria.html?cat=cpu">Processadores</a>
+          <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+          <a href="/categoria.html?cat=ram">Memórias RAM</a>
+          <a href="/categoria.html?cat=ssd">SSDs</a>
+        </div>
+        <div class="footer-column">
+          <h4>Ferramentas</h4>
+          <a href="/comparador.html">Comparador</a>
+          <a href="#">Ranking de Preço</a>
+          <a href="#">Alertas de Preço</a>
+        </div>
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <a href="/sobre.html">Sobre Nós</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 XGaming. Todos os direitos reservados.</span>
+        <span>Feito com 💜 para gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import './style.css';
+    import productsData from './data/products.json';
+    // Particles
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+      resize(); window.addEventListener('resize', resize);
+      let ps = [];
+      for(let i=0;i<40;i++) ps.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,s:Math.random()*1.5+0.3,sx:(Math.random()-0.5)*0.2,sy:(Math.random()-0.5)*0.2,o:Math.random()*0.3+0.1,c:Math.random()>0.5?'0,240,255':'168,85,247'});
+      function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);ps.forEach(p=>{p.x+=p.sx;p.y+=p.sy;if(p.x<0||p.x>canvas.width)p.sx*=-1;if(p.y<0||p.y>canvas.height)p.sy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.s,0,Math.PI*2);ctx.fillStyle=`rgba(${p.c},${p.o})`;ctx.fill();});requestAnimationFrame(loop);}
+      loop();
+    }
+    // Navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar?.classList.toggle('scrolled', window.scrollY > 50));
+    document.getElementById('hamburger')?.addEventListener('click', () => document.getElementById('nav-links')?.classList.toggle('open'));
+    // Animations
+    const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // Comparator data
+    const allProducts = [];
+    const categories = {
+      gpu: 'Placas de Vídeo', cpu: 'Processadores', mobo: 'Placas-mãe',
+      ram: 'Memórias', ssd: 'SSDs'
+    };
+    for (const [cat, items] of Object.entries(productsData)) {
+      items.forEach(i => allProducts.push({...i, category: cat}));
+    }
+
+    function populateSelects() {
+      const s1 = document.getElementById('select-1');
+      const s2 = document.getElementById('select-2');
+      let html = '<option value="">Selecionar produto...</option>';
+      for (const cat of Object.keys(categories)) {
+        const catItems = allProducts.filter(p => p.category === cat);
+        if (catItems.length === 0) continue;
+        html += `<optgroup label="${categories[cat]}">`;
+        catItems.forEach(p => { html += `<option value="${p.name}">${p.name}</option>`; });
+        html += `</optgroup>`;
+      }
+      if (s1) s1.innerHTML = html;
+      if (s2) s2.innerHTML = html;
+    }
+    populateSelects();
+
+    function getBrandClass(brand) {
+      const b = brand.toLowerCase();
+      if (['nvidia','corsair','samsung','lg','wd','crucial'].includes(b)) return 'brand-nvidia';
+      if (['amd','g.skill','aoc'].includes(b)) return 'brand-amd';
+      return 'brand-intel';
+    }
+
+    function compare() {
+      const v1 = document.getElementById('select-1').value;
+      const v2 = document.getElementById('select-2').value;
+      const container = document.getElementById('comp-results');
+      if (!v1 || !v2) { container.innerHTML = '<div class="comp-empty">Selecione dois produtos para comparar.</div>'; return; }
+      if (v1 === v2) { container.innerHTML = '<div class="comp-empty">Selecione produtos diferentes.</div>'; return; }
+      const g1 = allProducts.find(p => p.name === v1);
+      const g2 = allProducts.find(p => p.name === v2);
+      
+      // Update slots with images
+      document.querySelector('#slot-1 .comp-slot-icon').innerHTML = `<img src="${g1.image}" style="max-width:120px; max-height:80px; object-fit:contain; filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));" onerror="this.style.display='none'" />`;
+      document.querySelector('#slot-2 .comp-slot-icon').innerHTML = `<img src="${g2.image}" style="max-width:120px; max-height:80px; object-fit:contain; filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));" onerror="this.style.display='none'" />`;
+      document.querySelector('#slot-1 .comp-slot-label').innerHTML = `<span class="brand-tag ${getBrandClass(g1.brand)}" style="padding:2px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">${g1.brand}</span>`;
+      document.querySelector('#slot-2 .comp-slot-label').innerHTML = `<span class="brand-tag ${getBrandClass(g2.brand)}" style="padding:2px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">${g2.brand}</span>`;
+      document.getElementById('slot-1').classList.add('filled');
+      document.getElementById('slot-2').classList.add('filled');
+
+      const specs = [
+        { label:'Preço à Vista', v1:`R$ ${g1.price.toLocaleString('pt-BR')}`, v2:`R$ ${g2.price.toLocaleString('pt-BR')}`, w: g1.price < g2.price ? 1 : g1.price > g2.price ? 2 : 0 }
+      ];
+      if (g1.tdp || g2.tdp) specs.push({ label:'Consumo (TDP)', v1:g1.tdp ? `${g1.tdp}W` : '-', v2:g2.tdp ? `${g2.tdp}W` : '-', w: g1.tdp < g2.tdp ? 1 : g1.tdp > g2.tdp ? 2 : 0 });
+      if (g1.benchmark || g2.benchmark) specs.push({ label:'Pontuação Benchmark', v1:g1.benchmark ? g1.benchmark.toLocaleString('pt-BR') : '-', v2:g2.benchmark ? g2.benchmark.toLocaleString('pt-BR') : '-', w: (g1.benchmark||0) > (g2.benchmark||0) ? 1 : (g1.benchmark||0) < (g2.benchmark||0) ? 2 : 0 });
+      if (g1.score || g2.score) specs.push({ label:'Score Custo-Benefício', v1:g1.score ? `${g1.score}/100` : '-', v2:g2.score ? `${g2.score}/100` : '-', w: (g1.score||0) > (g2.score||0) ? 1 : (g1.score||0) < (g2.score||0) ? 2 : 0 });
+      if (g1.freeShipping || g2.freeShipping) specs.push({ label:'Frete', v1:g1.freeShipping?'Grátis':'-', v2:g2.freeShipping?'Grátis':'-', w:0 });
+
+      container.innerHTML = `<div class="comp-results">
+        <div class="comp-result-card"><div class="comp-result-name">${g1.name}</div>${specs.map(s=>`<div class="comp-spec-row"><span>${s.label}</span><span class="${s.w===1?'winner':''}">${s.v1}</span></div>`).join('')}
+        <a href="/produto.html?name=${encodeURIComponent(g1.name)}" class="btn-primary" style="display:block;text-align:center;margin-top:2rem;">Ver Produto 1</a></div>
+        <div class="comp-result-card"><div class="comp-result-name">${g2.name}</div>${specs.map(s=>`<div class="comp-spec-row"><span>${s.label}</span><span class="${s.w===2?'winner':''}">${s.v2}</span></div>`).join('')}
+        <a href="/produto.html?name=${encodeURIComponent(g2.name)}" class="btn-primary" style="display:block;text-align:center;margin-top:2rem;">Ver Produto 2</a></div>
+      </div>`;
+    }
+    document.getElementById('select-1').addEventListener('change', compare);
+    document.getElementById('select-2').addEventListener('change', compare);
+  </script>
+</body>
+</html>

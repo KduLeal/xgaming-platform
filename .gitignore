@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment & Secrets
+.env
+.env.local
+data/ml-token.json
+
+# Build
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

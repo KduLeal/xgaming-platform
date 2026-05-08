@@ -1,0 +1,32 @@
+{
+  "gpu": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  },
+  "cpu": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  },
+  "mobo": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  },
+  "ram": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  },
+  "ssd": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  },
+  "monitor": {
+    "total": 0,
+    "brands": 0,
+    "brandList": []
+  }
+}

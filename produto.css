@@ -1,0 +1,112 @@
+/* ========== PRODUCT PAGE ========== */
+.prod-hero { padding-top: 100px; position: relative; z-index: 1;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,240,255,0.04) 0%, transparent 60%); }
+.breadcrumb { display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-3); margin-bottom:1.5rem; }
+.breadcrumb a { color:var(--text-2); transition:var(--transition); }
+.breadcrumb a:hover { color:var(--cyan); }
+.prod-title { font-size: clamp(1.8rem,3.5vw,2.5rem); margin-bottom:0.5rem; }
+.prod-tagline { font-size:1rem; color:var(--text-2); margin-bottom:2rem; font-family:'Inter',sans-serif; }
+
+.prod-hero-content { display:flex; align-items:center; gap:2rem; margin-top:1rem; margin-bottom:2rem; }
+.prod-hero-image-wrapper { width:150px; height:150px; flex-shrink:0; background:var(--bg-card); border:1px solid var(--border-glass); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1rem; }
+#prod-hero-img { max-width:100%; max-height:100%; object-fit:contain; filter:drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
+.prod-hero-info { flex:1; }
+
+.prod-price-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+.prod-price-card {
+  padding:1.5rem; border-radius:var(--radius-lg);
+  background:var(--bg-card); border:1px solid var(--border-glass);
+  backdrop-filter:blur(10px); transition:var(--transition);
+}
+.prod-price-card:hover { border-color:var(--border-glow); transform:translateY(-4px); }
+.prod-price-card.highlight-card { border-color:rgba(0,240,255,0.2); background:rgba(0,240,255,0.03); }
+.prod-price-label { font-size:0.7rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--cyan); font-weight:600; margin-bottom:0.5rem; }
+.prod-price-value { font-family:'Orbitron',sans-serif; font-size:1.8rem; font-weight:800; margin-bottom:0.25rem; }
+.prod-price-value.green { color:var(--green); }
+.prod-price-value.cyan { color:var(--cyan); }
+.prod-price-store { font-size:0.8rem; color:var(--text-2); }
+.prod-price-store strong { color:var(--text-1); }
+
+.prod-grid { display:grid; grid-template-columns:1fr 340px; gap:2rem; }
+.prod-section-card {
+  padding:2rem; border-radius:var(--radius-lg);
+  background:var(--bg-card); border:1px solid var(--border-glass);
+  backdrop-filter:blur(10px); margin-bottom:1.5rem;
+}
+.prod-section-title { font-size:1.1rem; font-weight:700; margin-bottom:1rem; font-family:'Orbitron',sans-serif; }
+.prod-section-card h3 { font-size:1rem; font-weight:600; margin-bottom:0.75rem; font-family:'Inter',sans-serif; }
+.prod-section-card p { font-size:0.9rem; color:var(--text-2); line-height:1.7; }
+.green { color:var(--green); }
+
+.specs-table { width:100%; border-collapse:collapse; }
+.specs-table td { padding:0.75rem 1rem; font-size:0.85rem; border-bottom:1px solid var(--border-glass); }
+.specs-table td:first-child { color:var(--text-2); width:40%; }
+.specs-table td:last-child { color:var(--text-1); font-weight:500; }
+.specs-table tr:hover { background:rgba(0,240,255,0.02); }
+
+.chart-placeholder { padding:1rem 0; }
+
+.prod-sidebar-card {
+  padding:1.5rem; border-radius:var(--radius-lg);
+  background:var(--bg-card); border:1px solid var(--border-glass);
+  backdrop-filter:blur(10px); margin-bottom:1rem; text-align:center;
+}
+.prod-img-placeholder {
+  width:100%; height:200px; display:flex; align-items:center; justify-content:center;
+  font-size:4rem; background:var(--bg-glass); border-radius:var(--radius-md); margin-bottom:1rem;
+}
+.prod-sidebar-name { font-weight:600; margin-bottom:0.25rem; }
+.prod-sidebar-price { font-family:'Orbitron',sans-serif; font-size:1.2rem; font-weight:700; margin-bottom:0.25rem; }
+.prod-sidebar-store { font-size:0.8rem; color:var(--text-2); }
+.prod-sidebar-title { font-family:'Orbitron',sans-serif; font-size:0.85rem; text-align:left; margin-bottom:1rem; }
+.quick-spec {
+  display:flex; justify-content:space-between; padding:0.5rem 0;
+  border-bottom:1px solid var(--border-glass); font-size:0.85rem;
+}
+.quick-spec span { color:var(--text-2); }
+.quick-spec strong { color:var(--text-1); }
+
+/* ========== HERO BRAND TAG ========== */
+.prod-hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.prod-hero-header .brand-tag { font-size:0.7rem; padding:4px 12px; border-radius:4px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.brand-nvidia { background:rgba(118,185,0,0.15); color:#76b900; border:1px solid rgba(118,185,0,0.3); }
+.brand-amd { background:rgba(237,28,36,0.15); color:#ed1c24; border:1px solid rgba(237,28,36,0.3); }
+.brand-intel { background:rgba(0,113,197,0.15); color:#0071c5; border:1px solid rgba(0,113,197,0.3); }
+
+/* ========== SIDEBAR IMAGE ========== */
+.prod-sidebar-img {
+  width:100%; max-height:220px; object-fit:contain;
+  background:var(--bg-glass); border-radius:var(--radius-md);
+  padding:1rem; margin-bottom:1rem;
+}
+
+/* ========== SIMILAR PRODUCTS ========== */
+.similar-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:1rem; }
+.similar-card {
+  display:flex; flex-direction:column; padding:1rem;
+  border-radius:var(--radius-md); background:var(--bg-glass);
+  border:1px solid var(--border-glass); transition:var(--transition);
+  text-decoration:none; color:inherit;
+}
+.similar-card:hover { border-color:var(--border-glow); transform:translateY(-4px); box-shadow:var(--shadow-glow); }
+.similar-img { width:100%; height:100px; object-fit:contain; margin-bottom:0.75rem; border-radius:4px; }
+.similar-card .brand-tag { font-size:0.6rem; padding:2px 8px; margin-bottom:0.5rem; width:fit-content; }
+.similar-name { font-size:0.8rem; font-weight:600; line-height:1.3; margin-bottom:0.5rem; color:var(--text-1); }
+.similar-price { font-family:'Orbitron',sans-serif; font-size:0.9rem; font-weight:700; color:var(--green); margin-bottom:0.25rem; }
+.similar-score { font-size:0.75rem; font-weight:600; }
+
+/* ========== UTILITY COLORS ========== */
+.orange { color:#f0883e; }
+.red { color:#f85149; }
+.cyan { color:var(--cyan); }
+
+@media(max-width:1024px) { .prod-grid { grid-template-columns:1fr; } }
+@media(max-width:768px) {
+  .prod-price-cards { grid-template-columns:1fr; }
+  .similar-grid { grid-template-columns:repeat(2,1fr); }
+}

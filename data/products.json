@@ -1,0 +1,36 @@
+{
+  "gpu": [
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Vídeo Msi Rtx5060 Gaming Trio Oc 8gb Gddr",
+      "price": 3099,
+      "image": "/images/products/gpu/placa-de-vdeo-msi-rtx5060-gam.jpg",
+      "link": "https://meli.la/23TmAzT",
+      "store": "Mercado Livre",
+      "score": 80
+    },
+    {
+      "brand": "Intel",
+      "name": "Placa De Vídeo Asrock Intel Arc B580 Steel Legend ",
+      "price": 2647,
+      "image": "/images/products/gpu/placa-de-vdeo-asrock-intel-ar.jpg",
+      "link": "https://meli.la/1haWFbG",
+      "store": "Mercado Livre",
+      "score": 80
+    }
+  ],
+  "cpu": [
+    {
+      "brand": "AMD",
+      "name": "Processador Amd Ryzen 5 5600gt, 3.6ghz (4.6ghz Tur",
+      "price": 1140,
+      "image": "/images/products/cpu/processador-amd-ryzen-5-5600gt.jpg",
+      "link": "https://meli.la/2nJfoxP",
+      "store": "Mercado Livre",
+      "score": 80
+    }
+  ],
+  "mobo": [],
+  "ram": [],
+  "ssd": []
+}

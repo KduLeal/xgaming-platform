@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>XGaming — Painel Admin</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .admin-container { max-width: 600px; margin: 100px auto; padding: 2rem; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); backdrop-filter: blur(10px); }
+    .admin-header { margin-bottom: 2rem; text-align: center; }
+    .admin-header h1 { font-family: 'Orbitron', sans-serif; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .admin-header p { color: var(--text-2); font-size: 0.9rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--text-2); }
+    .form-group input, .form-group select { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-glass); background: rgba(0,0,0,0.2); color: var(--text-1); font-size: 1rem; outline: none; transition: 0.3s; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,0.2); }
+    .btn-submit { width: 100%; padding: 14px; font-size: 1.1rem; border: none; cursor: pointer; }
+    #status-msg { margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none; text-align: center; font-weight: bold; }
+    .success { background: rgba(0, 255, 128, 0.1); border: 1px solid var(--green); color: var(--green); }
+    .error { background: rgba(255, 60, 60, 0.1); border: 1px solid var(--red); color: var(--red); }
+    .loading-spinner { display: inline-block; width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 1s ease-in-out infinite; vertical-align: middle; margin-right: 10px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links">
+      <a href="/">← Voltar ao Site</a>
+    </div>
+  </nav>
+
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Painel de Controle</h1>
+      <p>Adicione novos produtos com link de afiliado. O robô coletará os dados automaticamente.</p>
+    </div>
+
+    <form id="admin-form">
+      <div class="form-group">
+        <label for="link">Link do Produto (Normal ou Afiliado sec/)</label>
+        <input type="url" id="link" placeholder="https://mercadolivre.com/sec/..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Categoria</label>
+        <select id="category" required>
+          <option value="gpu">Placa de Vídeo (GPU)</option>
+          <option value="cpu">Processador (CPU)</option>
+          <option value="mobo">Placa-mãe</option>
+          <option value="ram">Memória RAM</option>
+          <option value="ssd">SSD</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="brand">Marca (Opcional, tenta descobrir automático)</label>
+        <input type="text" id="brand" placeholder="Ex: NVIDIA, AMD, Corsair...">
+      </div>
+
+      <button type="submit" class="btn-primary btn-submit" id="submit-btn">Adicionar Produto</button>
+    </form>
+
+    <div id="status-msg"></div>
+  </div>
+
+  <script>
+    document.getElementById('admin-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const msg = document.getElementById('status-msg');
+      const link = document.getElementById('link').value;
+      const category = document.getElementById('category').value;
+      const brand = document.getElementById('brand').value;
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading-spinner"></span> Coletando dados (Pode levar 15s)...';
+      msg.style.display = 'none';
+      msg.className = '';
+
+      try {
+        const res = await fetch('http://localhost:3002/api/add-product', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ link, category, brand })
+        });
+        
+        const data = await res.json();
+        
+        if (res.ok) {
+          msg.textContent = '✅ Sucesso! Produto adicionado ao products.json.';
+          msg.classList.add('success');
+          document.getElementById('admin-form').reset();
+        } else {
+          msg.textContent = '❌ Erro: ' + (data.error || 'Falha ao processar produto.');
+          msg.classList.add('error');
+        }
+      } catch (err) {
+        msg.textContent = '❌ Erro de Conexão: O Admin Server (porta 3002) está rodando?';
+        msg.classList.add('error');
+      } finally {
+        msg.style.display = 'block';
+        btn.disabled = false;
+        btn.innerHTML = 'Adicionar Produto';
+      }
+    });
+  </script>
+</body>
+</html>

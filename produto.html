@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XGaming — Produto</title>
+  <meta name="description" content="Compare preços, benchmarks e especificações completas do produto. Encontre a melhor oferta." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/produto.css" />
+</head>
+<body>
+  <canvas id="particles-canvas"></canvas>
+  <nav class="navbar" id="navbar">
+    <a href="/" class="nav-logo"><span class="x">X</span><span class="gaming">GAMING</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+      <a href="/categoria.html?cat=cpu">Processadores</a>
+      <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+      <a href="/categoria.html?cat=ram">Memórias</a>
+      <a href="/categoria.html?cat=ssd">SSDs</a>
+      <a href="/comparador.html">Comparador</a>
+      <a href="/sobre.html">Sobre</a>
+    </div>
+    <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="prod-hero">
+    <div class="section-container">
+      <nav class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/categoria.html?cat=gpu" id="breadcrumb-cat-link">Produtos</a> <span>›</span>
+        <span id="prod-breadcrumb">Carregando...</span>
+      </nav>
+      <div class="prod-hero-content">
+        <div class="prod-hero-image-wrapper fade-right">
+          <img id="prod-hero-img" src="" alt="Produto" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div class="prod-hero-info">
+          <div class="prod-hero-header">
+            <span class="brand-tag" id="prod-brand-tag"></span>
+            <h1 class="prod-title fade-up" id="prod-title">Carregando...</h1>
+          </div>
+          <p class="prod-tagline fade-up">Menor Preço, Histórico e Análise Completa</p>
+        </div>
+      </div>
+
+      <div class="prod-price-cards fade-up">
+        <div class="prod-price-card">
+          <div class="prod-price-label">💰 Menor Preço à Vista</div>
+          <div class="prod-price-value green" id="prod-price">-</div>
+          <div class="prod-price-store" id="prod-price-store">Carregando...</div>
+        </div>
+        <div class="prod-price-card highlight-card">
+          <div class="prod-price-label">⚡ Custo-Benefício</div>
+          <div class="prod-price-value cyan" id="prod-score">-</div>
+          <div class="prod-price-store" id="prod-score-desc">-</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prod-details">
+    <div class="section-container" style="padding-top:2rem;">
+      <div class="prod-grid">
+        <div class="prod-main">
+          <div class="prod-section-card fade-up">
+            <h2 class="prod-section-title">📊 Monitor de Preço</h2>
+            <h3>Resumo rápido de preço e valor</h3>
+            <p id="prod-price-desc">Carregando informações do produto...</p>
+          </div>
+          <div class="prod-section-card fade-up">
+            <h2 class="prod-section-title">📈 Histórico de Preço</h2>
+            <div class="chart-placeholder">
+              <canvas id="price-chart" height="250"></canvas>
+            </div>
+          </div>
+          <div class="prod-section-card fade-up">
+            <h2 class="prod-section-title">🔧 Especificações Técnicas</h2>
+            <table class="specs-table">
+              <tbody id="specs-table-body">
+                <tr><td colspan="2" style="text-align:center;color:var(--text-3);">Carregando...</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prod-section-card fade-up">
+            <h2 class="prod-section-title">🔗 Produtos Similares</h2>
+            <div class="similar-grid" id="similar-products">
+              <!-- Dynamic similar products -->
+            </div>
+          </div>
+        </div>
+        <div class="prod-sidebar">
+          <div class="prod-sidebar-card fade-right">
+            <img class="prod-sidebar-img" id="prod-sidebar-img" src="" alt="Produto" loading="lazy" onerror="this.style.display='none'" />
+            <div class="prod-sidebar-name" id="prod-sidebar-name">-</div>
+            <div class="prod-sidebar-price green" id="prod-sidebar-price">-</div>
+            <div class="prod-sidebar-store" id="prod-sidebar-store">-</div>
+            <a href="#" class="btn-primary" id="prod-buy-link" style="width:100%;text-align:center;display:block;margin-top:1rem;">Ver Oferta →</a>
+          </div>
+          <div class="prod-sidebar-card fade-right">
+            <h4 class="prod-sidebar-title">⚡ Specs Rápidas</h4>
+            <div id="quick-specs">
+              <!-- Dynamic quick specs -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="section-container" style="padding-top:0;padding-bottom:0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="x">X</span>GAMING</div>
+          <p class="footer-desc">Aviso Legal: O XGaming é suportado por sua audiência. Quando você compra através de links em nosso site, podemos ganhar uma comissão de afiliado, sem custo extra para você.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer-social" aria-label="Discord">💬</a>
+            <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+            <a href="#" class="footer-social" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+          <a href="/categoria.html?cat=cpu">Processadores</a>
+          <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+          <a href="/categoria.html?cat=ram">Memórias RAM</a>
+          <a href="/categoria.html?cat=ssd">SSDs</a>
+        </div>
+        <div class="footer-column">
+          <h4>Ferramentas</h4>
+          <a href="/comparador.html">Comparador</a>
+          <a href="#">Ranking de Preço</a>
+          <a href="#">Alertas de Preço</a>
+        </div>
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <a href="/sobre.html">Sobre Nós</a>
+          <a href="/contato.html">Contato</a>
+          <a href="/privacidade.html">Privacidade</a>
+          <a href="/termos.html">Termos</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 XGaming. Todos os direitos reservados.</span>
+        <span>Feito com 💜 para gamers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script type="module" src="/produto.js"></script>
+</body>
+</html>

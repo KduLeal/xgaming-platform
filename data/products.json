@@ -1266,9 +1266,9 @@
     {
       "brand": "Intel",
       "name": "Processador Intel Core I5 14600k Lga1700 Bx8071514600k",
-      "price": 2632,
+      "price": 2032,
       "image": "/images/products/cpu/processador-intel-core-i5-1460.jpg",
-      "score": 80,
+      "score": 99,
       "priceHistory": [
         {
           "month": "Dez/25",
@@ -1292,17 +1292,18 @@
         },
         {
           "month": "Mai/26",
-          "price": 2632
+          "price": 2032
         }
       ],
       "offers": [
         {
           "store": "Mercado Livre",
-          "price": 2632,
+          "price": 2032,
           "link": "https://meli.la/171rVg9",
           "lastUpdate": "2026-05-14T03:15:58.630Z"
         }
-      ]
+      ],
+      "benchmark": 39500
     },
     {
       "brand": "Intel",

@@ -804,7 +804,7 @@
       "name": "Placa de Vídeo Gamer Aitek NVIDIA GTX750 TI DELTA-GTX750TI-4G 4GB GDDR5 Full HD",
       "price": 619,
       "image": "/images/products/gpu/placa-de-vdeo-gamer-aitek-nvi.jpg",
-      "score": 80,
+      "score": 89,
       "priceHistory": [
         {
           "month": "Dez/25",
@@ -838,7 +838,8 @@
           "link": "https://meli.la/13cgwku",
           "lastUpdate": "2026-05-14T02:25:18.495Z"
         }
-      ]
+      ],
+      "benchmark": 3720
     }
   ],
   "cpu": [],

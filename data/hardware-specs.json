@@ -58,7 +58,8 @@
     "Arc A770": { "Benchmark": "15200", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "32", "VRAM Base": "8GB/16GB GDDR6", "TDP Padrão": "225W", "Interface": "PCIe 4.0 x16" },
     "Arc A750": { "Benchmark": "13800", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "28", "VRAM Base": "8GB GDDR6", "TDP Padrão": "225W", "Interface": "PCIe 4.0 x16" },
     "Arc A580": { "Benchmark": "11900", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "24", "VRAM Base": "8GB GDDR6", "TDP Padrão": "185W", "Interface": "PCIe 4.0 x16" },
-    "Arc A380": { "Benchmark": "6500", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "8", "VRAM Base": "6GB GDDR6", "TDP Padrão": "75W", "Interface": "PCIe 4.0 x8" }
+    "Arc A380": { "Benchmark": "6500", "Arquitetura": "Xe-HPG (Alchemist)", "Xe Cores": "8", "VRAM Base": "6GB GDDR6", "TDP Padrão": "75W", "Interface": "PCIe 4.0 x8" },
+    "GTX 750 Ti": { "Benchmark": "3720", "Arquitetura": "Maxwell", "CUDA Cores": "640", "VRAM Base": "2GB/4GB GDDR5", "TDP Padrão": "60W", "Interface": "PCIe 3.0 x16" }
   },
   "cpu": {
     "Ryzen 9 9950X": { "Benchmark": "65000", "Socket": "AM5", "Cores / Threads": "16 / 32", "TDP (PBP)": "170W", "Gráficos": "Radeon Graphics" },

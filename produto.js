@@ -30,8 +30,9 @@ function getProductFromURL() {
       // Procura no Mega Banco para extrair TDP
       const dbCat = hardwareSpecs[catId] || {};
       let dbRef = null;
+      const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
       for (const [key, specs] of Object.entries(dbCat)) {
-        if (matchKey(found.name, key)) {
+        if (normalize(found.name).includes(normalize(key))) {
           dbRef = specs; break;
         }
       }
@@ -139,8 +140,9 @@ function renderProduct(product) {
     // Tenta buscar no Mega Banco para extrair 1 ou 2 specs de destaque
     const dbCat = hardwareSpecs[product.category] || {};
     let detailedRef = null;
+    const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
     for (const [key, dbSpecs] of Object.entries(dbCat)) {
-      if (matchKey(product.name, key)) { detailedRef = dbSpecs; break; }
+      if (normalize(product.name).includes(normalize(key))) { detailedRef = dbSpecs; break; }
     }
 
     if (product.category === 'gpu') {
@@ -221,10 +223,11 @@ function renderDetailedSpecs(product) {
   let detailedRef = null;
 
   // Encontra a melhor correspondência no mega banco de dados
+  const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
   for (const [key, specs] of Object.entries(dbCat)) {
-    if (matchKey(product.name, key)) {
+    if (normalize(product.name).includes(normalize(key))) {
       detailedRef = specs;
-      break; // O primeiro que bater (mais geral) ganha
+      break; 
     }
   }
 

@@ -77,7 +77,8 @@ function getBrandClass(brand) {
 }
 
 function matchKey(productName, key) {
-  return productName.replace(/\s+/g, '').toLowerCase().includes(key.replace(/\s+/g, '').toLowerCase());
+  const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
+  return normalize(productName).includes(normalize(key));
 }
 
 function getTechnicalSpecs(product) {

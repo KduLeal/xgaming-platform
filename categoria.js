@@ -119,9 +119,9 @@ function loadCategory() {
   const items = rawItems.map(item => {
     // Procura no Mega Banco para extrair TDP e spec filterable
     let dbRef = null;
-    const n = item.name.replace(/\s+/g, '').toLowerCase();
+    const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
     for (const [key, specs] of Object.entries(dbCat)) {
-      if (n.includes(key.replace(/\s+/g, '').toLowerCase())) {
+      if (normalize(item.name).includes(normalize(key))) {
         dbRef = specs; break;
       }
     }
@@ -129,10 +129,13 @@ function loadCategory() {
     let tdp = item.tdp;
     if (!tdp && dbRef) {
       const dbTdp = dbRef['TDP Padrão'] || dbRef['TDP (PBP)'];
-      if (dbTdp) tdp = parseInt(dbTdp);
+      if (dbTdp) tdp = dbTdp; // Mantém como string para preservar o 'W' se vier do banco
     }
     
     let bench = item.benchmark;
+    if (!bench && dbRef) {
+       bench = dbRef['Benchmark'] ? parseInt(dbRef['Benchmark']) : 0;
+    }
     if (!bench) {
        bench = Math.floor(item.price * (cat === 'cpu' ? 4.2 : 2.8));
     }

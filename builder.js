@@ -19,9 +19,8 @@ const state = {
 
 // ========== HELPERS ==========
 function matchKey(productName, key) {
-  const normalizedKey = key.replace(/\s+/g, '').toLowerCase();
-  const normalizedName = productName.replace(/\s+/g, '').toLowerCase();
-  return normalizedName.includes(normalizedKey);
+  const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
+  return normalize(productName).includes(normalize(key));
 }
 
 function getDetailedSpecs(category, productName) {

@@ -762,7 +762,7 @@
       "name": "Placa De Video Geforce Gt240 Afox 1gb Ddr3 128b Hdmi Dvi Vga",
       "price": 231.9,
       "image": "/images/products/gpu/placa-de-video-geforce-gt240-a.jpg",
-      "score": 80,
+      "score": 82,
       "priceHistory": [
         {
           "month": "Dez/25",
@@ -797,8 +797,48 @@
           "lastUpdate": "2026-05-14T01:29:15.304Z"
         }
       ],
-      "benchmark": 430,
-      "score": 82
+      "benchmark": 430
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa de Vídeo Gamer Aitek NVIDIA GTX750 TI DELTA-GTX750TI-4G 4GB GDDR5 Full HD",
+      "price": 619,
+      "image": "/images/products/gpu/placa-de-vdeo-gamer-aitek-nvi.jpg",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 712
+        },
+        {
+          "month": "Jan/26",
+          "price": 681
+        },
+        {
+          "month": "Fev/26",
+          "price": 658
+        },
+        {
+          "month": "Mar/26",
+          "price": 647
+        },
+        {
+          "month": "Abr/26",
+          "price": 628
+        },
+        {
+          "month": "Mai/26",
+          "price": 619
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 619,
+          "link": "https://meli.la/13cgwku",
+          "lastUpdate": "2026-05-14T02:25:18.495Z"
+        }
+      ]
     }
   ],
   "cpu": [],

@@ -55,6 +55,12 @@
     .input-affiliate { padding: 8px; border-radius: 4px; border: 1px solid var(--cyan); background: rgba(0,0,0,0.5); color: #fff; font-size: 0.85rem; }
     .btn-approve { background: var(--cyan); color: #000; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; }
     .btn-approve:hover { background: #00e0ee; }
+    
+    /* Botão de Sync */
+    .sync-wrapper { text-align: center; margin-bottom: 2rem; }
+    .btn-sync { background: #a855f7; color: #fff; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: 'Orbitron', sans-serif; transition: 0.3s; box-shadow: 0 0 15px rgba(168, 85, 247, 0.3); }
+    .btn-sync:hover { background: #9333ea; box-shadow: 0 0 25px rgba(168, 85, 247, 0.5); transform: translateY(-2px); }
+    .btn-sync:disabled { background: #4b5563; cursor: not-allowed; box-shadow: none; }
   </style>
 </head>
 <body>
@@ -69,6 +75,11 @@
     <div class="admin-header">
       <h1>Painel de Controle</h1>
       <p>Adicione novos produtos com link de afiliado. O robô coletará os dados automaticamente.</p>
+    </div>
+
+    <div class="sync-wrapper">
+      <button id="sync-btn" class="btn-sync" onclick="syncDeploy()">🚀 Sincronizar Site (Deploy)</button>
+      <p id="sync-status" style="font-size: 0.8rem; color: var(--text-2); margin-top: 8px;"></p>
     </div>
 
     <form id="admin-form">
@@ -385,6 +396,33 @@
       loadCoverage();
       loadPending();
     });
+    // Sincronização Manual (Deploy)
+    async function syncDeploy() {
+      const btn = document.getElementById('sync-btn');
+      const status = document.getElementById('sync-status');
+      
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading-spinner"></span> Sincronizando...';
+      status.innerText = 'Enviando alterações para o GitHub/Vercel...';
+      
+      try {
+        const response = await fetch('http://localhost:3002/api/sync', {
+          method: 'POST'
+        });
+        const result = await response.json();
+        
+        if (result.success) {
+          status.innerHTML = '<span style="color: var(--green)">✅ Site sincronizado! O Vercel atualizará em instantes.</span>';
+        } else {
+          throw new Error(result.error);
+        }
+      } catch (err) {
+        status.innerHTML = `<span style="color: var(--red)">❌ Erro no Sync: ${err.message}</span>`;
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '🚀 Sincronizar Site (Deploy)';
+      }
+    }
   </script>
 </body>
 </html>

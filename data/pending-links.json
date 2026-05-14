@@ -1,45 +1,5 @@
 [
   {
-    "id": "ml-1778702747714-0",
-    "category": "gpu",
-    "name": "Placa De Vídeo Rtx 4060 Ti 8gb Gddrd6 128b Ghost Gainward",
-    "price": 4426,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_731010-MLA80566511738_112024-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-rtx-4060-ti-8gb-gddrd6-128b-ghost-gainward/p/MLB43448289?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=76ef0470-b5e0-4d25-8041-0b99b66c2151&wid=&sid=search",
-    "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:05:47.714Z"
-  },
-  {
-    "id": "ml-1778702832564-0",
-    "category": "gpu",
-    "name": "Placa de Vídeo AMD RX 550 4GB GDDR5 PCI-E 3.0 PCYES Edge Para Jogos",
-    "price": 899,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_819380-MLA99593276862_122025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-amd-rx-550-4gb-gddr5-pci-e-30-pcyes-edge-para-jogos/p/MLB61228334?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=a23df40a-c5a5-46dd-9c3c-35bc6299a044&wid=MLB4274632771&sid=search",
-    "store": "Zalon",
-    "scrapedAt": "2026-05-13T20:07:12.564Z"
-  },
-  {
-    "id": "ml-1778702837075-0",
-    "category": "gpu",
-    "name": "Placa de vídeo AMD Asus TUF Gaming Radeon RX 6700 Series RX 6700 XT OC Edition 12GB",
-    "price": 3528,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_625014-MLA47855233956_102021-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-amd-asus-tuf-gaming-radeon-rx-6700-series-rx-6700-xt-oc-edition-12gb/p/MLB18441948?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=76253bd9-2911-4dd7-981b-3ca9fc85d2ae&wid=&sid=search",
-    "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:07:17.075Z"
-  },
-  {
-    "id": "ml-1778702887533-0",
-    "category": "gpu",
-    "name": "Placa de Vídeo Gamer Aitek NVIDIA GTX750 TI DELTA-GTX750TI-4G 4GB GDDR5 Full HD",
-    "price": 619,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_786032-MLA100667671813_122025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-gamer-aitek-nvidia-gtx750-ti-delta-gtx750ti-4g-4gb-gddr5-full-hd/p/MLB62947470?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=e6d28ba5-be18-4284-9154-63591327f893&wid=MLB4578021739&sid=search",
-    "store": "Meli Shopp",
-    "scrapedAt": "2026-05-13T20:08:07.533Z"
-  },
-  {
     "id": "ml-1778702900375-0",
     "category": "cpu",
     "name": "Processador Amd Ryzen 9 9950x 4.3ghz (max Turbo 5.7ghz) Am5",
@@ -125,7 +85,7 @@
     "name": "Processador Amd Ryzen 5 5500 3.6ghz 4.2ghz Max Turbo Cache 1",
     "price": 997,
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_806163-MLA99416647702_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5500-36ghz-42ghz-max-turbo-cache-1/up/MLBU3882300163?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2f2eec69-cba1-4574-9a6e-3d7f98efdb23&wid=MLB4590516747&sid=search",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5500-36ghz-42ghz-max-turbo-cache-1/up/MLBU3882300163?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2f2eec69-cba1-4574-9e28-bbfa0f93b505&wid=MLB4590516747&sid=search",
     "store": "Casa do Provedor",
     "scrapedAt": "2026-05-13T20:09:31.923Z"
   },
@@ -417,7 +377,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_693837-MLA109936178466_042026-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/ssd-nvme-m2-2280-pcie-gen5-1tb-interno-titan-edition-up-gamer/p/MLB68574448?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=01d22769-2c6e-45f1-bdd5-b6aaf8c1499e&wid=MLB4635340205&sid=search",
     "store": "SPREAKER",
-    "scrapedAt": "2026-05-13T20:12:42.567Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703167518-0",
@@ -427,7 +387,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_795091-MLA99417498242_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/unidade-de-estado-solido-kingston-m2-nvme-pcie-40-nv3-de-1-tb-azul-escuro/p/MLB39766120?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=dbf8478a-82f4-4fe9-ba1f-4d08e2146e20&wid=MLB3961793527&sid=search",
     "store": "TOP SYSTEM INFORMATICA",
-    "scrapedAt": "2026-05-13T20:12:47.518Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703172617-0",
@@ -437,7 +397,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_884044-MLA99946856231_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/ssd-2tb-m2-2280-nvme-pcie-gen3-western-digital-wd-green-sn350-wds200t3g0c-velocidade-de-leitura-ate-3200mbs-cor-verde-disco-solido-interno/p/MLB19713197?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=8767ac93-c5cf-4829-a3c6-008ccd155733&wid=MLB4332194311&sid=search",
     "store": "INPOWER",
-    "scrapedAt": "2026-05-13T20:12:52.617Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703177566-0",
@@ -447,7 +407,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_794498-MLA99456482896_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/disco-solido-ssd-120gb-6gbs-sata-3-pklk-premium-sd120/p/MLB46150812?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=83bc22a2-fc17-47d0-9cd9-b3fe933f3213&wid=MLB6031639350&sid=search",
     "store": "PKLK Distribuidora",
-    "scrapedAt": "2026-05-13T20:12:57.566Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703182800-0",
@@ -457,7 +417,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_752046-MLA110174012531_042026-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/ssd-interno-512gb-m2-nvme-leitura-rapida-armazenamento-alta-velocidade-upgrade-pc-notebook-desktop-inicializaco-sistema-jogos-programas-up-gamer-fast-plus-up3000/p/MLB33975632?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=8e450dc4-ddf8-4f44-a83f-6b9319ff2b5f&wid=MLB6246985354&sid=search",
     "store": "SPREAKER",
-    "scrapedAt": "2026-05-13T20:13:02.800Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703187971-0",
@@ -467,7 +427,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_850237-MLA82159186433_012025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/ssd-hiksemi-wave-240gb-25-sata-30-hs-ssd-waves240g/p/MLB45759263?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=33987d6e-1b91-4c95-b956-e305d343fa34&wid=MLB4046152407&sid=search",
     "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:13:07.971Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703394895-2",
@@ -477,7 +437,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_654059-MLA99969943953_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-de-video-msi-rtx-5060-ti-8gb-gddr7-128bits-ventus-plus/p/MLB49822699?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=3&type=product&float_highlight=last_units&tracking_id=aa7dd3f7-a240-4ad6-9e33-9065e545c877&wid=MLB4104663865&sid=search",
     "store": "Nvidia",
-    "scrapedAt": "2026-05-13T20:16:34.895Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703422873-0",
@@ -487,7 +447,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_670696-MLA100008908463_122025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-de-video-pcyes-amd-radeon-rx-7600xt-16gb-gddr6-128-bits-projeto-edge/p/MLB60328494?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=9f07855b-ae4f-4610-a59f-015b4024c000&wid=MLB5922214468&sid=search",
     "store": "INFOTURBO",
-    "scrapedAt": "2026-05-13T20:17:02.873Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703474995-0",
@@ -497,7 +457,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_947673-MLA82378414752_022025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-de-video-asrock-intel-arc-b580-challengeroc-12gb-gddrg/up/MLBU3206646820?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=b5aeaefe-bcb3-4bc5-a341-be326519d86e&wid=MLB5407094188&sid=search",
     "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:17:54.995Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703485112-0",
@@ -507,7 +467,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_813414-MLB83622181875_042025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-9700x-39ghz-40mb-sem-cooler-am5/up/MLBU3115146466?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=dbe5a3bd-6b05-4441-bab7-99199ad65a37&wid=MLB5344095812&sid=search",
     "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:18:05.112Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703490227-0",
@@ -517,7 +477,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_842098-MLB106772690368_022026-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-9600x-6core-12threads-39ghz-5/up/MLBU3797260761?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cc975f24-b062-4bd4-9e28-bbfa0f93b505&wid=MLB4479921095&sid=search",
     "store": "TG TUDO GAMER",
-    "scrapedAt": "2026-05-13T20:18:10.227Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703495190-0",
@@ -527,7 +487,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_618579-MLA99472299804_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-9-7900x-100-100000589wof-de-12-nucleos-e-56ghz-de-frequncia-com-grafica-integrada/p/MLB19711898?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=1b581fbc-37d5-44e2-be18-472d1aa1e1b1&wid=MLB5530036658&sid=search",
     "store": "OBA SUPLEMENTOS",
-    "scrapedAt": "2026-05-13T20:18:15.190Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703499814-0",
@@ -537,7 +497,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_742266-MLA99578794952_122025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-7-7700x-100-100000591wof-de-8-nucleos-e-54ghz-de-frequncia-com-grafica-integrada/p/MLB19711896?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2d5dde90-64f9-4d38-b636-a18a648a7524&wid=MLB4353631719&sid=search",
     "store": "Casa do Provedor",
-    "scrapedAt": "2026-05-13T20:18:19.814Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703514716-0",
@@ -547,7 +507,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_651436-MLA99950950291_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i7-14700k-340ghz-33mb-ddr45-fclga1700/p/MLB27917297?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cdae6dc4-1709-4d27-8f57-383064fde58c&wid=MLB3510856331&sid=search",
     "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:18:34.716Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703544215-0",
@@ -557,7 +517,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_781802-MLA88021124506_072025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-me-asus-prime-b850-plus-wifi-b850-amd-ddr5-am5-atx/p/MLB53051574?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=090e5019-ad4e-4359-bc69-8c0e5dedd3b6&wid=MLB5930273318&sid=search",
     "store": "INPOWER",
-    "scrapedAt": "2026-05-13T20:19:04.215Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778703560275-0",
@@ -567,7 +527,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_874578-MLA87007587361_062025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-me-nzxt-n7-z790-branco-socket-lga1700-intel-ddr5/p/MLB51881765?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6559e152-5963-40e3-9cdc-82971884f55a&wid=MLB6544280820&sid=search",
     "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:19:20.275Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778704141951-1",
@@ -577,7 +537,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_897773-MLA110554712792_052026-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/placa-de-video-gigabyte-radeon-rx-9060-xt-gaming-8gb/p/MLB69434287?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=3b21b431-9616-4100-8361-2e131346aa07&wid=MLB4669890771&sid=search",
     "store": "Pichau",
-    "scrapedAt": "2026-05-13T20:29:01.951Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778704166040-0",
@@ -587,7 +547,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_646617-CBT107525435206_032026-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/graphics-card-asrock-rx-7900-xtx-24gb-gddr6-oc/p/MLB2073338305?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=90a02479-2ca6-4070-ad20-66767f3aea94&wid=MLB4510386531&sid=search",
     "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:29:26.040Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778704264246-0",
@@ -597,7 +557,7 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_873709-MLA99507240202_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-gamer-intel-core-i5-12600k-bx8071512600k-de-10-nucleos-e-49ghz-de-frequncia-com-grafica-integrada/p/MLB18603110?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e4861519-9c86-457c-acb7-c605e059764d&wid=MLB3644054571&sid=search",
     "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:31:04.246Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   },
   {
     "id": "ml-1778704776747-0",
@@ -607,6 +567,6 @@
     "image": "https://http2.mlstatic.com/D_Q_NP_2X_796826-MLA99992353565_112025-E.webp",
     "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-5700-46ghz-8c-16t-am4/p/MLB31054937?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6b95af8b-9934-4054-a206-be3a435f7550&wid=MLB6087159664&sid=search",
     "store": "TNT Info",
-    "scrapedAt": "2026-05-13T20:39:36.747Z"
+    "scrapedAt": "2026-05-14T02:35:01.000Z"
   }
 ]

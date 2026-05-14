@@ -288,8 +288,8 @@ function cleanPendingQueue() {
     const pending = JSON.parse(fs.readFileSync(PENDING_FILE, 'utf-8'));
     const products = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
     
-    // Normalizar nomes para comparação
-    const normalize = (name) => name.replace(/\s+/g, '').toLowerCase();
+    // Normalizar nomes para comparação (Remove espaços, acentos e minúsculas)
+    const normalize = (name) => name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '').toLowerCase();
     
     const allProductNames = Object.values(products).flat().map(p => normalize(p.name));
     
@@ -346,6 +346,18 @@ app.post('/api/remove-pending', (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+app.post('/api/sync', (req, res) => {
+  console.log('[Admin API] 🚀 Iniciando Sync Manual via Painel...');
+  exec('git add . && git commit -m "chore: sync manual via Admin Panel" && git push', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`[Admin API] ❌ Erro no Sync: ${error.message}`);
+      return res.status(500).json({ error: error.message });
+    }
+    console.log(`[Admin API] ✅ Sync concluído!\n${stdout}`);
+    res.json({ success: true, output: stdout });
+  });
 });
 
 app.listen(PORT, () => {

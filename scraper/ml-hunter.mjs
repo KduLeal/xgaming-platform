@@ -18,8 +18,8 @@ const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 // ========== HELPERS ==========
 function matchKey(productName, key) {
   if (!productName || !key) return false;
-  const normalizedKey = key.replace(/\s+/g, '').toLowerCase();
-  const normalizedName = productName.replace(/\s+/g, '').toLowerCase();
+  const normalizedKey = key.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '').toLowerCase();
+  const normalizedName = productName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '').toLowerCase();
   return normalizedName.includes(normalizedKey);
 }
 

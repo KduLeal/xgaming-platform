@@ -1,25 +1,5 @@
 [
   {
-    "id": "ml-1778702991664-0",
-    "category": "cpu",
-    "name": "Processador Intel Core I5 14600k Lga1700 Bx8071514600k",
-    "price": 4299,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_874505-MLA100008465301_122025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i5-14600k-lga1700-bx8071514600k/p/MLB29149408?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=be607ecd-a9ff-4ee2-9e84-934d33ef87c7&wid=MLB4211176633&sid=search",
-    "store": "Terabyte Eshop",
-    "scrapedAt": "2026-05-13T20:09:51.664Z"
-  },
-  {
-    "id": "ml-1778702996549-0",
-    "category": "cpu",
-    "name": "Processador Intel I5-14400f 20mb 3.5ghz Lga 1700 ddr/5",
-    "price": 1479,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_935664-MLA99964547047_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-intel-i5-14400f-20mb-35ghz-lga-1700-ddr5/p/MLB29937677?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=fbafbadb-42dd-41f7-940e-00ce82d5577e&wid=MLB3605359445&sid=search",
-    "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:09:56.549Z"
-  },
-  {
     "id": "ml-1778703001796-0",
     "category": "cpu",
     "name": "Processador gamer Intel Core i9-14900K",

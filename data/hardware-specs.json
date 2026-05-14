@@ -85,6 +85,7 @@
     "Ryzen 5 5500": { "Benchmark": "19400", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 4600G": { "Benchmark": "15800", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Graphics 7" },
     "i9-14900K": { "Benchmark": "61000", "Socket": "LGA 1700", "Cores / Threads": "24 (8P+16E) / 32", "TDP (PBP)": "253W", "Gráficos": "Intel UHD 770" },
+    "i9-14900": { "Benchmark": "59500", "Socket": "LGA 1700", "Cores / Threads": "24 (8P+16E) / 32", "TDP (PBP)": "65W", "Gráficos": "Intel UHD 770" },
     "i7-14700K": { "Benchmark": "53500", "Socket": "LGA 1700", "Cores / Threads": "20 (8P+12E) / 28", "TDP (PBP)": "253W", "Gráficos": "Intel UHD 770" },
     "i5-14600K": { "Benchmark": "39500", "Socket": "LGA 1700", "Cores / Threads": "14 (6P+8E) / 20", "TDP (PBP)": "181W", "Gráficos": "Intel UHD 770" },
     "i5-14400F": { "Benchmark": "25800", "Socket": "LGA 1700", "Cores / Threads": "10 (6P+4E) / 16", "TDP (PBP)": "148W", "Gráficos": "Nenhum (F)" },

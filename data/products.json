@@ -1226,7 +1226,7 @@
       "name": "Processador Intel Core I9-14900 3.6GHz 24 Núcleos LGA 1700",
       "price": 4449,
       "image": "/images/products/cpu/processador-intel-core-i9-1490.jpg",
-      "score": 80,
+      "score": 98,
       "priceHistory": [
         {
           "month": "Dez/25",
@@ -1260,7 +1260,91 @@
           "link": "https://meli.la/2Bncu6G",
           "lastUpdate": "2026-05-14T03:11:09.905Z"
         }
+      ],
+      "benchmark": 59500
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador Intel Core I5 14600k Lga1700 Bx8071514600k",
+      "price": 2632,
+      "image": "/images/products/cpu/processador-intel-core-i5-1460.jpg",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 3027
+        },
+        {
+          "month": "Jan/26",
+          "price": 2887
+        },
+        {
+          "month": "Fev/26",
+          "price": 2768
+        },
+        {
+          "month": "Mar/26",
+          "price": 2685
+        },
+        {
+          "month": "Abr/26",
+          "price": 2672
+        },
+        {
+          "month": "Mai/26",
+          "price": 2632
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2632,
+          "link": "https://meli.la/171rVg9",
+          "lastUpdate": "2026-05-14T03:15:58.630Z"
+        }
       ]
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador Intel I5-14400f 20mb 3.5ghz Lga 1700 ddr/5",
+      "price": 1479,
+      "image": "/images/products/cpu/processador-intel-i5-14400f-20.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1701
+        },
+        {
+          "month": "Jan/26",
+          "price": 1647
+        },
+        {
+          "month": "Fev/26",
+          "price": 1566
+        },
+        {
+          "month": "Mar/26",
+          "price": 1513
+        },
+        {
+          "month": "Abr/26",
+          "price": 1485
+        },
+        {
+          "month": "Mai/26",
+          "price": 1479
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1479,
+          "link": "https://meli.la/2kXA2Eu",
+          "lastUpdate": "2026-05-14T03:16:15.245Z"
+        }
+      ],
+      "benchmark": 25800
     }
   ],
   "mobo": [],

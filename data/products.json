@@ -796,7 +796,9 @@
           "link": "https://meli.la/34o3fxp",
           "lastUpdate": "2026-05-14T01:29:15.304Z"
         }
-      ]
+      ],
+      "benchmark": 430,
+      "score": 82
     }
   ],
   "cpu": [],

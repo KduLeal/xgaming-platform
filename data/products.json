@@ -1346,6 +1346,131 @@
         }
       ],
       "benchmark": 25800
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador gamer Intel Core i9-14900K",
+      "price": 4001,
+      "image": "/images/products/cpu/processador-gamer-intel-core-i.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 4601
+        },
+        {
+          "month": "Jan/26",
+          "price": 4538
+        },
+        {
+          "month": "Fev/26",
+          "price": 4324
+        },
+        {
+          "month": "Mar/26",
+          "price": 4229
+        },
+        {
+          "month": "Abr/26",
+          "price": 4129
+        },
+        {
+          "month": "Mai/26",
+          "price": 4001
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 4001,
+          "link": "https://meli.la/24rN2bC",
+          "lastUpdate": "2026-05-14T03:28:28.051Z"
+        }
+      ],
+      "benchmark": 61000
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador Intel Core I5-12400F 2.50GHZ 18MB DDR4/5 FCLGA1700 BX8071512400F",
+      "price": 1098,
+      "image": "/images/products/cpu/processador-intel-core-i5-1240.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1263
+        },
+        {
+          "month": "Jan/26",
+          "price": 1235
+        },
+        {
+          "month": "Fev/26",
+          "price": 1201
+        },
+        {
+          "month": "Mar/26",
+          "price": 1142
+        },
+        {
+          "month": "Abr/26",
+          "price": 1105
+        },
+        {
+          "month": "Mai/26",
+          "price": 1098
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1098,
+          "link": "https://meli.la/1jLZXvz",
+          "lastUpdate": "2026-05-14T03:32:39.240Z"
+        }
+      ],
+      "benchmark": 19600
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador Core I3 12100f 3,3ghz 12mb Lga1700 Bx8071512100",
+      "price": 719,
+      "image": "/images/products/cpu/processador-core-i3-12100f-33.jpg",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 827
+        },
+        {
+          "month": "Jan/26",
+          "price": 795
+        },
+        {
+          "month": "Fev/26",
+          "price": 794
+        },
+        {
+          "month": "Mar/26",
+          "price": 771
+        },
+        {
+          "month": "Abr/26",
+          "price": 749
+        },
+        {
+          "month": "Mai/26",
+          "price": 719
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 719,
+          "link": "https://meli.la/1MzCLca",
+          "lastUpdate": "2026-05-14T03:33:10.285Z"
+        }
+      ]
     }
   ],
   "mobo": [],

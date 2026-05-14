@@ -1,45 +1,5 @@
 [
   {
-    "id": "ml-1778703001796-0",
-    "category": "cpu",
-    "name": "Processador gamer Intel Core i9-14900K",
-    "price": 4479,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_738595-MLA99998051643_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-intel-core-i9-14900k/p/MLB27830801?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=3a8aa90d-e917-4fdf-b8e6-208a91394068&wid=MLB3498879753&sid=search",
-    "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:10:01.797Z"
-  },
-  {
-    "id": "ml-1778703016938-0",
-    "category": "cpu",
-    "name": "Bandeja Intel S1700 Core I5 13400f Gen13",
-    "price": 1972,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_708758-MLA108642052591_032026-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/bandeja-intel-s1700-core-i5-13400f-gen13/p/MLB66539617?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=787480ab-b20b-4e8c-86a2-b4fb41c301ea&wid=MLB4666422525&sid=search",
-    "store": "Concordia Informatica",
-    "scrapedAt": "2026-05-13T20:10:16.938Z"
-  },
-  {
-    "id": "ml-1778703026788-0",
-    "category": "cpu",
-    "name": "Processador Intel Core I5-12400F 2.50GHZ 18MB DDR4/5 FCLGA1700 BX8071512400F",
-    "price": 1098,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_702511-MLA99969847587_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i5-12400f-250ghz-18mb-ddr45-fclga1700-bx8071512400f/p/MLB18733972?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cb5c992f-b519-4ea6-b932-1e8f6673aa80&wid=MLB3956827389&sid=search",
-    "store": "TOP SYSTEM INFORMATICA",
-    "scrapedAt": "2026-05-13T20:10:26.788Z"
-  },
-  {
-    "id": "ml-1778703031512-0",
-    "category": "cpu",
-    "name": "Processador Core I3 12100f 3,3ghz 12mb Lga1700 Bx8071512100",
-    "price": 719,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_856357-MLB49168886527_022022-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-core-i3-12100f-33ghz-12mb-lga1700-bx8071512100/up/MLBU1101811537?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=4403493b-fef6-454a-8017-39f4a3cc125b&wid=MLB2179768791&sid=search",
-    "store": "Total Info",
-    "scrapedAt": "2026-05-13T20:10:31.512Z"
-  },
-  {
     "id": "ml-1778703036870-0",
     "category": "cpu",
     "name": "Processador Intel Core I5-10400f Bx8070110400f",

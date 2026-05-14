@@ -30,9 +30,8 @@ function getProductFromURL() {
       // Procura no Mega Banco para extrair TDP
       const dbCat = hardwareSpecs[catId] || {};
       let dbRef = null;
-      const n = found.name.replace(/\s+/g, '').toLowerCase();
       for (const [key, specs] of Object.entries(dbCat)) {
-        if (n.includes(key.replace(/\s+/g, '').toLowerCase())) {
+        if (matchKey(found.name, key)) {
           dbRef = specs; break;
         }
       }
@@ -79,9 +78,8 @@ function getVRAMFromName(name) {
 }
 
 function matchKey(productName, key) {
-  const normalizedKey = key.replace(/\s+/g, '').toLowerCase();
-  const normalizedName = productName.replace(/\s+/g, '').toLowerCase();
-  return normalizedName.includes(normalizedKey);
+  const normalize = (s) => s.replace(/[\s-]/g, '').toLowerCase();
+  return normalize(productName).includes(normalize(key));
 }
 
 // ========== RENDER PRODUCT ==========

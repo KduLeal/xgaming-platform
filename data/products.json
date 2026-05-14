@@ -1058,7 +1058,7 @@
       "name": "Processador AMD Ryzen 7 5700G 100-100000263BOX de 8 núcleos e 4.6GHz de frequência com gráfica integrada",
       "price": 1099,
       "image": "/images/products/cpu/processador-amd-ryzen-7-5700g.jpg",
-      "score": 80,
+      "score": 98,
       "priceHistory": [
         {
           "month": "Dez/25",
@@ -1092,7 +1092,8 @@
           "link": "https://meli.la/1q1Bddn",
           "lastUpdate": "2026-05-14T03:01:02.421Z"
         }
-      ]
+      ],
+      "benchmark": 24600
     },
     {
       "brand": "AMD",

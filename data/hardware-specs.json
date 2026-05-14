@@ -79,6 +79,7 @@
     "Ryzen 7 5700X": { "Benchmark": "26700", "Socket": "AM4", "Cores / Threads": "8 / 16", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 5600X": { "Benchmark": "22100", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 5600": { "Benchmark": "21600", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
+    "Ryzen 7 5700G": { "Benchmark": "24600", "Socket": "AM4", "Cores / Threads": "8 / 16", "TDP (PBP)": "65W", "Gráficos": "Radeon Graphics 8" },
     "Ryzen 5 5600G": { "Benchmark": "19800", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Graphics 7" },
     "Ryzen 5 5600GT": { "Benchmark": "20200", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Vega 7" },
     "Ryzen 5 5500": { "Benchmark": "19400", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },

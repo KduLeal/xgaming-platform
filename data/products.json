@@ -842,7 +842,50 @@
       "benchmark": 3720
     }
   ],
-  "cpu": [],
+  "cpu": [
+    {
+      "brand": "AMD",
+      "name": "Processador Amd Ryzen 9 9950x 4.3ghz (max Turbo 5.7ghz) Am5",
+      "price": 5585.79,
+      "image": "/images/products/cpu/processador-amd-ryzen-9-9950x.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 6424
+        },
+        {
+          "month": "Jan/26",
+          "price": 6199
+        },
+        {
+          "month": "Fev/26",
+          "price": 6030
+        },
+        {
+          "month": "Mar/26",
+          "price": 5771
+        },
+        {
+          "month": "Abr/26",
+          "price": 5755
+        },
+        {
+          "month": "Mai/26",
+          "price": 5585.79
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 5585.79,
+          "link": "https://meli.la/2JTzFR8",
+          "lastUpdate": "2026-05-14T02:50:53.103Z"
+        }
+      ],
+      "benchmark": 65000
+    }
+  ],
   "mobo": [],
   "ram": [],
   "ssd": [],

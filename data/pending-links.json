@@ -1,15 +1,5 @@
 [
   {
-    "id": "ml-1778702900375-0",
-    "category": "cpu",
-    "name": "Processador Amd Ryzen 9 9950x 4.3ghz (max Turbo 5.7ghz) Am5",
-    "price": 5585,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_834759-MLB83769433029_042025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-9-9950x-43ghz-max-turbo-57ghz-am5/up/MLBU3127353328?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6bcf7a94-681a-47e7-9f29-94fe1798e59f&wid=MLB5351409066&sid=search",
-    "store": "Mercado Livre",
-    "scrapedAt": "2026-05-13T20:08:20.375Z"
-  },
-  {
     "id": "ml-1778702905097-0",
     "category": "cpu",
     "name": "Processador Amd Ryzen 9 9900x3d De 5,5 Ghz Am5",

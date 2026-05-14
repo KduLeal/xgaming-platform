@@ -2,60 +2,806 @@
   "gpu": [
     {
       "brand": "NVIDIA",
-      "name": "Placa De Vídeo Msi Rtx5060 Gaming Trio Oc 8gb Gddr",
-      "price": 3099,
-      "image": "/images/products/gpu/placa-de-vdeo-msi-rtx5060-gam.jpg",
-      "link": "https://meli.la/23TmAzT",
-      "store": "Mercado Livre",
-      "score": 80
+      "name": "Placa De Vídeo Asus Rtx 5090 Tuf Gaming Oc 32gb Gddr7 512bit",
+      "price": 26599,
+      "image": "/images/products/gpu/placa-de-vdeo-asus-rtx-5090-t.jpg",
+      "score": 91,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 30589
+        },
+        {
+          "month": "Jan/26",
+          "price": 30583
+        },
+        {
+          "month": "Fev/26",
+          "price": 29576
+        },
+        {
+          "month": "Mar/26",
+          "price": 29350
+        },
+        {
+          "month": "Abr/26",
+          "price": 28250
+        },
+        {
+          "month": "Mai/26",
+          "price": 26599
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 26599,
+          "link": "https://meli.la/1qhiypi",
+          "lastUpdate": "2026-05-13T17:15:34.705Z"
+        }
+      ],
+      "benchmark": 48500
     },
     {
       "brand": "NVIDIA",
-      "name": "Placa de vídeo Nvidia Asus TUF Gaming GeForce RTX 4090",
-      "price": 22999,
-      "image": "/images/products/gpu/placa-de-vdeo-nvidia-asus-tuf.jpg",
-      "link": "https://meli.la/2nGD5rd",
-      "store": "Mercado Livre",
+      "name": "Placa De Vídeo Zotac Gaming Rtx 5060 8gb Gddr7 Oc",
+      "price": 2560,
+      "image": "/images/products/gpu/placa-de-vdeo-zotac-gaming-rt.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 2944
+        },
+        {
+          "month": "Jan/26",
+          "price": 2865
+        },
+        {
+          "month": "Fev/26",
+          "price": 2736
+        },
+        {
+          "month": "Mar/26",
+          "price": 2681
+        },
+        {
+          "month": "Abr/26",
+          "price": 2651
+        },
+        {
+          "month": "Mai/26",
+          "price": 2560
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2560,
+          "link": "https://meli.la/12ehFEu",
+          "lastUpdate": "2026-05-13T17:21:50.619Z"
+        }
+      ],
+      "benchmark": 22500
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa de vídeo Geforce Rtx 5050 8gb Msi Shadow 2x Oc",
+      "price": 2199,
+      "image": "/images/products/gpu/placa-de-vdeo-geforce-rtx-505.jpg",
       "score": 80,
       "priceHistory": [
-        { "month": "Dez/25", "price": 26449 },
-        { "month": "Jan/26", "price": 26393 },
-        { "month": "Fev/26", "price": 26269 },
-        { "month": "Mar/26", "price": 25018 },
-        { "month": "Abr/26", "price": 24215 },
-        { "month": "Mai/26", "price": 22999 }
-      ]
+        {
+          "month": "Dez/25",
+          "price": 2529
+        },
+        {
+          "month": "Jan/26",
+          "price": 2424
+        },
+        {
+          "month": "Fev/26",
+          "price": 2322
+        },
+        {
+          "month": "Mar/26",
+          "price": 2281
+        },
+        {
+          "month": "Abr/26",
+          "price": 2242
+        },
+        {
+          "month": "Mai/26",
+          "price": 2199
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2199,
+          "link": "https://meli.la/1bixXbG",
+          "lastUpdate": "2026-05-13T19:31:33.135Z"
+        }
+      ],
+      "lastUpdate": "2026-05-13T19:31:33.139Z",
+      "benchmark": 17800
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Video Asus Rtx 5080 Prime Oc 16gb Gddr7 256 Bits",
+      "price": 15000,
+      "image": "/images/products/gpu/placa-de-video-asus-rtx-5080-p.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 17250
+        },
+        {
+          "month": "Jan/26",
+          "price": 16683
+        },
+        {
+          "month": "Fev/26",
+          "price": 16011
+        },
+        {
+          "month": "Mar/26",
+          "price": 15527
+        },
+        {
+          "month": "Abr/26",
+          "price": 14900
+        },
+        {
+          "month": "Mai/26",
+          "price": 15000
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 15000,
+          "link": "https://meli.la/12zmz9P",
+          "lastUpdate": "2026-05-13T17:27:21.013Z"
+        }
+      ],
+      "benchmark": 39200
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Video Galax Geforce Rtx 5060 Ti 1-click Oc Classic",
+      "price": 4399,
+      "image": "/images/products/gpu/placa-de-video-galax-geforce-r.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 5059
+        },
+        {
+          "month": "Jan/26",
+          "price": 5033
+        },
+        {
+          "month": "Fev/26",
+          "price": 4788
+        },
+        {
+          "month": "Mar/26",
+          "price": 4718
+        },
+        {
+          "month": "Abr/26",
+          "price": 4687
+        },
+        {
+          "month": "Mai/26",
+          "price": 4399
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 4399,
+          "link": "https://meli.la/2Lnw5x5",
+          "lastUpdate": "2026-05-13T19:29:32.030Z"
+        }
+      ],
+      "benchmark": 26800
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa de vídeo Nvidia MSI Ventus GeForce RTX 30 Series RTX 3070 Ti 8GB",
+      "price": 7897.41,
+      "image": "/images/products/gpu/placa-de-vdeo-nvidia-msi-vent.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 9082
+        },
+        {
+          "month": "Jan/26",
+          "price": 8968
+        },
+        {
+          "month": "Fev/26",
+          "price": 8792
+        },
+        {
+          "month": "Mar/26",
+          "price": 8613
+        },
+        {
+          "month": "Abr/26",
+          "price": 8272
+        },
+        {
+          "month": "Mai/26",
+          "price": 7897.41
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 7897.41,
+          "link": "https://meli.la/1Tkjzrw",
+          "lastUpdate": "2026-05-13T20:42:32.894Z"
+        }
+      ],
+      "benchmark": 23500
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa gráfica Zotac Geforce Rtx 3060 T.e Oc, 12gb Gddr6",
+      "price": 3756,
+      "image": "/images/products/gpu/placa-grfica-zotac-geforce-rt.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 4319
+        },
+        {
+          "month": "Jan/26",
+          "price": 4143
+        },
+        {
+          "month": "Fev/26",
+          "price": 4020
+        },
+        {
+          "month": "Mar/26",
+          "price": 3869
+        },
+        {
+          "month": "Abr/26",
+          "price": 3793
+        },
+        {
+          "month": "Mai/26",
+          "price": 3756
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 3756,
+          "link": "https://meli.la/1GKXNCi",
+          "lastUpdate": "2026-05-13T20:43:27.835Z"
+        }
+      ],
+      "benchmark": 17100
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Vídeo Msi Geforce Rtx 3050 Low Profile 6gb Gddr6",
+      "price": 2299,
+      "image": "/images/products/gpu/placa-de-vdeo-msi-geforce-rtx.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 2644
+        },
+        {
+          "month": "Jan/26",
+          "price": 2640
+        },
+        {
+          "month": "Fev/26",
+          "price": 2519
+        },
+        {
+          "month": "Mar/26",
+          "price": 2490
+        },
+        {
+          "month": "Abr/26",
+          "price": 2443
+        },
+        {
+          "month": "Mai/26",
+          "price": 2299
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2299,
+          "link": "https://meli.la/2N2MpZ2",
+          "lastUpdate": "2026-05-13T20:44:04.084Z"
+        }
+      ],
+      "benchmark": 12800
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa de Vídeo ASRock Radeon RX 7900 Steel Legend 16GB 256bits PCIe 4.0",
+      "price": 6859,
+      "image": "/images/products/gpu/placa-de-vdeo-asrock-radeon-r.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 7888
+        },
+        {
+          "month": "Jan/26",
+          "price": 7806
+        },
+        {
+          "month": "Fev/26",
+          "price": 7745
+        },
+        {
+          "month": "Mar/26",
+          "price": 7603
+        },
+        {
+          "month": "Abr/26",
+          "price": 7243
+        },
+        {
+          "month": "Mai/26",
+          "price": 6859
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 6859,
+          "link": "https://meli.la/2bwQLwq",
+          "lastUpdate": "2026-05-13T20:44:33.392Z"
+        }
+      ],
+      "benchmark": 23500
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa De Vídeo Asrock Rx 6500 Xt Gaming D Oc 4gb Gddr6 64bit",
+      "price": 1573.43,
+      "image": "/images/products/gpu/placa-de-vdeo-asrock-rx-6500.jpg",
+      "score": 90,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1809
+        },
+        {
+          "month": "Jan/26",
+          "price": 1764
+        },
+        {
+          "month": "Fev/26",
+          "price": 1692
+        },
+        {
+          "month": "Mar/26",
+          "price": 1634
+        },
+        {
+          "month": "Abr/26",
+          "price": 1556
+        },
+        {
+          "month": "Mai/26",
+          "price": 1573.43
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1573.43,
+          "link": "https://meli.la/2e66MFi",
+          "lastUpdate": "2026-05-13T20:48:35.868Z"
+        }
+      ],
+      "benchmark": 9500
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa de Vídeo RX 7600 GAMING OC 8G AMD Radeon Gigabyte, 8GB, GDDR6, 128bits, RGB - GV-R76GAMING OC-8GD",
+      "price": 2727,
+      "image": "/images/products/gpu/placa-de-vdeo-rx-7600-gaming.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 3136
+        },
+        {
+          "month": "Jan/26",
+          "price": 3038
+        },
+        {
+          "month": "Fev/26",
+          "price": 2952
+        },
+        {
+          "month": "Mar/26",
+          "price": 2892
+        },
+        {
+          "month": "Abr/26",
+          "price": 2862
+        },
+        {
+          "month": "Mai/26",
+          "price": 2727
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2727,
+          "link": "https://meli.la/1HEsKbA",
+          "lastUpdate": "2026-05-13T20:49:14.199Z"
+        }
+      ],
+      "benchmark": 16300
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa De Vídeo Pcyes Radeon Rx 550 4gb Gddr5 Hdmi/dp/dvi AMD",
+      "price": 585,
+      "image": "/images/products/gpu/placa-de-vdeo-pcyes-radeon-rx.jpg",
+      "score": 85,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 673
+        },
+        {
+          "month": "Jan/26",
+          "price": 664
+        },
+        {
+          "month": "Fev/26",
+          "price": 642
+        },
+        {
+          "month": "Mar/26",
+          "price": 639
+        },
+        {
+          "month": "Abr/26",
+          "price": 617
+        },
+        {
+          "month": "Mai/26",
+          "price": 585
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 585,
+          "link": "https://meli.la/1xygbJr",
+          "lastUpdate": "2026-05-13T20:55:39.065Z"
+        }
+      ],
+      "benchmark": 1638
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa De Video Powercolor Radeon Rx 6500 Xt Fighter, 4gb",
+      "price": 1229,
+      "image": "/images/products/gpu/placa-de-video-powercolor-rade.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1413
+        },
+        {
+          "month": "Jan/26",
+          "price": 1359
+        },
+        {
+          "month": "Fev/26",
+          "price": 1358
+        },
+        {
+          "month": "Mar/26",
+          "price": 1305
+        },
+        {
+          "month": "Abr/26",
+          "price": 1244
+        },
+        {
+          "month": "Mai/26",
+          "price": 1229
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1229,
+          "link": "https://meli.la/2Z43UgM",
+          "lastUpdate": "2026-05-13T20:58:49.918Z"
+        }
+      ],
+      "benchmark": 9500
+    },
+    {
+      "brand": "AMD",
+      "name": "Placa de vídeo AMD ASRock Challenger Radeon RX 6600 Series RX 6600 8GB",
+      "price": 2352,
+      "image": "/images/products/gpu/placa-de-vdeo-amd-asrock-chal.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 2705
+        },
+        {
+          "month": "Jan/26",
+          "price": 2628
+        },
+        {
+          "month": "Fev/26",
+          "price": 2543
+        },
+        {
+          "month": "Mar/26",
+          "price": 2527
+        },
+        {
+          "month": "Abr/26",
+          "price": 2484
+        },
+        {
+          "month": "Mai/26",
+          "price": 2352
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2352,
+          "link": "https://meli.la/22SNufQ",
+          "lastUpdate": "2026-05-13T20:59:29.452Z"
+        }
+      ],
+      "benchmark": 14400
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa de vídeo Nvidia Asus TUF Gaming GeForce GTX 16 Series GTX 1660 Ti OC Edition 6GB",
+      "price": 4927,
+      "image": "/images/products/gpu/placa-de-vdeo-nvidia-asus-tuf.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 5666
+        },
+        {
+          "month": "Jan/26",
+          "price": 5642
+        },
+        {
+          "month": "Fev/26",
+          "price": 5365
+        },
+        {
+          "month": "Mar/26",
+          "price": 5157
+        },
+        {
+          "month": "Abr/26",
+          "price": 5012
+        },
+        {
+          "month": "Mai/26",
+          "price": 4927
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 4927,
+          "link": "https://meli.la/1BrXQD3",
+          "lastUpdate": "2026-05-14T00:19:04.249Z"
+        }
+      ],
+      "benchmark": 12900
+    },
+    {
+      "brand": "Geral",
+      "name": "Placa De Vídeo Pcyes Gtx 1660 Super 6gb Gddr6 Dual Fan",
+      "price": 1649,
+      "image": "/images/products/gpu/placa-de-vdeo-pcyes-gtx-1660.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1896
+        },
+        {
+          "month": "Jan/26",
+          "price": 1859
+        },
+        {
+          "month": "Fev/26",
+          "price": 1856
+        },
+        {
+          "month": "Mar/26",
+          "price": 1825
+        },
+        {
+          "month": "Abr/26",
+          "price": 1770
+        },
+        {
+          "month": "Mai/26",
+          "price": 1649
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1649,
+          "link": "https://meli.la/1BrXQD3",
+          "lastUpdate": "2026-05-14T00:22:24.645Z"
+        }
+      ],
+      "benchmark": 12700
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Vídeo Pcyes Geforce Gtx 1650 Gddr6 4gb",
+      "price": 1199,
+      "image": "/images/products/gpu/placa-de-vdeo-pcyes-geforce-g.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1379
+        },
+        {
+          "month": "Jan/26",
+          "price": 1323
+        },
+        {
+          "month": "Fev/26",
+          "price": 1259
+        },
+        {
+          "month": "Mar/26",
+          "price": 1198
+        },
+        {
+          "month": "Abr/26",
+          "price": 1156
+        },
+        {
+          "month": "Mai/26",
+          "price": 1199
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1199,
+          "link": "https://meli.la/21W6W9R",
+          "lastUpdate": "2026-05-14T01:25:35.741Z"
+        }
+      ],
+      "benchmark": 7800
     },
     {
       "brand": "Intel",
-      "name": "Placa De Vídeo Asrock Intel Arc B580 Steel Legend OC",
-      "price": 2647,
-      "image": "/images/products/gpu/placa-de-vdeo-asrock-intel-ar.jpg",
-      "link": "https://meli.la/1haWFbG",
-      "store": "Mercado Livre",
+      "name": "Placa De Vídeo Onix Odyssey Intel® Arc B580 Gddr6 12gb Preto",
+      "price": 2719,
+      "image": "/images/products/gpu/placa-de-vdeo-onix-odyssey-in.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 3127
+        },
+        {
+          "month": "Jan/26",
+          "price": 3023
+        },
+        {
+          "month": "Fev/26",
+          "price": 2999
+        },
+        {
+          "month": "Mar/26",
+          "price": 2953
+        },
+        {
+          "month": "Abr/26",
+          "price": 2908
+        },
+        {
+          "month": "Mai/26",
+          "price": 2719
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2719,
+          "link": "https://meli.la/19q1hWG",
+          "lastUpdate": "2026-05-14T01:28:09.674Z"
+        }
+      ],
+      "benchmark": 19500
+    },
+    {
+      "brand": "NVIDIA",
+      "name": "Placa De Video Geforce Gt240 Afox 1gb Ddr3 128b Hdmi Dvi Vga",
+      "price": 231.9,
+      "image": "/images/products/gpu/placa-de-video-geforce-gt240-a.jpg",
       "score": 80,
       "priceHistory": [
-        { "month": "Dez/25", "price": 3044 },
-        { "month": "Jan/26", "price": 3038 },
-        { "month": "Fev/26", "price": 2916 },
-        { "month": "Mar/26", "price": 2796 },
-        { "month": "Abr/26", "price": 2704 },
-        { "month": "Mai/26", "price": 2647 }
+        {
+          "month": "Dez/25",
+          "price": 267
+        },
+        {
+          "month": "Jan/26",
+          "price": 256
+        },
+        {
+          "month": "Fev/26",
+          "price": 247
+        },
+        {
+          "month": "Mar/26",
+          "price": 243
+        },
+        {
+          "month": "Abr/26",
+          "price": 231
+        },
+        {
+          "month": "Mai/26",
+          "price": 231.9
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 231.9,
+          "link": "https://meli.la/34o3fxp",
+          "lastUpdate": "2026-05-14T01:29:15.304Z"
+        }
       ]
     }
   ],
-  "cpu": [
-    {
-      "brand": "AMD",
-      "name": "Processador Amd Ryzen 5 5600GT 3.6GHz (4.6GHz Turbo)",
-      "price": 1140,
-      "image": "/images/products/cpu/processador-amd-ryzen-5-5600gt.jpg",
-      "link": "https://meli.la/2nJfoxP",
-      "store": "Mercado Livre",
-      "score": 80
-    }
-  ],
+  "cpu": [],
   "mobo": [],
   "ram": [],
-  "ssd": []
+  "ssd": [],
+  "psu": []
 }

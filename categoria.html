@@ -20,7 +20,7 @@
       <a href="/categoria.html?cat=ram">Memórias</a>
       <a href="/categoria.html?cat=ssd">SSDs</a>
       <a href="/comparador.html">Comparador</a>
-      <a href="/sobre.html">Sobre</a>
+      <a href="/builder.html" style="color: #00f0ff;">PC Builder <span style="font-size: 0.6rem; background: #00f0ff; color: #06080d; padding: 2px 4px; border-radius: 4px; vertical-align: top; margin-left: 4px;">BETA</span></a>      <a href="/sobre.html">Sobre</a>
     </div>
     <a href="/comparador.html" class="nav-cta">⚡ Comparar</a>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -50,6 +50,16 @@
             <select id="filter-brand" class="filter-select">
               <option value="">Todas as Marcas</option>
             </select>
+          </div>
+          <div class="filter-group">
+            <select id="filter-spec" class="filter-select">
+              <option value="">Todas as Specs</option>
+            </select>
+          </div>
+          <div class="filter-group filter-price-range">
+            <input type="number" id="filter-price-min" class="filter-input filter-input-sm" placeholder="R$ Min" min="0" />
+            <span class="filter-separator">—</span>
+            <input type="number" id="filter-price-max" class="filter-input filter-input-sm" placeholder="R$ Max" min="0" />
           </div>
           <input type="text" id="filter-search" class="filter-input" placeholder="🔍 Buscar modelo..." />
           <div class="view-toggle">
@@ -126,3 +136,4 @@
   <script type="module" src="/categoria.js"></script>
 </body>
 </html>
+

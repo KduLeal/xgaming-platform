@@ -1,7 +1,24 @@
 import './style.css';
 import './produto.css';
 import productsData from './data/products.json';
-import hardwareSpecs from './data/hardware-specs.json';// ========== FIND PRODUCT ==========
+import hardwareSpecs from './data/hardware-specs.json';
+
+// ========== SECURITY HELPERS ==========
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ========== PRICE ANALYSIS ==========
+function isLowestPrice(product) {
+  if (!product.priceHistory || product.priceHistory.length < 2) return false;
+  const historicalPrices = product.priceHistory.map(h => h.price);
+  const minHistorical = Math.min(...historicalPrices);
+  return product.price <= minHistorical;
+}
+
+// ========== FIND PRODUCT ==========
 function getProductFromURL() {
   const params = new URLSearchParams(window.location.search);
   const name = params.get('name');
@@ -167,10 +184,18 @@ function renderProduct(product) {
   renderOffersTable(product);
 
   // Price monitor description
-  // Price monitor description
   const priceDesc = document.getElementById('prod-price-desc');
+  const lowest = isLowestPrice(product);
   if (priceDesc) {
-    priceDesc.innerHTML = `O produto <strong>${product.name}</strong> está com melhor oferta por <strong class="green">R$ ${product.price.toLocaleString('pt-BR')}</strong> em ${product.store}. ${product.score >= 70 ? '<strong class="green">Excelente custo-benefício!</strong>' : 'Compare com outros modelos para encontrar a melhor opção.'}`;
+    let desc = `O produto <strong>${escapeHTML(product.name)}</strong> está com melhor oferta por <strong class="green">R$ ${product.price.toLocaleString('pt-BR')}</strong> em ${escapeHTML(product.store)}. `;
+    if (lowest) {
+      desc += `<span class="lowest-price-badge badge-lg" style="margin-top:0.75rem;display:inline-flex;">🔥 Este é o menor preço dos últimos 6 meses!</span>`;
+    } else if (product.score >= 70) {
+      desc += `<strong class="green">Excelente custo-benefício!</strong>`;
+    } else {
+      desc += `Compare com outros modelos para encontrar a melhor opção.`;
+    }
+    priceDesc.innerHTML = desc;
   }
 
   // Brand tag

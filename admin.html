@@ -37,6 +37,24 @@
     .coverage-list.done .coverage-item { border-left: 3px solid var(--green); }
     .coverage-item a { color: var(--cyan); text-decoration: none; font-size: 0.85rem; padding: 4px 8px; background: rgba(0,240,255,0.1); border-radius: 4px; transition: 0.3s; }
     .coverage-item a:hover { background: var(--cyan); color: #000; }
+    
+    /* Fila de Aprovação */
+    .pending-container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: var(--bg-card); border: 1px solid rgba(255, 200, 0, 0.3); border-radius: var(--radius-lg); backdrop-filter: blur(10px); }
+    .pending-header { text-align: center; margin-bottom: 2rem; }
+    .pending-header h2 { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: #ffc107; }
+    .pending-list { display: flex; flex-direction: column; gap: 1rem; }
+    .pending-item { display: flex; gap: 1rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid var(--border-glass); align-items: center; }
+    .pending-img { width: 60px; height: 60px; object-fit: contain; border-radius: 4px; background: #fff; padding: 2px; }
+    .pending-info { flex: 1; }
+    .pending-info h4 { font-size: 0.95rem; margin-bottom: 4px; color: var(--text-1); }
+    .pending-info p { font-size: 0.8rem; color: var(--text-2); margin-bottom: 4px; }
+    .pending-price { font-weight: bold; color: var(--cyan); font-size: 1.1rem; }
+    .pending-actions { display: flex; flex-direction: column; gap: 0.5rem; width: 250px; }
+    .btn-copy { background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border-glass); color: #fff; padding: 6px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; transition: 0.2s; }
+    .btn-copy:hover { background: rgba(255,255,255,0.2); }
+    .input-affiliate { padding: 8px; border-radius: 4px; border: 1px solid var(--cyan); background: rgba(0,0,0,0.5); color: #fff; font-size: 0.85rem; }
+    .btn-approve { background: var(--cyan); color: #000; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; }
+    .btn-approve:hover { background: #00e0ee; }
   </style>
 </head>
 <body>
@@ -79,6 +97,26 @@
     </form>
 
     <div id="status-msg"></div>
+  </div>
+
+  <div class="pending-container" id="pending-section" style="display: none;">
+    <div class="pending-header">
+      <h2>Fila de Aprovação (ML Hunter)</h2>
+      <p style="color: var(--text-2); font-size: 0.9rem; margin-top: 0.5rem;">O robô encontrou essas ofertas. Clique no nome para abrir o link original e verificar.</p>
+    </div>
+    
+    <div class="coverage-filters" id="pending-filters">
+      <button class="active" data-cat="all">Todos</button>
+      <button data-cat="gpu">GPUs</button>
+      <button data-cat="cpu">CPUs</button>
+      <button data-cat="mobo">Mães</button>
+      <button data-cat="ram">RAMs</button>
+      <button data-cat="ssd">SSDs</button>
+    </div>
+
+    <div class="pending-list" id="pending-list">
+      <!-- Inserido via JS -->
+    </div>
   </div>
 
   <div class="coverage-container">
@@ -147,6 +185,127 @@
         btn.innerHTML = 'Adicionar Produto';
       }
     });
+
+    // ========== PENDING QUEUE (ML HUNTER) ==========
+    let allPending = [];
+    let currentPendingFilter = 'all';
+
+    async function loadPending() {
+      try {
+        const res = await fetch('http://localhost:3002/api/pending');
+        allPending = await res.json();
+        
+        const section = document.getElementById('pending-section');
+        if (!allPending || allPending.length === 0) {
+          section.style.display = 'none';
+          return;
+        }
+
+        section.style.display = 'block';
+        renderPending(currentPendingFilter);
+      } catch (err) {
+        console.error('Erro ao carregar fila de aprovação:', err);
+      }
+    }
+
+    function renderPending(cat) {
+      currentPendingFilter = cat;
+      const list = document.getElementById('pending-list');
+      const filtered = cat === 'all' ? allPending : allPending.filter(i => i.category === cat);
+      
+      if (filtered.length === 0) {
+        list.innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-2);">Nenhum item pendente nesta categoria.</div>';
+        return;
+      }
+
+      list.innerHTML = filtered.map(item => `
+        <div class="pending-item" id="pend-${item.id}">
+          <a href="${item.originalLink}" target="_blank">
+            <img src="${item.image}" class="pending-img" alt="Img" />
+          </a>
+          <div class="pending-info">
+            <h4><a href="${item.originalLink}" target="_blank" style="color: inherit; text-decoration: none;">${item.name}</a></h4>
+            <p>${item.store} • <span style="color: var(--cyan)">${item.category.toUpperCase()}</span></p>
+            <div class="pending-price">R$ ${item.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
+          </div>
+          <div class="pending-actions">
+            <button class="btn-copy" onclick="copyLink('${item.originalLink}')">1. Copiar Link Original</button>
+            <input type="url" id="input-${item.id}" class="input-affiliate" placeholder="2. Cole o Link de Afiliado (sec/)" />
+            <button class="btn-approve" onclick="approveItem('${item.id}', '${item.category}')">3. Aprovar Produto</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.querySelectorAll('#pending-filters button').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('#pending-filters button').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        renderPending(e.target.dataset.cat);
+      });
+    });
+
+    window.copyLink = function(link) {
+      navigator.clipboard.writeText(link);
+      alert('Link original copiado! Cole no painel de afiliados do Mercado Livre.');
+    };
+
+    window.approveItem = async function(id, category) {
+      const input = document.getElementById(`input-${id}`);
+      const link = input.value.trim();
+      
+      // Get item data for fallback in case of scraper block
+      const item = allPending.find(p => p.id === id);
+      const fallbackData = item ? { name: item.name, price: item.price, image: item.image } : null;
+      
+      if (!link || (!link.includes('mercadolivre') && !link.includes('meli.la'))) {
+        alert('Por favor, insira um link de afiliado válido do Mercado Livre (ex: mercadolivre.com/sec/ ou meli.la/...).');
+        return;
+      }
+
+      const btn = input.nextElementSibling;
+      btn.disabled = true;
+      btn.textContent = 'Processando...';
+
+      try {
+        // 1. Add Product (Scrape it via the new affiliate link)
+        const resAdd = await fetch('http://localhost:3002/api/add-product', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ link, category, brand: '', fallbackData }) // Pass fallback data
+        });
+        
+        if (!resAdd.ok) {
+          const data = await resAdd.json();
+          throw new Error(data.error || 'Falha ao processar produto');
+        }
+
+        // 2. Remove from pending
+        await fetch('http://localhost:3002/api/remove-pending', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id })
+        });
+
+        // 3. Remove from UI immediately for snappy feel
+        const el = document.getElementById(`pend-${id}`);
+        if (el) {
+          el.style.opacity = '0';
+          el.style.transform = 'translateX(50px)';
+          el.style.transition = '0.4s';
+          setTimeout(() => el.remove(), 400);
+        }
+
+        console.log('Produto aprovado com sucesso!');
+        loadPending();
+        loadCoverage();
+
+      } catch (err) {
+        alert('Erro: ' + err.message);
+        btn.disabled = false;
+        btn.textContent = '3. Aprovar Produto';
+      }
+    };
 
     // ========== COVERAGE MANAGER ==========
     let hwSpecs = null;
@@ -222,7 +381,10 @@
     });
 
     // Inicia ao carregar a página
-    window.addEventListener('load', loadCoverage);
+    window.addEventListener('load', () => {
+      loadCoverage();
+      loadPending();
+    });
   </script>
 </body>
 </html>

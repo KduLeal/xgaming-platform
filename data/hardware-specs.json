@@ -2,6 +2,9 @@
   "gpu": {
     "RTX 5090": { "Benchmark": "48500", "Arquitetura": "Blackwell", "CUDA Cores": "21760", "VRAM Base": "32GB GDDR7", "TDP Padrão": "600W", "Interface": "PCIe 5.0 x16" },
     "RTX 5080": { "Benchmark": "39200", "Arquitetura": "Blackwell", "CUDA Cores": "10752", "VRAM Base": "16GB GDDR7", "TDP Padrão": "400W", "Interface": "PCIe 5.0 x16" },
+    "RTX 5060 Ti": { "Benchmark": "26800", "Arquitetura": "Blackwell", "CUDA Cores": "4608", "VRAM Base": "16GB GDDR7", "TDP Padrão": "180W", "Interface": "PCIe 5.0 x8" },
+    "RTX 5060": { "Benchmark": "22500", "Arquitetura": "Blackwell", "CUDA Cores": "3840", "VRAM Base": "8GB GDDR7", "TDP Padrão": "145W", "Interface": "PCIe 5.0 x8" },
+    "RTX 5050": { "Benchmark": "17800", "Arquitetura": "Blackwell", "CUDA Cores": "2560", "VRAM Base": "8GB GDDR7", "TDP Padrão": "115W", "Interface": "PCIe 5.0 x8" },
     "RTX 4090": { "Benchmark": "38850", "Arquitetura": "Ada Lovelace", "CUDA Cores": "16384", "VRAM Base": "24GB GDDR6X", "TDP Padrão": "450W", "Interface": "PCIe 4.0 x16" },
     "RTX 4080 Super": { "Benchmark": "34500", "Arquitetura": "Ada Lovelace", "CUDA Cores": "10240", "VRAM Base": "16GB GDDR6X", "TDP Padrão": "320W", "Interface": "PCIe 4.0 x16" },
     "RTX 4080": { "Benchmark": "33800", "Arquitetura": "Ada Lovelace", "CUDA Cores": "9728", "VRAM Base": "16GB GDDR6X", "TDP Padrão": "320W", "Interface": "PCIe 4.0 x16" },
@@ -20,9 +23,15 @@
     "RTX 3060 Ti": { "Benchmark": "20200", "Arquitetura": "Ampere", "CUDA Cores": "4864", "VRAM Base": "8GB GDDR6", "TDP Padrão": "200W", "Interface": "PCIe 4.0 x16" },
     "RTX 3060": { "Benchmark": "17100", "Arquitetura": "Ampere", "CUDA Cores": "3584", "VRAM Base": "12GB GDDR6", "TDP Padrão": "170W", "Interface": "PCIe 4.0 x16" },
     "RTX 3050": { "Benchmark": "12800", "Arquitetura": "Ampere", "CUDA Cores": "2560", "VRAM Base": "8GB GDDR6", "TDP Padrão": "130W", "Interface": "PCIe 4.0 x8" },
-    "RX 7900 XTX": { "Benchmark": "31100", "Arquitetura": "RDNA 3", "Stream Processors": "6144", "VRAM Base": "24GB GDDR6", "TDP Padrão": "355W", "Interface": "PCIe 4.0 x16" },
-    "RX 7900 XT": { "Benchmark": "28800", "Arquitetura": "RDNA 3", "Stream Processors": "5376", "VRAM Base": "20GB GDDR6", "TDP Padrão": "315W", "Interface": "PCIe 4.0 x16" },
-    "RX 7800 XT": { "Benchmark": "24300", "Arquitetura": "RDNA 3", "Stream Processors": "3840", "VRAM Base": "16GB GDDR6", "TDP Padrão": "263W", "Interface": "PCIe 4.0 x16" },
+    "RX 7900 XTX": { "Benchmark": "31500", "Arquitetura": "RDNA 3", "CUDA Cores": "6144 Stream", "VRAM Base": "24GB GDDR6", "TDP Padrão": "355W", "Interface": "PCIe 4.0 x16" },
+    "RX 7900 XT": { "Benchmark": "26500", "Arquitetura": "RDNA 3", "CUDA Cores": "5376 Stream", "VRAM Base": "20GB GDDR6", "TDP Padrão": "315W", "Interface": "PCIe 4.0 x16" },
+    "RX 7900 GRE": { "Benchmark": "21800", "Arquitetura": "RDNA 3", "CUDA Cores": "5120 Stream", "VRAM Base": "16GB GDDR6", "TDP Padrão": "260W", "Interface": "PCIe 4.0 x16" },
+    "RX 7900": { "Benchmark": "23500", "Arquitetura": "RDNA 3", "CUDA Cores": "5120 Stream", "VRAM Base": "16GB GDDR6", "TDP Padrão": "260W", "Interface": "PCIe 4.0 x16" },
+    "RX 7800 XT": { "Benchmark": "19200", "Arquitetura": "RDNA 3", "CUDA Cores": "3840 Stream", "VRAM Base": "16GB GDDR6", "TDP Padrão": "263W", "Interface": "PCIe 4.0 x16" },
+    "RX 6700 XT": { "Benchmark": "18500", "Arquitetura": "RDNA 2", "CUDA Cores": "2560 Stream", "VRAM Base": "12GB GDDR6", "TDP Padrão": "230W", "Interface": "PCIe 4.0 x16" },
+    "RX 6600": { "Benchmark": "14200", "Arquitetura": "RDNA 2", "CUDA Cores": "1792 Stream", "VRAM Base": "8GB GDDR6", "TDP Padrão": "132W", "Interface": "PCIe 4.0 x8" },
+    "RX 6500 XT": { "Benchmark": "9500", "Arquitetura": "RDNA 2", "CUDA Cores": "1024 Stream", "VRAM Base": "4GB GDDR6", "TDP Padrão": "107W", "Interface": "PCIe 4.0 x4" },
+    "RX 550": { "Benchmark": "1638", "Arquitetura": "Lexa", "CUDA Cores": "512 Stream", "VRAM Base": "4GB GDDR5", "TDP Padrão": "50W", "Interface": "PCIe 3.0 x8" },
     "RX 7700 XT": { "Benchmark": "21500", "Arquitetura": "RDNA 3", "Stream Processors": "3456", "VRAM Base": "12GB GDDR6", "TDP Padrão": "245W", "Interface": "PCIe 4.0 x16" },
     "RX 7600 XT": { "Benchmark": "17200", "Arquitetura": "RDNA 3", "Stream Processors": "2048", "VRAM Base": "16GB GDDR6", "TDP Padrão": "190W", "Interface": "PCIe 4.0 x8" },
     "RX 7600": { "Benchmark": "16300", "Arquitetura": "RDNA 3", "Stream Processors": "2048", "VRAM Base": "8GB GDDR6", "TDP Padrão": "165W", "Interface": "PCIe 4.0 x8" },
@@ -66,6 +75,7 @@
     "Ryzen 5 5600X": { "Benchmark": "22100", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 5600": { "Benchmark": "21600", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 5600G": { "Benchmark": "19800", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Graphics 7" },
+    "Ryzen 5 5600GT": { "Benchmark": "20200", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Vega 7" },
     "Ryzen 5 5500": { "Benchmark": "19400", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Nenhum" },
     "Ryzen 5 4600G": { "Benchmark": "15800", "Socket": "AM4", "Cores / Threads": "6 / 12", "TDP (PBP)": "65W", "Gráficos": "Radeon Graphics 7" },
     "i9-14900K": { "Benchmark": "61000", "Socket": "LGA 1700", "Cores / Threads": "24 (8P+16E) / 32", "TDP (PBP)": "253W", "Gráficos": "Intel UHD 770" },
@@ -122,5 +132,15 @@
     "1TB": { "Capacidade": "1024 GB", "Tipo": "Padrão Gamer" },
     "512GB": { "Capacidade": "512 GB", "Tipo": "Custo-benefício" },
     "240GB": { "Capacidade": "240 GB", "Tipo": "Entrada" }
+  },
+  "psu": {
+    "1000W 80 Plus Gold": { "Potência Real": "1000W", "Certificação": "80 Plus Gold", "Modular": "Full-Modular" },
+    "850W 80 Plus Gold": { "Potência Real": "850W", "Certificação": "80 Plus Gold", "Modular": "Full-Modular" },
+    "750W 80 Plus Bronze": { "Potência Real": "750W", "Certificação": "80 Plus Bronze", "Modular": "Semi-Modular" },
+    "650W 80 Plus Bronze": { "Potência Real": "650W", "Certificação": "80 Plus Bronze", "Modular": "Não Modular" },
+    "600W 80 Plus White": { "Potência Real": "600W", "Certificação": "80 Plus White", "Modular": "Não Modular" },
+    "500W 80 Plus Bronze": { "Potência Real": "500W", "Certificação": "80 Plus Bronze", "Modular": "Não Modular" },
+    "500W 80 Plus White": { "Potência Real": "500W", "Certificação": "80 Plus White", "Modular": "Não Modular" },
+    "400W 80 Plus White": { "Potência Real": "400W", "Certificação": "80 Plus White", "Modular": "Não Modular" }
   }
 }

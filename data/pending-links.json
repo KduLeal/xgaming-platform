@@ -1,0 +1,612 @@
+[
+  {
+    "id": "ml-1778702747714-0",
+    "category": "gpu",
+    "name": "Placa De Vídeo Rtx 4060 Ti 8gb Gddrd6 128b Ghost Gainward",
+    "price": 4426,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_731010-MLA80566511738_112024-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-rtx-4060-ti-8gb-gddrd6-128b-ghost-gainward/p/MLB43448289?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=76ef0470-b5e0-4d25-8041-0b99b66c2151&wid=&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:05:47.714Z"
+  },
+  {
+    "id": "ml-1778702832564-0",
+    "category": "gpu",
+    "name": "Placa de Vídeo AMD RX 550 4GB GDDR5 PCI-E 3.0 PCYES Edge Para Jogos",
+    "price": 899,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_819380-MLA99593276862_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-amd-rx-550-4gb-gddr5-pci-e-30-pcyes-edge-para-jogos/p/MLB61228334?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=a23df40a-c5a5-46dd-9c3c-35bc6299a044&wid=MLB4274632771&sid=search",
+    "store": "Zalon",
+    "scrapedAt": "2026-05-13T20:07:12.564Z"
+  },
+  {
+    "id": "ml-1778702837075-0",
+    "category": "gpu",
+    "name": "Placa de vídeo AMD Asus TUF Gaming Radeon RX 6700 Series RX 6700 XT OC Edition 12GB",
+    "price": 3528,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_625014-MLA47855233956_102021-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-amd-asus-tuf-gaming-radeon-rx-6700-series-rx-6700-xt-oc-edition-12gb/p/MLB18441948?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=76253bd9-2911-4dd7-981b-3ca9fc85d2ae&wid=&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:07:17.075Z"
+  },
+  {
+    "id": "ml-1778702887533-0",
+    "category": "gpu",
+    "name": "Placa de Vídeo Gamer Aitek NVIDIA GTX750 TI DELTA-GTX750TI-4G 4GB GDDR5 Full HD",
+    "price": 619,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_786032-MLA100667671813_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-gamer-aitek-nvidia-gtx750-ti-delta-gtx750ti-4g-4gb-gddr5-full-hd/p/MLB62947470?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=e6d28ba5-be18-4284-9154-63591327f893&wid=MLB4578021739&sid=search",
+    "store": "Meli Shopp",
+    "scrapedAt": "2026-05-13T20:08:07.533Z"
+  },
+  {
+    "id": "ml-1778702900375-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 9 9950x 4.3ghz (max Turbo 5.7ghz) Am5",
+    "price": 5585,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_834759-MLB83769433029_042025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-9-9950x-43ghz-max-turbo-57ghz-am5/up/MLBU3127353328?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6bcf7a94-681a-47e7-9f29-94fe1798e59f&wid=MLB5351409066&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:08:20.375Z"
+  },
+  {
+    "id": "ml-1778702905097-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 9 9900x3d De 5,5 Ghz Am5",
+    "price": 12423,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_627722-MLA99966959905_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-9-9900x3d-de-55-ghz-am5/p/MLB50143050?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=7f75b44f-3c0b-4724-81e9-ca372f5a82f6&wid=MLB5720842544&sid=search",
+    "store": "Terabyte Eshop",
+    "scrapedAt": "2026-05-13T20:08:25.097Z"
+  },
+  {
+    "id": "ml-1778702917342-0",
+    "category": "cpu",
+    "name": "Processador gamer AMD Ryzen 9 7950X3D 100-100000908WOF de 16 núcleos e 5.7GHz de frequência com gráfica integrada",
+    "price": 4263,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_974411-MLA99991231693_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-9-7950x3d-100-100000908wof-de-16-nucleos-e-57ghz-de-frequncia-com-grafica-integrada/p/MLB22481014?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=3fd089ba-02de-4944-836d-b951de6d62be&wid=MLB3637137956&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:08:37.342Z"
+  },
+  {
+    "id": "ml-1778702926376-0",
+    "category": "cpu",
+    "name": "Processador gamer AMD Ryzen 7 7800X3D 100-100000910WOF de 8 núcleos e 5GHz de frequência com gráfica integrada",
+    "price": 3900,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_772047-MLA99415879120_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-7-7800x3d-100-100000910wof-de-8-nucleos-e-5ghz-de-frequncia-com-grafica-integrada/p/MLB22826887?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=d2bd403c-de9b-4c7a-8f6a-d29ac96f1ad1&wid=MLB4147191751&sid=search",
+    "store": "LIDER INFORMATICA",
+    "scrapedAt": "2026-05-13T20:08:46.376Z"
+  },
+  {
+    "id": "ml-1778702939719-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 5 7600x Am5 5.3ghz - 100-100000593wof",
+    "price": 1670,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_890838-MLB51714905613_092022-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-7600x-am5-53ghz---100100000593wof/up/MLBU1113886229?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=dc17c680-9957-4253-990e-62e47d85d841&wid=MLB2819635552&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:08:59.719Z"
+  },
+  {
+    "id": "ml-1778702944446-0",
+    "category": "cpu",
+    "name": "Processador AMD Ryzen 7 5700G 100-100000263BOX de 8 núcleos e 4.6GHz de frequência com gráfica integrada",
+    "price": 1699,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_941100-MLA99523579842_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-5700g-100-100000263box-de-8-nucleos-e-46ghz-de-frequncia-com-grafica-integrada/p/MLB18441624?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=d794ae9a-2043-4049-a844-81134114fdf2&wid=MLB5887231550&sid=search",
+    "store": "TNT Info",
+    "scrapedAt": "2026-05-13T20:09:04.446Z"
+  },
+  {
+    "id": "ml-1778702953715-1",
+    "category": "cpu",
+    "name": "Kit Amd Ryzen 7 5700x + B550m Aorus Elite + 16gb 3200mhz",
+    "price": 3699,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_826177-MLB92350494891_092025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/kit-amd-ryzen-7-5700x--b550m-aorus-elite--16gb-3200mhz/up/MLBU1111248190?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=9c748806-6f25-4813-8515-9d0903ae7b32&wid=MLB2688803339&sid=search",
+    "store": "Total Info",
+    "scrapedAt": "2026-05-13T20:09:13.715Z"
+  },
+  {
+    "id": "ml-1778702966915-0",
+    "category": "cpu",
+    "name": "Processador AMD Ryzen 5 5600GT, 3.6GHz (4.6GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100001488BOX",
+    "price": 1333,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_975621-MLA99589746250_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5600gt-36ghz-46ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100001488box/p/MLB32444906?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e8cf296e-8adf-4d64-8d58-4dcaa771e965&wid=MLB5720543110&sid=search",
+    "store": "CHIPART",
+    "scrapedAt": "2026-05-13T20:09:26.915Z"
+  },
+  {
+    "id": "ml-1778702971923-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 5 5500 3.6ghz 4.2ghz Max Turbo Cache 1",
+    "price": 997,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_806163-MLA99416647702_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5500-36ghz-42ghz-max-turbo-cache-1/up/MLBU3882300163?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2f2eec69-cba1-4574-9a6e-3d7f98efdb23&wid=MLB4590516747&sid=search",
+    "store": "Casa do Provedor",
+    "scrapedAt": "2026-05-13T20:09:31.923Z"
+  },
+  {
+    "id": "ml-1778702976969-0",
+    "category": "cpu",
+    "name": "Kit Upgrade Gamer, Amd Ryzen 5 4600g + A520m + 8gb Ddr4",
+    "price": 2011,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_890626-MLB91925882346_092025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/kit-upgrade-gamer-amd-ryzen-5-4600g--a520m--8gb-ddr4/up/MLBU764738428?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=ccbe541b-6a62-411a-8b94-41b6d60d0e6b&wid=MLB3469475057&sid=search",
+    "store": "GAMING INFO",
+    "scrapedAt": "2026-05-13T20:09:36.969Z"
+  },
+  {
+    "id": "ml-1778702982214-0",
+    "category": "cpu",
+    "name": "Processador Intel Core I9-14900 3.6GHz 24 Núcleos LGA 1700",
+    "price": 4649,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_956083-MLA99384596854_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i9-14900-36ghz-24-nucleos-lga-1700/p/MLB32038252?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=4fe2ea7c-4dec-42cc-997f-1d479f5c0d4c&wid=MLB3908309941&sid=search",
+    "store": "Login",
+    "scrapedAt": "2026-05-13T20:09:42.214Z"
+  },
+  {
+    "id": "ml-1778702991664-0",
+    "category": "cpu",
+    "name": "Processador Intel Core I5 14600k Lga1700 Bx8071514600k",
+    "price": 4299,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_874505-MLA100008465301_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i5-14600k-lga1700-bx8071514600k/p/MLB29149408?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=be607ecd-a9ff-4ee2-9e84-934d33ef87c7&wid=MLB4211176633&sid=search",
+    "store": "Terabyte Eshop",
+    "scrapedAt": "2026-05-13T20:09:51.664Z"
+  },
+  {
+    "id": "ml-1778702996549-0",
+    "category": "cpu",
+    "name": "Processador Intel I5-14400f 20mb 3.5ghz Lga 1700 ddr/5",
+    "price": 1479,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_935664-MLA99964547047_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-i5-14400f-20mb-35ghz-lga-1700-ddr5/p/MLB29937677?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=fbafbadb-42dd-41f7-940e-00ce82d5577e&wid=MLB3605359445&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:09:56.549Z"
+  },
+  {
+    "id": "ml-1778703001796-0",
+    "category": "cpu",
+    "name": "Processador gamer Intel Core i9-14900K",
+    "price": 4479,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_738595-MLA99998051643_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-intel-core-i9-14900k/p/MLB27830801?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=3a8aa90d-e917-4fdf-b8e6-208a91394068&wid=MLB3498879753&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:10:01.797Z"
+  },
+  {
+    "id": "ml-1778703016938-0",
+    "category": "cpu",
+    "name": "Bandeja Intel S1700 Core I5 13400f Gen13",
+    "price": 1972,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_708758-MLA108642052591_032026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/bandeja-intel-s1700-core-i5-13400f-gen13/p/MLB66539617?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=787480ab-b20b-4e8c-86a2-b4fb41c301ea&wid=MLB4666422525&sid=search",
+    "store": "Concordia Informatica",
+    "scrapedAt": "2026-05-13T20:10:16.938Z"
+  },
+  {
+    "id": "ml-1778703026788-0",
+    "category": "cpu",
+    "name": "Processador Intel Core I5-12400F 2.50GHZ 18MB DDR4/5 FCLGA1700 BX8071512400F",
+    "price": 1098,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_702511-MLA99969847587_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i5-12400f-250ghz-18mb-ddr45-fclga1700-bx8071512400f/p/MLB18733972?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cb5c992f-b519-4ea6-b932-1e8f6673aa80&wid=MLB3956827389&sid=search",
+    "store": "TOP SYSTEM INFORMATICA",
+    "scrapedAt": "2026-05-13T20:10:26.788Z"
+  },
+  {
+    "id": "ml-1778703031512-0",
+    "category": "cpu",
+    "name": "Processador Core I3 12100f 3,3ghz 12mb Lga1700 Bx8071512100",
+    "price": 719,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_856357-MLB49168886527_022022-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-core-i3-12100f-33ghz-12mb-lga1700-bx8071512100/up/MLBU1101811537?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=4403493b-fef6-454a-8017-39f4a3cc125b&wid=MLB2179768791&sid=search",
+    "store": "Total Info",
+    "scrapedAt": "2026-05-13T20:10:31.512Z"
+  },
+  {
+    "id": "ml-1778703036870-0",
+    "category": "cpu",
+    "name": "Processador Intel Core I5-10400f Bx8070110400f",
+    "price": 950,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_699185-MLA43024199028_082020-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i510400f-bx8070110400f/up/MLBU1103486912?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=891b8fd4-46f4-4a5d-9ac8-304928eb0efa&wid=MLB2134933281&sid=search",
+    "store": "Total Info",
+    "scrapedAt": "2026-05-13T20:10:36.871Z"
+  },
+  {
+    "id": "ml-1778703042211-0",
+    "category": "mobo",
+    "name": "Placa Mãe Msi Mag X870e Tomahawk Wifi7 Am5 4xddr5 Amd X870e Preto",
+    "price": 6404,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_699140-MLA99498253338_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-msi-mag-x870e-tomahawk-wifi7-am5-4xddr5-amd-x870e-preto/p/MLB53467423?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=c9d8f0a5-514b-4134-81bb-b6acab35da52&wid=MLB5759860764&sid=search",
+    "store": "Terabyte Eshop",
+    "scrapedAt": "2026-05-13T20:10:42.211Z"
+  },
+  {
+    "id": "ml-1778703056162-0",
+    "category": "mobo",
+    "name": "Placa Mãe Nzxt N7 B650e Branca Socket Am5",
+    "price": 3663,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_728832-MLA96711867039_102025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-nzxt-n7-b650e-branca-socket-am5/p/MLB54151263?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6ff6ad14-1663-42a3-8bd2-995f95d73d62&wid=MLB4379754599&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:10:56.162Z"
+  },
+  {
+    "id": "ml-1778703061528-0",
+    "category": "mobo",
+    "name": "Placa Mãe Msi Pro A620am-b Evo Chipset A620a Am5 Matx Ddr5",
+    "price": 1374,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_961708-MLB111079023661_042026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-mae-msi-pro-a620amb-evo-chipset-a620a-am5-matx-ddr5/up/MLBU3938732908?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=1c2e1ccd-cb85-4271-b863-171569fd73fc&wid=MLB4645126507&sid=search",
+    "store": "Terabyte Eshop",
+    "scrapedAt": "2026-05-13T20:11:01.528Z"
+  },
+  {
+    "id": "ml-1778703066563-0",
+    "category": "mobo",
+    "name": "Placa Mãe A520M K V2 AMD AM4 MATX DDR4 Gigabyte Cor Preto",
+    "price": 539,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_642824-MLA99375931234_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-a520m-k-v2-amd-am4-matx-ddr4-gigabyte-cor-preto/p/MLB24456876?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e004f314-d0de-4213-95bf-5fd063bcafe9&wid=MLB4332365009&sid=search",
+    "store": "TNT Info",
+    "scrapedAt": "2026-05-13T20:11:06.563Z"
+  },
+  {
+    "id": "ml-1778703071396-0",
+    "category": "mobo",
+    "name": "Placa-mãe Asus P/amd Am4 B550m-plus Tuf Gaming 4xddr4 Matx",
+    "price": 1029,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_666926-MLA99989580013_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-asus-pamd-am4-b550m-plus-tuf-gaming-4xddr4-matx/p/MLB22415603?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=0ebb2631-db93-4ae2-875d-163b36274cdc&wid=MLB4032948013&sid=search",
+    "store": "TNT Info",
+    "scrapedAt": "2026-05-13T20:11:11.396Z"
+  },
+  {
+    "id": "ml-1778703076467-0",
+    "category": "mobo",
+    "name": "Placa Mãe Asrock B450m-hdv R4.0 B450 Amd Am4 Matx Ddr4 Preto",
+    "price": 750,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_807217-MLA99527550222_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-asrock-b450m-hdv-r40-b450-amd-am4-matx-ddr4-preto/p/MLB22661333?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=5e46eb25-8158-4c4a-8a26-58f31b2511c5&wid=MLB6107616354&sid=search",
+    "store": "Floresta Urbana",
+    "scrapedAt": "2026-05-13T20:11:16.467Z"
+  },
+  {
+    "id": "ml-1778703081740-0",
+    "category": "mobo",
+    "name": "Placa Mae Mancer A320m-dx, Ddr4, Socket Am4, M-atx.",
+    "price": 508,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_936514-MLB110355351058_052026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-mae-mancer-a320mdx-ddr4-socket-am4-matx/up/MLBU3938735021?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=afd651b7-190a-4dd1-83ea-1cb15b190a9a&wid=MLB4658041205&sid=search",
+    "store": "Pichau",
+    "scrapedAt": "2026-05-13T20:11:21.740Z"
+  },
+  {
+    "id": "ml-1778703090291-0",
+    "category": "mobo",
+    "name": "Placa Mãe Asus Tuf Gaming B760m-plus Ii, B760, Matx, Ddr5",
+    "price": 1745,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_960090-MLA99474066202_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-asus-tuf-gaming-b760m-plus-ii-b760-matx-ddr5/p/MLB38460898?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=64c13bbf-23ee-401f-97a5-4015dfbbda13&wid=MLB3975415247&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:11:30.291Z"
+  },
+  {
+    "id": "ml-1778703095347-0",
+    "category": "mobo",
+    "name": "Placa Mãe Asus Prime Intel H610mcs D4 Lga1700 Matx Ddr4",
+    "price": 830,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_980365-MLA99979674343_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-asus-prime-intel-h610mcs-d4-lga1700-matx-ddr4/p/MLB45986541?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=ab75692f-c089-4b57-bccb-581d2cd4284f&wid=MLB4353279921&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:11:35.347Z"
+  },
+  {
+    "id": "ml-1778703110107-0",
+    "category": "ram",
+    "name": "Memoria Corsair Vengeance Rgb Ddr5 96gb (2 X 48gb) 7200mhz",
+    "price": 8389,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_888484-MLA94169193246_102025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-corsair-vengeance-rgb-ddr5-96gb-2-x-48gb-7200mhz/p/MLB59388141?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=01a7c735-72b4-4083-b940-80259a89b7fd&wid=MLB4674812759&sid=search",
+    "store": "alfastore",
+    "scrapedAt": "2026-05-13T20:11:50.107Z"
+  },
+  {
+    "id": "ml-1778703114710-0",
+    "category": "ram",
+    "name": "Memória Ram Gamer Para Pc Ddr5 16gb 6400mhz Clanm Rgb Cl40",
+    "price": 3132,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_997059-MLA105747860931_012026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-gamer-para-pc-ddr5-16gb-6400mhz-clanm-rgb-cl40/p/MLB64922316?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=fada96ac-97a7-4fc4-99e6-615135358221&wid=MLB4450259611&sid=search",
+    "store": "SETUP NINJA",
+    "scrapedAt": "2026-05-13T20:11:54.710Z"
+  },
+  {
+    "id": "ml-1778703119445-0",
+    "category": "ram",
+    "name": "Memória Xpg Lancer 2x16GB Ddr5 6000mhz CL30 Ax5u6000c3016g-dclarbk",
+    "price": 5495,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_773305-MLA96227784492_102025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-xpg-lancer-2x16gb-ddr5-6000mhz-cl30-ax5u6000c3016g-dclarbk/p/MLB61405905?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=5fecc26b-a5ad-43e8-9a21-f7ed886ba8eb&wid=MLB4637341815&sid=search",
+    "store": "Brocbyte",
+    "scrapedAt": "2026-05-13T20:11:59.445Z"
+  },
+  {
+    "id": "ml-1778703123915-0",
+    "category": "ram",
+    "name": "Memória RAM Para PC DDR5 5600mhz Cl40 16GB 1x16gb Kingston Fury Beast KF556C40BB-16 PC Gamer Cor Preto",
+    "price": 3299,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_881006-MLA99475708822_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-para-pc-ddr5-5600mhz-cl40-16gb-1x16gb-kingston-fury-beast-kf556c40bb-16-pc-gamer-cor-preto/p/MLB19153020?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=d661efcc-7b8f-4bf9-96f0-a3458ae44995&wid=MLB4400220377&sid=search",
+    "store": "SETUP NINJA",
+    "scrapedAt": "2026-05-13T20:12:03.915Z"
+  },
+  {
+    "id": "ml-1778703133071-0",
+    "category": "ram",
+    "name": "Memória Ram Para Notebook 16gb Ddr5 4800mhz Cl40 Sodimm Crucial Ct16g48c40s5 Preto",
+    "price": 1499,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_707578-MLA95647450214_102025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-para-notebook-16gb-ddr5-4800mhz-cl40-sodimm-crucial-ct16g48c40s5-preto/p/MLB21754935?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=ffa0bb1a-32aa-4f50-832f-09f2ff9ff28e&wid=MLB6236489760&sid=search",
+    "store": "ATWE Eletrônicos",
+    "scrapedAt": "2026-05-13T20:12:13.071Z"
+  },
+  {
+    "id": "ml-1778703138062-0",
+    "category": "ram",
+    "name": "Memoria Ram Ddr5 96gb (2x48gb) 7000mhz Corsair Vengeance Rgb",
+    "price": 8049,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_674174-MLA110951897369_042026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-corsair-vengeance-rgb-ddr5-96gb-2-x-48gb-7000mhz/p/MLB2083915602?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=a7a115aa-45ba-4c08-aedb-44f06b4bc2b8&wid=MLB6676555964&sid=search",
+    "store": "alfastore",
+    "scrapedAt": "2026-05-13T20:12:18.062Z"
+  },
+  {
+    "id": "ml-1778703142691-0",
+    "category": "ram",
+    "name": "Memória 8gb Ddr4 3600mhz Fury Beast Black Kf436c17bb/8",
+    "price": 799,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_744866-MLB109637369220_042026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-8gb-ddr4-3600mhz-fury-beast-black-kf436c17bb8/up/MLBU3900591325?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e7efbe95-05ad-473d-90ed-9d8675e47991&wid=MLB6631375162&sid=search",
+    "store": "TOP SYSTEM INFORMATICA",
+    "scrapedAt": "2026-05-13T20:12:22.691Z"
+  },
+  {
+    "id": "ml-1778703147643-0",
+    "category": "ram",
+    "name": "Memória RAM Para Notebook DDR4 16gb 3200Mhz CL20 Kingston Fury Impact KF432S20IB/16 Gamer Preto",
+    "price": 789,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_922020-MLA100045834555_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-para-notebook-ddr4-16gb-3200mhz-cl20-kingston-fury-impact-kf432s20ib16-gamer-preto/p/MLB18931517?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=c81a817e-d03b-4347-b585-665a9ba6a6a1&wid=MLB5710609372&sid=search",
+    "store": "MEETION",
+    "scrapedAt": "2026-05-13T20:12:27.643Z"
+  },
+  {
+    "id": "ml-1778703152406-0",
+    "category": "ram",
+    "name": "Memória Ram Para PC Ddr4 3200mhz CL16 8gb 1x8gb Adata Xpg Spectrix D35g AX4U32008G16A-SBKD35G U-dimm Gamer RGB",
+    "price": 899,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_765352-MLA99964409185_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-para-pc-ddr4-3200mhz-cl16-8gb-1x8gb-adata-xpg-spectrix-d35g-ax4u32008g16a-sbkd35g-u-dimm-gamer-rgb/p/MLB32947978?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=843c384c-e57d-4e9d-b7f8-a796e0ff5539&wid=MLB5654359916&sid=search",
+    "store": "SETUP NINJA",
+    "scrapedAt": "2026-05-13T20:12:32.406Z"
+  },
+  {
+    "id": "ml-1778703157229-0",
+    "category": "ram",
+    "name": "Memória Ram 8gb Ddr4 2666mhz Westgatte Udimm Preto",
+    "price": 489,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_851809-MLA97355364372_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/memoria-ram-8gb-ddr4-2666mhz-westgatte-udimm-preto/p/MLB44168726?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=5c433aa0-8d9e-4d15-abee-572b58ca7328&wid=MLB6169978840&sid=search",
+    "store": "WESTGATTE",
+    "scrapedAt": "2026-05-13T20:12:37.229Z"
+  },
+  {
+    "id": "ml-1778703162567-0",
+    "category": "ssd",
+    "name": "SSD NVMe M.2 2280 PCIe Gen5 1TB Interno Titan Edition - UP Gamer",
+    "price": 1999,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_693837-MLA109936178466_042026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/ssd-nvme-m2-2280-pcie-gen5-1tb-interno-titan-edition-up-gamer/p/MLB68574448?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=01d22769-2c6e-45f1-bdd5-b6aaf8c1499e&wid=MLB4635340205&sid=search",
+    "store": "SPREAKER",
+    "scrapedAt": "2026-05-13T20:12:42.567Z"
+  },
+  {
+    "id": "ml-1778703167518-0",
+    "category": "ssd",
+    "name": "Unidade de estado sólido Kingston M.2 NVMe PCIe 4.0 NV3 de 1 TB, azul escuro",
+    "price": 999,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_795091-MLA99417498242_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/unidade-de-estado-solido-kingston-m2-nvme-pcie-40-nv3-de-1-tb-azul-escuro/p/MLB39766120?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=dbf8478a-82f4-4fe9-ba1f-4d08e2146e20&wid=MLB3961793527&sid=search",
+    "store": "TOP SYSTEM INFORMATICA",
+    "scrapedAt": "2026-05-13T20:12:47.518Z"
+  },
+  {
+    "id": "ml-1778703172617-0",
+    "category": "ssd",
+    "name": "Ssd 2tb M.2 2280 Nvme Pcie Gen3 Western Digital WD Green SN350 Wds200t3g0c Velocidade De Leitura Até 3200mb/s Cor Verde Disco Sólido Interno",
+    "price": 2099,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_884044-MLA99946856231_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/ssd-2tb-m2-2280-nvme-pcie-gen3-western-digital-wd-green-sn350-wds200t3g0c-velocidade-de-leitura-ate-3200mbs-cor-verde-disco-solido-interno/p/MLB19713197?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=8767ac93-c5cf-4829-a3c6-008ccd155733&wid=MLB4332194311&sid=search",
+    "store": "INPOWER",
+    "scrapedAt": "2026-05-13T20:12:52.617Z"
+  },
+  {
+    "id": "ml-1778703177566-0",
+    "category": "ssd",
+    "name": "Disco Sólido Ssd 120gb 6gb/s Sata 3 Pklk Premium Sd120",
+    "price": 189,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_794498-MLA99456482896_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/disco-solido-ssd-120gb-6gbs-sata-3-pklk-premium-sd120/p/MLB46150812?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=83bc22a2-fc17-47d0-9cd9-b3fe933f3213&wid=MLB6031639350&sid=search",
+    "store": "PKLK Distribuidora",
+    "scrapedAt": "2026-05-13T20:12:57.566Z"
+  },
+  {
+    "id": "ml-1778703182800-0",
+    "category": "ssd",
+    "name": "SSD Interno 512GB M.2 NVMe Leitura Rápida Armazenamento Alta Velocidade Upgrade PC Notebook Desktop Inicialização Sistema Jogos Programas UP Gamer Fast Plus UP3000",
+    "price": 899,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_752046-MLA110174012531_042026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/ssd-interno-512gb-m2-nvme-leitura-rapida-armazenamento-alta-velocidade-upgrade-pc-notebook-desktop-inicializaco-sistema-jogos-programas-up-gamer-fast-plus-up3000/p/MLB33975632?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=8e450dc4-ddf8-4f44-a83f-6b9319ff2b5f&wid=MLB6246985354&sid=search",
+    "store": "SPREAKER",
+    "scrapedAt": "2026-05-13T20:13:02.800Z"
+  },
+  {
+    "id": "ml-1778703187971-0",
+    "category": "ssd",
+    "name": "Ssd Hiksemi Wave 240gb 2.5 Sata 3.0 Hs-ssd-wave(s)/240g",
+    "price": 436,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_850237-MLA82159186433_012025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/ssd-hiksemi-wave-240gb-25-sata-30-hs-ssd-waves240g/p/MLB45759263?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=33987d6e-1b91-4c95-b956-e305d343fa34&wid=MLB4046152407&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:13:07.971Z"
+  },
+  {
+    "id": "ml-1778703394895-2",
+    "category": "gpu",
+    "name": "Placa De Vídeo Msi Rtx 5060 Ti 8gb Gddr7 128bits Ventus Plus",
+    "price": 3870,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_654059-MLA99969943953_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-msi-rtx-5060-ti-8gb-gddr7-128bits-ventus-plus/p/MLB49822699?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=3&type=product&float_highlight=last_units&tracking_id=aa7dd3f7-a240-4ad6-9e33-9065e545c877&wid=MLB4104663865&sid=search",
+    "store": "Nvidia",
+    "scrapedAt": "2026-05-13T20:16:34.895Z"
+  },
+  {
+    "id": "ml-1778703422873-0",
+    "category": "gpu",
+    "name": "Placa de Vídeo Pcyes AMD Radeon RX 7600XT 16GB GDDR6 128 Bits Projeto Edge",
+    "price": 2699,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_670696-MLA100008908463_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-pcyes-amd-radeon-rx-7600xt-16gb-gddr6-128-bits-projeto-edge/p/MLB60328494?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=9f07855b-ae4f-4610-a59f-015b4024c000&wid=MLB5922214468&sid=search",
+    "store": "INFOTURBO",
+    "scrapedAt": "2026-05-13T20:17:02.873Z"
+  },
+  {
+    "id": "ml-1778703474995-0",
+    "category": "gpu",
+    "name": "Placa De Vídeo Asrock Intel Arc B580 Challengeroc 12gb Gddrg",
+    "price": 3171,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_947673-MLA82378414752_022025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-asrock-intel-arc-b580-challengeroc-12gb-gddrg/up/MLBU3206646820?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=b5aeaefe-bcb3-4bc5-a341-be326519d86e&wid=MLB5407094188&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:17:54.995Z"
+  },
+  {
+    "id": "ml-1778703485112-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 7 9700x 3.9ghz 40mb Sem Cooler Am5",
+    "price": 2879,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_813414-MLB83622181875_042025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-9700x-39ghz-40mb-sem-cooler-am5/up/MLBU3115146466?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=dbe5a3bd-6b05-4441-bab7-99199ad65a37&wid=MLB5344095812&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:18:05.112Z"
+  },
+  {
+    "id": "ml-1778703490227-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 5 9600x, 6-core, 12-threads, 3.9ghz (5",
+    "price": 2506,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_842098-MLB106772690368_022026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-9600x-6core-12threads-39ghz-5/up/MLBU3797260761?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cc975f24-b062-4bd4-9e28-bbfa0f93b505&wid=MLB4479921095&sid=search",
+    "store": "TG TUDO GAMER",
+    "scrapedAt": "2026-05-13T20:18:10.227Z"
+  },
+  {
+    "id": "ml-1778703495190-0",
+    "category": "cpu",
+    "name": "Processador gamer AMD Ryzen 9 7900X 100-100000589WOF de 12 núcleos e 5.6GHz de frequência com gráfica integrada",
+    "price": 3029,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_618579-MLA99472299804_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-9-7900x-100-100000589wof-de-12-nucleos-e-56ghz-de-frequncia-com-grafica-integrada/p/MLB19711898?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=1b581fbc-37d5-44e2-be18-472d1aa1e1b1&wid=MLB5530036658&sid=search",
+    "store": "OBA SUPLEMENTOS",
+    "scrapedAt": "2026-05-13T20:18:15.190Z"
+  },
+  {
+    "id": "ml-1778703499814-0",
+    "category": "cpu",
+    "name": "Processador gamer AMD Ryzen 7 7700X 100-100000591WOF de 8 núcleos e 5.4GHz de frequência com gráfica integrada",
+    "price": 2177,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_742266-MLA99578794952_122025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-7-7700x-100-100000591wof-de-8-nucleos-e-54ghz-de-frequncia-com-grafica-integrada/p/MLB19711896?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2d5dde90-64f9-4d38-b636-a18a648a7524&wid=MLB4353631719&sid=search",
+    "store": "Casa do Provedor",
+    "scrapedAt": "2026-05-13T20:18:19.814Z"
+  },
+  {
+    "id": "ml-1778703514716-0",
+    "category": "cpu",
+    "name": "PROCESSADOR INTEL CORE I7-14700K 3.40GHZ 33MB DDR4/5 FCLGA1700",
+    "price": 3363,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_651436-MLA99950950291_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i7-14700k-340ghz-33mb-ddr45-fclga1700/p/MLB27917297?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=cdae6dc4-1709-4d27-8f57-383064fde58c&wid=MLB3510856331&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:18:34.716Z"
+  },
+  {
+    "id": "ml-1778703544215-0",
+    "category": "mobo",
+    "name": "Placa Mãe Asus Prime B850-plus Wifi B850 Amd Ddr5 Am5 Atx",
+    "price": 2579,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_781802-MLA88021124506_072025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-asus-prime-b850-plus-wifi-b850-amd-ddr5-am5-atx/p/MLB53051574?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&float_highlight=last_units&tracking_id=090e5019-ad4e-4359-bc69-8c0e5dedd3b6&wid=MLB5930273318&sid=search",
+    "store": "INPOWER",
+    "scrapedAt": "2026-05-13T20:19:04.215Z"
+  },
+  {
+    "id": "ml-1778703560275-0",
+    "category": "mobo",
+    "name": "Placa Mãe Nzxt N7 Z790 Branco Socket Lga1700 Intel Ddr5",
+    "price": 3449,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_874578-MLA87007587361_062025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-me-nzxt-n7-z790-branco-socket-lga1700-intel-ddr5/p/MLB51881765?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6559e152-5963-40e3-9cdc-82971884f55a&wid=MLB6544280820&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:19:20.275Z"
+  },
+  {
+    "id": "ml-1778704141951-1",
+    "category": "gpu",
+    "name": "Placa De Video Gigabyte Radeon Rx 9060 Xt Gaming, 8gb",
+    "price": 4941,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_897773-MLA110554712792_052026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/placa-de-video-gigabyte-radeon-rx-9060-xt-gaming-8gb/p/MLB69434287?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=3b21b431-9616-4100-8361-2e131346aa07&wid=MLB4669890771&sid=search",
+    "store": "Pichau",
+    "scrapedAt": "2026-05-13T20:29:01.951Z"
+  },
+  {
+    "id": "ml-1778704166040-0",
+    "category": "gpu",
+    "name": "Asrock Phantom Gaming Radeon Rx 7900 Xtx 24gb Oc Gddr6",
+    "price": 8884,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_646617-CBT107525435206_032026-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/graphics-card-asrock-rx-7900-xtx-24gb-gddr6-oc/p/MLB2073338305?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=90a02479-2ca6-4070-ad20-66767f3aea94&wid=MLB4510386531&sid=search",
+    "store": "Mercado Livre",
+    "scrapedAt": "2026-05-13T20:29:26.040Z"
+  },
+  {
+    "id": "ml-1778704264246-0",
+    "category": "cpu",
+    "name": "Processador gamer Intel Core i5-12600K BX8071512600K de 10 núcleos e 4.9GHz de frequência com gráfica integrada",
+    "price": 1698,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_873709-MLA99507240202_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-intel-core-i5-12600k-bx8071512600k-de-10-nucleos-e-49ghz-de-frequncia-com-grafica-integrada/p/MLB18603110?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e4861519-9c86-457c-acb7-c605e059764d&wid=MLB3644054571&sid=search",
+    "store": "Gigantec",
+    "scrapedAt": "2026-05-13T20:31:04.246Z"
+  },
+  {
+    "id": "ml-1778704776747-0",
+    "category": "cpu",
+    "name": "Processador Amd Ryzen 7 5700 4.6ghz 8c 16t Am4",
+    "price": 1599,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_796826-MLA99992353565_112025-E.webp",
+    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-5700-46ghz-8c-16t-am4/p/MLB31054937?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=6b95af8b-9934-4054-a206-be3a435f7550&wid=MLB6087159664&sid=search",
+    "store": "TNT Info",
+    "scrapedAt": "2026-05-13T20:39:36.747Z"
+  }
+]

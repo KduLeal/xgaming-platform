@@ -37,6 +37,13 @@ function slugify(text) {
     .replace(/\-\-+/g, '-');
 }
 
+function sanitize(text) {
+  if (!text) return '';
+  return text.toString()
+    .replace(/<[^>]*>?/gm, '') // Remove HTML tags
+    .replace(/[<>\"\'&]/g, s => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '&': '&amp;' }[s]));
+}
+
 function cleanPrice(text) {
   const str = text.toString();
   if (str.includes('.') && !str.includes(',')) {
@@ -69,19 +76,27 @@ function detectStore(url) {
 }
 
 app.post('/api/add-product', async (req, res) => {
-  const { link, category, brand } = req.body;
+  const { link, category, brand, fallbackData } = req.body;
   if (!link || !category) return res.status(400).json({ error: 'Link e Categoria são obrigatórios' });
 
   let browser;
   try {
     console.log(`[Admin API] Navegando para: ${link}`);
-    browser = await puppeteer.launch({ headless: 'new', args: ['--no-sandbox'] });
+    browser = await puppeteer.launch({ 
+      executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      headless: 'new', 
+      args: ['--no-sandbox', '--disable-setuid-sandbox'] 
+    });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 800 });
     
     // Fake human behavior
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await page.goto(link, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36');
+    await page.setExtraHTTPHeaders({
+      'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Referer': 'https://www.mercadolivre.com.br/'
+    });
+    await page.goto(link, { waitUntil: 'networkidle2', timeout: 30000 });
     
     // Auto-navigate if it's a Store page with "Ir para produto"
     const hasStoreProduct = await page.evaluate(() => {
@@ -124,14 +139,22 @@ app.post('/api/add-product', async (req, res) => {
     });
 
     if (!data.title || !data.price) {
-      console.log('Tirando print de erro...');
-      await page.screenshot({ path: path.resolve('public/images/error.png') });
-      throw new Error('Não foi possível encontrar o título ou o preço. Print salvo em public/images/error.png.');
+      if (fallbackData && fallbackData.name && fallbackData.price) {
+        console.log('[Admin API] ⚠️ Bloqueio detectado no ML. Usando dados de fallback...');
+        data.title = fallbackData.name;
+        data.price = fallbackData.price;
+        data.imgUrl = fallbackData.image;
+      } else {
+        console.log('Tirando print de erro...');
+        await page.screenshot({ path: path.resolve('public/images/error.png') });
+        throw new Error('Não foi possível encontrar o título ou o preço. Print salvo em public/images/error.png.');
+      }
     }
 
     const price = cleanPrice(data.price);
-    const finalBrand = brand || detectBrand(data.title);
-    const slug = slugify(data.title.substring(0, 30)); // short slug
+    const finalBrand = sanitize(brand || detectBrand(data.title));
+    const finalTitle = sanitize(data.title.substring(0, 120));
+    const slug = slugify(finalTitle.substring(0, 30)); 
     
     // Download Image
     let localImagePath = `/images/products/${category}/${slug}.jpg`;
@@ -167,7 +190,7 @@ app.post('/api/add-product', async (req, res) => {
 
     const newProduct = {
       brand: finalBrand,
-      name: data.title.substring(0, 120),
+      name: finalTitle,
       price: price, // Current best price
       image: localImagePath,
       score: 80, // Default
@@ -251,6 +274,75 @@ app.get('/api/data', (req, res) => {
     const products = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
     const specs = JSON.parse(fs.readFileSync(path.resolve('data/hardware-specs.json'), 'utf-8'));
     res.json({ products, specs });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+const PENDING_FILE = path.resolve('data/pending-links.json');
+
+function cleanPendingQueue() {
+  try {
+    if (!fs.existsSync(PENDING_FILE) || !fs.existsSync(DATA_FILE)) return;
+    
+    const pending = JSON.parse(fs.readFileSync(PENDING_FILE, 'utf-8'));
+    const products = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
+    
+    // Normalizar nomes para comparação
+    const normalize = (name) => name.replace(/\s+/g, '').toLowerCase();
+    
+    const allProductNames = Object.values(products).flat().map(p => normalize(p.name));
+    
+    const filtered = pending.filter(p => {
+      const nameInSite = allProductNames.includes(normalize(p.name));
+      
+      // Filtro Rigoroso de Lojas Internacionais na Fila
+      const storeName = p.store ? p.store.toLowerCase() : '';
+      const isInternational = storeName.includes('nocnoc') || 
+                              storeName.includes('usa') || 
+                              storeName.includes('china') || 
+                              storeName.includes('internacional');
+      
+      // Filtro de Usados na Fila
+      const nameLower = p.name.toLowerCase();
+      const isUsed = nameLower.includes('usado') || 
+                    nameLower.includes('usada') || 
+                    nameLower.includes('lhr') || 
+                    nameLower.includes('semi-novo') ||
+                    nameLower.includes('seminovo');
+      
+      return !nameInSite && !isInternational && !isUsed;
+    });
+    
+    if (filtered.length !== pending.length) {
+      console.log(`[Admin] 🧹 Limpeza automática: removidos ${pending.length - filtered.length} itens (duplicatas ou internacionais).`);
+      fs.writeFileSync(PENDING_FILE, JSON.stringify(filtered, null, 2));
+    }
+  } catch (err) {
+    console.error('[Admin] Erro na limpeza automática:', err);
+  }
+}
+
+app.get('/api/pending', (req, res) => {
+  cleanPendingQueue(); // Limpar antes de entregar
+  if (fs.existsSync(PENDING_FILE)) {
+    const data = fs.readFileSync(PENDING_FILE, 'utf-8');
+    res.json(JSON.parse(data));
+  } else {
+    res.json([]);
+  }
+});
+
+app.post('/api/remove-pending', (req, res) => {
+  const { id } = req.body;
+  if (!id) return res.status(400).json({ error: 'ID is required' });
+  
+  try {
+    if (!fs.existsSync(PENDING_FILE)) return res.json({ success: true });
+    let pending = JSON.parse(fs.readFileSync(PENDING_FILE, 'utf-8'));
+    pending = pending.filter(p => p.id !== id);
+    fs.writeFileSync(PENDING_FILE, JSON.stringify(pending, null, 2));
+    res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -2,6 +2,21 @@ import './style.css';
 import './categoria.css';
 import productsData from './data/products.json';
 import hardwareSpecs from './data/hardware-specs.json';
+
+// ========== SECURITY HELPERS ==========
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ========== PRICE ANALYSIS ==========
+function isLowestPrice(product) {
+  if (!product.priceHistory || product.priceHistory.length < 2) return false;
+  const historicalPrices = product.priceHistory.map(h => h.price);
+  const minHistorical = Math.min(...historicalPrices);
+  return product.price <= minHistorical;
+}
 // ========== PARTICLES ==========
 function initParticles() {
   const canvas = document.getElementById('particles-canvas');
@@ -77,7 +92,19 @@ let sortKey = 'price';
 let sortAsc = true;
 let filterBrand = '';
 let filterSearch = '';
+let filterPriceMin = null;
+let filterPriceMax = null;
+let filterSpec = '';
 let viewMode = 'table';
+
+// Spec filter config per category
+const SPEC_FILTERS = {
+  gpu: { label: 'VRAM', key: 'VRAM Base' },
+  cpu: { label: 'Socket', key: 'Socket' },
+  mobo: { label: 'Socket', key: 'Socket' },
+  ram: { label: 'Tipo', key: 'Tipo' },
+  ssd: { label: 'Tecnologia', key: 'Tecnologia' }
+};
 
 function getCategory() {
   const params = new URLSearchParams(window.location.search);
@@ -90,7 +117,7 @@ function loadCategory() {
   
   const rawItems = productsData[cat] || productsData.gpu || [];
   const items = rawItems.map(item => {
-    // Procura no Mega Banco para extrair TDP
+    // Procura no Mega Banco para extrair TDP e spec filterable
     let dbRef = null;
     const n = item.name.replace(/\s+/g, '').toLowerCase();
     for (const [key, specs] of Object.entries(dbCat)) {
@@ -107,15 +134,25 @@ function loadCategory() {
     
     let bench = item.benchmark;
     if (!bench) {
-       // Calcula um benchmark realista baseado no preco/categoria (para itens importados sem bench)
        bench = Math.floor(item.price * (cat === 'cpu' ? 4.2 : 2.8));
     }
+
+    // Extract the filterable spec value
+    let specValue = null;
+    const specConfig = SPEC_FILTERS[cat];
+    if (specConfig && dbRef && dbRef[specConfig.key]) {
+      specValue = dbRef[specConfig.key];
+    }
     
-    return { ...item, tdp, benchmark: bench };
+    return { ...item, tdp, benchmark: bench, specValue };
   });
 
   currentConfig = CAT_CONFIG[cat] || CAT_CONFIG.gpu;
-  currentData = { items, brands: [...new Set(items.map(i => i.brand))].sort() };
+  currentData = {
+    items,
+    brands: [...new Set(items.map(i => i.brand))].sort(),
+    specValues: [...new Set(items.map(i => i.specValue).filter(Boolean))].sort()
+  };
 
   document.title = `XGaming — ${currentConfig.title}`;
   document.getElementById('breadcrumb-cat').textContent = currentConfig.title;
@@ -130,7 +167,21 @@ function loadCategory() {
 
   const brandSelect = document.getElementById('filter-brand');
   brandSelect.innerHTML = '<option value="">Todas as Marcas</option>' +
-    currentData.brands.map(b => `<option value="${b}">${b}</option>`).join('');
+    currentData.brands.map(b => `<option value="${escapeHTML(b)}">${escapeHTML(b)}</option>`).join('');
+
+  // Populate spec filter
+  const specSelect = document.getElementById('filter-spec');
+  const specConfig = SPEC_FILTERS[cat];
+  if (specSelect) {
+    if (specConfig && currentData.specValues.length > 0) {
+      specSelect.innerHTML = `<option value="">Todos: ${specConfig.label}</option>` +
+        currentData.specValues.map(v => `<option value="${escapeHTML(v)}">${escapeHTML(v)}</option>`).join('');
+      specSelect.closest('.filter-group').style.display = '';
+    } else {
+      specSelect.innerHTML = '<option value="">Todas as Specs</option>';
+      specSelect.closest('.filter-group').style.display = 'none';
+    }
+  }
 
   renderProducts();
 }
@@ -139,6 +190,9 @@ function getFilteredSorted() {
   let items = [...currentData.items];
   if (filterBrand) items = items.filter(i => i.brand === filterBrand);
   if (filterSearch) items = items.filter(i => i.name.toLowerCase().includes(filterSearch.toLowerCase()));
+  if (filterPriceMin !== null) items = items.filter(i => i.price >= filterPriceMin);
+  if (filterPriceMax !== null) items = items.filter(i => i.price <= filterPriceMax);
+  if (filterSpec) items = items.filter(i => i.specValue && i.specValue === filterSpec);
   items.sort((a, b) => {
     let va = a[sortKey], vb = b[sortKey];
     if (va === null || va === undefined) va = sortAsc ? Infinity : -Infinity;
@@ -163,30 +217,39 @@ function renderProducts() {
 
   if (viewMode === 'table') {
     const tbody = document.getElementById('product-tbody');
-    tbody.innerHTML = items.map(item => `
+    tbody.innerHTML = items.map(item => {
+      const lowest = isLowestPrice(item);
+      return `
       <tr>
         <td>
           <div class="model-cell">
-            ${item.image ? `<img class="model-thumb" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'" />` : ''}
-            <span class="brand-tag ${getBrandClass(item.brand)}">${item.brand}</span>
-            <span class="model-name">${item.name}</span>
+            ${item.image ? `<img class="model-thumb" src="${item.image}" alt="${escapeHTML(item.name)}" loading="lazy" onerror="this.style.display='none'" />` : ''}
+            <span class="brand-tag ${getBrandClass(item.brand)}">${escapeHTML(item.brand)}</span>
+            <span class="model-name">${escapeHTML(item.name)}</span>
           </div>
         </td>
-        <td><span class="price-cell">R$ ${item.price.toLocaleString('pt-BR')}</span> <a href="/produto.html?name=${encodeURIComponent(item.name)}" class="price-link">Ver mais →</a></td>
+        <td>
+          <span class="price-cell">R$ ${item.price.toLocaleString('pt-BR')}</span>
+          ${lowest ? '<span class="lowest-price-badge" style="margin-left:8px;">\uD83D\uDD25 Menor</span>' : ''}
+          <a href="/produto.html?name=${encodeURIComponent(item.name)}" class="price-link">Ver mais \u2192</a>
+        </td>
         <td>${item.tdp != null ? item.tdp + 'W' : '-'}</td>
         <td>${item.benchmark != null ? item.benchmark.toLocaleString('pt-BR') : '-'}</td>
         <td>${item.score != null ? `<span class="score-badge ${getScoreClass(item.score)}">${item.score}/100</span>` : '-'}</td>
       </tr>
-    `).join('');
+    `;}).join('');
     document.getElementById('table-view').classList.remove('hidden');
     document.getElementById('grid-view').classList.add('hidden');
   } else {
     const grid = document.getElementById('grid-view');
-    grid.innerHTML = items.map(item => `
+    grid.innerHTML = items.map(item => {
+      const lowest = isLowestPrice(item);
+      return `
       <a href="/produto.html?name=${encodeURIComponent(item.name)}" class="product-grid-card">
-        ${item.image ? `<img class="grid-card-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'" />` : ''}
-        <div class="card-brand"><span class="brand-tag ${getBrandClass(item.brand)}">${item.brand}</span></div>
-        <div class="card-name">${item.name}</div>
+        ${lowest ? '<div class="lowest-price-badge badge-lg" style="margin-bottom:0.75rem;">\uD83D\uDD25 Menor pre\u00E7o em 6 meses!</div>' : ''}
+        ${item.image ? `<img class="grid-card-img" src="${item.image}" alt="${escapeHTML(item.name)}" loading="lazy" onerror="this.style.display='none'" />` : ''}
+        <div class="card-brand"><span class="brand-tag ${getBrandClass(item.brand)}">${escapeHTML(item.brand)}</span></div>
+        <div class="card-name">${escapeHTML(item.name)}</div>
         <div class="card-price">R$ ${item.price.toLocaleString('pt-BR')}</div>
         <div class="card-specs">
           ${item.tdp ? `<span>TDP: ${item.tdp}W</span>` : ''}
@@ -194,7 +257,7 @@ function renderProducts() {
         </div>
         ${item.score != null ? `<div class="card-score"><span class="score-badge ${getScoreClass(item.score)}">${item.score}/100 pts</span></div>` : ''}
       </a>
-    `).join('');
+    `;}).join('');
     document.getElementById('grid-view').classList.remove('hidden');
     document.getElementById('table-view').classList.add('hidden');
   }
@@ -211,6 +274,23 @@ function initEvents() {
   });
   document.getElementById('filter-brand').addEventListener('change', e => { filterBrand = e.target.value; renderProducts(); });
   document.getElementById('filter-search').addEventListener('input', e => { filterSearch = e.target.value; renderProducts(); });
+  document.getElementById('filter-spec')?.addEventListener('change', e => { filterSpec = e.target.value; renderProducts(); });
+  
+  // Price range filters with debounce
+  let priceTimeout;
+  const handlePriceFilter = () => {
+    clearTimeout(priceTimeout);
+    priceTimeout = setTimeout(() => {
+      const minVal = document.getElementById('filter-price-min').value;
+      const maxVal = document.getElementById('filter-price-max').value;
+      filterPriceMin = minVal ? parseInt(minVal) : null;
+      filterPriceMax = maxVal ? parseInt(maxVal) : null;
+      renderProducts();
+    }, 400);
+  };
+  document.getElementById('filter-price-min')?.addEventListener('input', handlePriceFilter);
+  document.getElementById('filter-price-max')?.addEventListener('input', handlePriceFilter);
+
   document.getElementById('view-table').addEventListener('click', () => { viewMode='table'; document.getElementById('view-table').classList.add('active'); document.getElementById('view-grid').classList.remove('active'); renderProducts(); });
   document.getElementById('view-grid').addEventListener('click', () => { viewMode='grid'; document.getElementById('view-grid').classList.add('active'); document.getElementById('view-table').classList.remove('active'); renderProducts(); });
 }

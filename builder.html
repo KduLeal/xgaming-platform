@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XGaming — PC Builder</title>
+  <meta name="description" content="Monte seu PC Gamer com verificação de compatibilidade inteligente na XGaming." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="builder-page">
+  <canvas id="particles-canvas" class="particles-bg"></canvas>
+
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <span class="logo-x">X</span>
+        <span class="logo-text">GAMING</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="/categoria.html?cat=gpu">Placas de Vídeo</a>
+        <a href="/categoria.html?cat=cpu">Processadores</a>
+        <a href="/categoria.html?cat=mobo">Placas-mãe</a>
+        <a href="/categoria.html?cat=ram">Memórias</a>
+        <a href="/categoria.html?cat=ssd">SSDs</a>
+        <a href="/comparador.html">Comparador</a>
+        <a href="/builder.html" class="active" style="color: #00f0ff;">PC Builder <span style="font-size: 0.6rem; background: #00f0ff; color: #06080d; padding: 2px 4px; border-radius: 4px; vertical-align: top; margin-left: 4px;">BETA</span></a>
+        <a href="/sobre.html">Sobre</a>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <main class="builder-container">
+    <header class="builder-header fade-up">
+      <h1 class="glow-text">Monte seu Setup</h1>
+      <p>Escolha as peças. Nós garantimos a compatibilidade.</p>
+    </header>
+
+    <div class="builder-layout fade-up">
+      <!-- Coluna Esquerda: Slots -->
+      <div class="builder-slots">
+        
+        <!-- Slot CPU -->
+        <div class="component-slot" data-category="cpu" id="slot-cpu">
+          <div class="slot-icon">⚡</div>
+          <div class="slot-content">
+            <h3 class="slot-title">Processador</h3>
+            <p class="slot-selection" id="sel-cpu">Selecionar Processador...</p>
+          </div>
+          <button class="btn-select-part">Escolher</button>
+        </div>
+
+        <!-- Slot Placa-mãe -->
+        <div class="component-slot" data-category="mobo" id="slot-mobo">
+          <div class="slot-icon">🎛️</div>
+          <div class="slot-content">
+            <h3 class="slot-title">Placa-Mãe</h3>
+            <p class="slot-selection" id="sel-mobo">Selecionar Placa-Mãe...</p>
+          </div>
+          <button class="btn-select-part">Escolher</button>
+        </div>
+
+        <!-- Grupo RAM (Dinâmico) -->
+        <div id="slots-group-ram" class="slots-group"></div>
+
+        <!-- Slot GPU -->
+        <div class="component-slot" data-category="gpu" id="slot-gpu">
+          <div class="slot-icon">🎮</div>
+          <div class="slot-content">
+            <h3 class="slot-title">Placa de Vídeo</h3>
+            <p class="slot-selection" id="sel-gpu">Selecionar Placa de Vídeo...</p>
+          </div>
+          <button class="btn-select-part">Escolher</button>
+        </div>
+
+        <!-- Grupo SSD (Dinâmico) -->
+        <div id="slots-group-ssd" class="slots-group"></div>
+
+        <!-- Slot PSU -->
+        <div class="component-slot" data-category="psu" id="slot-psu">
+          <div class="slot-icon">🔌</div>
+          <div class="slot-content">
+            <h3 class="slot-title">Fonte</h3>
+            <p class="slot-selection" id="sel-psu">Selecionar Fonte de Alimentação...</p>
+          </div>
+          <button class="btn-select-part">Escolher</button>
+        </div>
+
+      </div>
+
+      <!-- Coluna Direita: HUD Resumo -->
+      <aside class="builder-hud">
+        <div class="hud-panel glass-panel">
+          <h3>Resumo da Montagem</h3>
+          
+          <div class="hud-price-container">
+            <span class="hud-label">Valor Total Estimado:</span>
+            <div class="hud-price" id="hud-total-price">R$ 0,00</div>
+          </div>
+
+          <div class="hud-power-container">
+            <div class="hud-power-header">
+              <span class="hud-label">Consumo de Energia (TDP):</span>
+              <span id="hud-power-text">0W / 0W</span>
+            </div>
+            <div class="power-bar-bg">
+              <div class="power-bar-fill" id="power-bar-fill"></div>
+            </div>
+            <p class="hud-hint" id="power-hint">Adicione uma fonte para calcular a margem.</p>
+          </div>
+
+          <div class="hud-compatibility-container" id="hud-alerts">
+            <div class="alert-box alert-neutral">
+              <span>⚠️</span>
+              <p>Comece escolhendo o Processador e a Placa-mãe para verificar a compatibilidade de Socket.</p>
+            </div>
+          </div>
+
+          <button class="btn-primary w-full mt-4" id="btn-buy-all" disabled>Comprar Peças</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Modal de Seleção de Peças -->
+  <div class="modal-overlay" id="parts-modal">
+    <div class="modal-content glass-panel">
+      <div class="modal-header">
+        <h2 id="modal-title">Escolha uma peça</h2>
+        <button class="btn-close" id="btn-close-modal">✖</button>
+      </div>
+      <div class="modal-body">
+        <div class="parts-grid" id="parts-grid">
+          <!-- Produtos renderizados aqui via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="section-container">
+      <div class="logo">
+        <span class="logo-x">X</span><span class="logo-text">GAMING</span>
+      </div>
+      <p style="color:#8b949e; font-size:0.9rem; margin-top:1rem;">
+        O melhor portal para hardwares gamers. Preços atualizados diariamente.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="/builder.js"></script>
+</body>
+</html>

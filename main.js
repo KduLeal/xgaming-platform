@@ -1,6 +1,21 @@
 import './style.css';
 import productsData from './data/products.json';
 
+// ========== SECURITY HELPERS ==========
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ========== PRICE ANALYSIS ==========
+function isLowestPrice(product) {
+  if (!product.priceHistory || product.priceHistory.length < 2) return false;
+  const historicalPrices = product.priceHistory.map(h => h.price);
+  const minHistorical = Math.min(...historicalPrices);
+  return product.price <= minHistorical;
+}
+
 // ========== PARTICLES ==========
 function initParticles() {
   const canvas = document.getElementById('particles-canvas');
@@ -190,19 +205,22 @@ function renderCategories() {
 function renderDeals() {
   const scroll = document.getElementById('deals-scroll');
   if (!scroll) return;
-  scroll.innerHTML = DEALS.map(d => `
+  scroll.innerHTML = DEALS.map(d => {
+    const lowest = isLowestPrice(d);
+    return `
     <a href="/produto.html?name=${encodeURIComponent(d.name)}" class="deal-card">
-      ${d.badge ? `<span class="deal-badge ${d.badge}">${d.badge === 'hot' ? '🔥 Hot' : '👑 Best'}</span>` : ''}
-      <span class="deal-brand ${d.brandClass}">${d.brand}</span>
-      <img class="deal-img" src="${d.image}" alt="${d.name}" loading="lazy" onerror="this.style.display='none'" />
-      <div class="deal-name">${d.name}</div>
+      ${lowest ? '<span class="deal-badge" style="background:rgba(34,197,94,0.2);color:var(--green);">🔥 Menor Preço</span>' : d.badge ? `<span class="deal-badge ${d.badge}">${d.badge === 'hot' ? '🔥 Hot' : '👑 Best'}</span>` : ''}
+      <span class="deal-brand ${d.brandClass}">${escapeHTML(d.brand)}</span>
+      <img class="deal-img" src="${d.image}" alt="${escapeHTML(d.name)}" loading="lazy" onerror="this.style.display='none'" />
+      <div class="deal-name">${escapeHTML(d.name)}</div>
       <div class="deal-prices">
         <span class="deal-price">R$ ${d.price.toLocaleString('pt-BR')}</span>
+        ${lowest ? '<span class="lowest-price-badge">🔥 Menor preço em 6 meses</span>' : ''}
       </div>
-      <div class="deal-store">Melhor oferta em ${d.store}</div>
+      <div class="deal-store">Melhor oferta em ${escapeHTML(d.store)}</div>
       <div class="deal-score score-${d.scoreClass}">${d.score}/100 pts</div>
     </a>
-  `).join('');
+  `;}).join('');
 }
 
 function renderFeatures() {

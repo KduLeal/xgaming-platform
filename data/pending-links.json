@@ -1,45 +1,5 @@
 [
   {
-    "id": "ml-1778702939719-0",
-    "category": "cpu",
-    "name": "Processador Amd Ryzen 5 7600x Am5 5.3ghz - 100-100000593wof",
-    "price": 1670,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_890838-MLB51714905613_092022-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-7600x-am5-53ghz---100100000593wof/up/MLBU1113886229?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=dc17c680-9957-4253-990e-62e47d85d841&wid=MLB2819635552&sid=search",
-    "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:08:59.719Z"
-  },
-  {
-    "id": "ml-1778702944446-0",
-    "category": "cpu",
-    "name": "Processador AMD Ryzen 7 5700G 100-100000263BOX de 8 núcleos e 4.6GHz de frequência com gráfica integrada",
-    "price": 1699,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_941100-MLA99523579842_122025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-7-5700g-100-100000263box-de-8-nucleos-e-46ghz-de-frequncia-com-grafica-integrada/p/MLB18441624?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=d794ae9a-2043-4049-a844-81134114fdf2&wid=MLB5887231550&sid=search",
-    "store": "TNT Info",
-    "scrapedAt": "2026-05-13T20:09:04.446Z"
-  },
-  {
-    "id": "ml-1778702953715-1",
-    "category": "cpu",
-    "name": "Kit Amd Ryzen 7 5700x + B550m Aorus Elite + 16gb 3200mhz",
-    "price": 3699,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_826177-MLB92350494891_092025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/kit-amd-ryzen-7-5700x--b550m-aorus-elite--16gb-3200mhz/up/MLBU1111248190?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=9c748806-6f25-4813-8515-9d0903ae7b32&wid=MLB2688803339&sid=search",
-    "store": "Total Info",
-    "scrapedAt": "2026-05-13T20:09:13.715Z"
-  },
-  {
-    "id": "ml-1778702966915-0",
-    "category": "cpu",
-    "name": "Processador AMD Ryzen 5 5600GT, 3.6GHz (4.6GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100001488BOX",
-    "price": 1333,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_975621-MLA99589746250_122025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5600gt-36ghz-46ghz-turbo-6-cores-12-threads-cooler-wraith-stealth-am4-100-100001488box/p/MLB32444906?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=e8cf296e-8adf-4d64-8d58-4dcaa771e965&wid=MLB5720543110&sid=search",
-    "store": "CHIPART",
-    "scrapedAt": "2026-05-13T20:09:26.915Z"
-  },
-  {
     "id": "ml-1778702971923-0",
     "category": "cpu",
     "name": "Processador Amd Ryzen 5 5500 3.6ghz 4.2ghz Max Turbo Cache 1",

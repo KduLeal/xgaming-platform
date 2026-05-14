@@ -1010,6 +1010,173 @@
         }
       ],
       "benchmark": 34200
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador Amd Ryzen 5 7600x Am5 5.3ghz - 100-100000593wof",
+      "price": 1670,
+      "image": "/images/products/cpu/processador-amd-ryzen-5-7600x.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1920
+        },
+        {
+          "month": "Jan/26",
+          "price": 1906
+        },
+        {
+          "month": "Fev/26",
+          "price": 1846
+        },
+        {
+          "month": "Mar/26",
+          "price": 1807
+        },
+        {
+          "month": "Abr/26",
+          "price": 1780
+        },
+        {
+          "month": "Mai/26",
+          "price": 1670
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1670,
+          "link": "https://meli.la/2FsKQ5A",
+          "lastUpdate": "2026-05-14T02:57:00.094Z"
+        }
+      ],
+      "benchmark": 28500
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador AMD Ryzen 7 5700G 100-100000263BOX de 8 núcleos e 4.6GHz de frequência com gráfica integrada",
+      "price": 1099,
+      "image": "/images/products/cpu/processador-amd-ryzen-7-5700g.jpg",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1264
+        },
+        {
+          "month": "Jan/26",
+          "price": 1208
+        },
+        {
+          "month": "Fev/26",
+          "price": 1150
+        },
+        {
+          "month": "Mar/26",
+          "price": 1137
+        },
+        {
+          "month": "Abr/26",
+          "price": 1133
+        },
+        {
+          "month": "Mai/26",
+          "price": 1099
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1099,
+          "link": "https://meli.la/1q1Bddn",
+          "lastUpdate": "2026-05-14T03:01:02.421Z"
+        }
+      ]
+    },
+    {
+      "brand": "AMD",
+      "name": "Kit Amd Ryzen 7 5700x + B550m Aorus Elite + 16gb 3200mhz",
+      "price": 3699,
+      "image": "/images/products/cpu/kit-amd-ryzen-7-5700x-b550m.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 4254
+        },
+        {
+          "month": "Jan/26",
+          "price": 4098
+        },
+        {
+          "month": "Fev/26",
+          "price": 3977
+        },
+        {
+          "month": "Mar/26",
+          "price": 3950
+        },
+        {
+          "month": "Abr/26",
+          "price": 3887
+        },
+        {
+          "month": "Mai/26",
+          "price": 3699
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 3699,
+          "link": "https://meli.la/1jVHanT",
+          "lastUpdate": "2026-05-14T03:01:31.394Z"
+        }
+      ],
+      "benchmark": 26700
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador AMD Ryzen 5 5600GT, 3.6GHz (4.6GHz Turbo), 6-Cores 12-Threads, Cooler Wraith Stealth, AM4, 100-100001488BOX",
+      "price": 1199,
+      "image": "/images/products/cpu/processador-amd-ryzen-5-5600gt.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 1379
+        },
+        {
+          "month": "Jan/26",
+          "price": 1355
+        },
+        {
+          "month": "Fev/26",
+          "price": 1292
+        },
+        {
+          "month": "Mar/26",
+          "price": 1252
+        },
+        {
+          "month": "Abr/26",
+          "price": 1217
+        },
+        {
+          "month": "Mai/26",
+          "price": 1199
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 1199,
+          "link": "https://meli.la/2pAcWay",
+          "lastUpdate": "2026-05-14T03:02:33.897Z"
+        }
+      ],
+      "benchmark": 21600
     }
   ],
   "mobo": [],

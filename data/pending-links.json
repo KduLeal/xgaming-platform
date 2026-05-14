@@ -1,35 +1,5 @@
 [
   {
-    "id": "ml-1778702905097-0",
-    "category": "cpu",
-    "name": "Processador Amd Ryzen 9 9900x3d De 5,5 Ghz Am5",
-    "price": 12423,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_627722-MLA99966959905_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-9-9900x3d-de-55-ghz-am5/p/MLB50143050?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=7f75b44f-3c0b-4724-81e9-ca372f5a82f6&wid=MLB5720842544&sid=search",
-    "store": "Terabyte Eshop",
-    "scrapedAt": "2026-05-13T20:08:25.097Z"
-  },
-  {
-    "id": "ml-1778702917342-0",
-    "category": "cpu",
-    "name": "Processador gamer AMD Ryzen 9 7950X3D 100-100000908WOF de 16 núcleos e 5.7GHz de frequência com gráfica integrada",
-    "price": 4263,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_974411-MLA99991231693_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-9-7950x3d-100-100000908wof-de-16-nucleos-e-57ghz-de-frequncia-com-grafica-integrada/p/MLB22481014?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=3fd089ba-02de-4944-836d-b951de6d62be&wid=MLB3637137956&sid=search",
-    "store": "Gigantec",
-    "scrapedAt": "2026-05-13T20:08:37.342Z"
-  },
-  {
-    "id": "ml-1778702926376-0",
-    "category": "cpu",
-    "name": "Processador gamer AMD Ryzen 7 7800X3D 100-100000910WOF de 8 núcleos e 5GHz de frequência com gráfica integrada",
-    "price": 3900,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_772047-MLA99415879120_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-gamer-amd-ryzen-7-7800x3d-100-100000910wof-de-8-nucleos-e-5ghz-de-frequncia-com-grafica-integrada/p/MLB22826887?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=d2bd403c-de9b-4c7a-8f6a-d29ac96f1ad1&wid=MLB4147191751&sid=search",
-    "store": "LIDER INFORMATICA",
-    "scrapedAt": "2026-05-13T20:08:46.376Z"
-  },
-  {
     "id": "ml-1778702939719-0",
     "category": "cpu",
     "name": "Processador Amd Ryzen 5 7600x Am5 5.3ghz - 100-100000593wof",

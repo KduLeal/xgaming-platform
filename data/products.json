@@ -884,6 +884,132 @@
         }
       ],
       "benchmark": 65000
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador Amd Ryzen 9 9900x3d De 5,5 Ghz Am5",
+      "price": 4432,
+      "image": "/images/products/cpu/processador-amd-ryzen-9-9900x3.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 5097
+        },
+        {
+          "month": "Jan/26",
+          "price": 5075
+        },
+        {
+          "month": "Fev/26",
+          "price": 4902
+        },
+        {
+          "month": "Mar/26",
+          "price": 4843
+        },
+        {
+          "month": "Abr/26",
+          "price": 4752
+        },
+        {
+          "month": "Mai/26",
+          "price": 4432
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 4432,
+          "link": "https://meli.la/27Z5ZpS",
+          "lastUpdate": "2026-05-14T02:52:10.329Z"
+        }
+      ],
+      "benchmark": 54000
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador gamer AMD Ryzen 9 7950X3D 100-100000908WOF de 16 núcleos e 5.7GHz de frequência com gráfica integrada",
+      "price": 3914,
+      "image": "/images/products/cpu/processador-gamer-amd-ryzen-9.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 4501
+        },
+        {
+          "month": "Jan/26",
+          "price": 4382
+        },
+        {
+          "month": "Fev/26",
+          "price": 4267
+        },
+        {
+          "month": "Mar/26",
+          "price": 4119
+        },
+        {
+          "month": "Abr/26",
+          "price": 3920
+        },
+        {
+          "month": "Mai/26",
+          "price": 3914
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 3914,
+          "link": "https://meli.la/2Fuhzra",
+          "lastUpdate": "2026-05-14T02:52:48.281Z"
+        }
+      ],
+      "benchmark": 62000
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador gamer AMD Ryzen 7 7800X3D 100-100000910WOF de 8 núcleos e 5GHz de frequência com gráfica integrada",
+      "price": 2762.81,
+      "image": "/images/products/cpu/processador-gamer-amd-ryzen-7.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 3177
+        },
+        {
+          "month": "Jan/26",
+          "price": 3095
+        },
+        {
+          "month": "Fev/26",
+          "price": 2946
+        },
+        {
+          "month": "Mar/26",
+          "price": 2821
+        },
+        {
+          "month": "Abr/26",
+          "price": 2710
+        },
+        {
+          "month": "Mai/26",
+          "price": 2762.81
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 2762.81,
+          "link": "https://meli.la/1RLPH6S",
+          "lastUpdate": "2026-05-14T02:53:31.127Z"
+        }
+      ],
+      "benchmark": 34200
     }
   ],
   "mobo": [],

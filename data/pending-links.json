@@ -1,35 +1,5 @@
 [
   {
-    "id": "ml-1778702971923-0",
-    "category": "cpu",
-    "name": "Processador Amd Ryzen 5 5500 3.6ghz 4.2ghz Max Turbo Cache 1",
-    "price": 997,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_806163-MLA99416647702_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-amd-ryzen-5-5500-36ghz-42ghz-max-turbo-cache-1/up/MLBU3882300163?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=2f2eec69-cba1-4574-9e28-bbfa0f93b505&wid=MLB4590516747&sid=search",
-    "store": "Casa do Provedor",
-    "scrapedAt": "2026-05-13T20:09:31.923Z"
-  },
-  {
-    "id": "ml-1778702976969-0",
-    "category": "cpu",
-    "name": "Kit Upgrade Gamer, Amd Ryzen 5 4600g + A520m + 8gb Ddr4",
-    "price": 2011,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_890626-MLB91925882346_092025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/kit-upgrade-gamer-amd-ryzen-5-4600g--a520m--8gb-ddr4/up/MLBU764738428?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=ccbe541b-6a62-411a-8b94-41b6d60d0e6b&wid=MLB3469475057&sid=search",
-    "store": "GAMING INFO",
-    "scrapedAt": "2026-05-13T20:09:36.969Z"
-  },
-  {
-    "id": "ml-1778702982214-0",
-    "category": "cpu",
-    "name": "Processador Intel Core I9-14900 3.6GHz 24 Núcleos LGA 1700",
-    "price": 4649,
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_956083-MLA99384596854_112025-E.webp",
-    "originalLink": "https://www.mercadolivre.com.br/processador-intel-core-i9-14900-36ghz-24-nucleos-lga-1700/p/MLB32038252?pdp_filters=official_store%3Aall#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=4fe2ea7c-4dec-42cc-997f-1d479f5c0d4c&wid=MLB3908309941&sid=search",
-    "store": "Login",
-    "scrapedAt": "2026-05-13T20:09:42.214Z"
-  },
-  {
     "id": "ml-1778702991664-0",
     "category": "cpu",
     "name": "Processador Intel Core I5 14600k Lga1700 Bx8071514600k",

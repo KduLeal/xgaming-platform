@@ -1178,6 +1178,89 @@
         }
       ],
       "benchmark": 21600
+    },
+    {
+      "brand": "AMD",
+      "name": "Processador Amd Ryzen 5 5500 3.6ghz 4.2ghz Max Turbo Cache 1",
+      "price": 569.63,
+      "image": "/images/products/cpu/processador-amd-ryzen-5-5500-3.jpg",
+      "score": 98,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 655
+        },
+        {
+          "month": "Jan/26",
+          "price": 651
+        },
+        {
+          "month": "Fev/26",
+          "price": 640
+        },
+        {
+          "month": "Mar/26",
+          "price": 628
+        },
+        {
+          "month": "Abr/26",
+          "price": 627
+        },
+        {
+          "month": "Mai/26",
+          "price": 569.63
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 569.63,
+          "link": "https://meli.la/2KZjtNf",
+          "lastUpdate": "2026-05-14T03:08:07.812Z"
+        }
+      ],
+      "benchmark": 19400
+    },
+    {
+      "brand": "Intel",
+      "name": "Processador Intel Core I9-14900 3.6GHz 24 Núcleos LGA 1700",
+      "price": 4449,
+      "image": "/images/products/cpu/processador-intel-core-i9-1490.jpg",
+      "score": 80,
+      "priceHistory": [
+        {
+          "month": "Dez/25",
+          "price": 5116
+        },
+        {
+          "month": "Jan/26",
+          "price": 5054
+        },
+        {
+          "month": "Fev/26",
+          "price": 4803
+        },
+        {
+          "month": "Mar/26",
+          "price": 4736
+        },
+        {
+          "month": "Abr/26",
+          "price": 4695
+        },
+        {
+          "month": "Mai/26",
+          "price": 4449
+        }
+      ],
+      "offers": [
+        {
+          "store": "Mercado Livre",
+          "price": 4449,
+          "link": "https://meli.la/2Bncu6G",
+          "lastUpdate": "2026-05-14T03:11:09.905Z"
+        }
+      ]
     }
   ],
   "mobo": [],
